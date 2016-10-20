@@ -93,7 +93,7 @@ To set the data source to Kanban, the `e-data-source.bind` property is assigned 
           { Id: 8, Status: 'Close', Summary: 'Login page validation', Type: 'Story', Priority: 'Release Breaker', Tags: 'Validation,Fix', Estimate: 2.5, Assignee: 'Laura Callahan', ImgUrl: 'images/kanban/8.png', RankId: 2 },
           { Id: 9, Status: 'Testing', Summary: 'Fix the issues reported in Safari browser.', Type: 'Bug', Priority: 'Release Breaker', Tags: 'Fix,Safari', Estimate: 1.5, Assignee: 'Laura Callahan', ImgUrl: 'images/kanban/1.png', RankId: 2 },
           { Id: 10, Status: 'Close', Summary: 'Test the application in the IE browser.', Type: 'Story', Priority: 'Low', Tags: 'Testing,IE', Estimate: 5.5, Assignee: 'Andrew Fuller', ImgUrl: 'images/kanban/4.png', RankId: 3 }];
-    }
+       }
     }
 
 
@@ -143,7 +143,7 @@ In order to display cards in Kanban control, you need to map the database fields
           { Id: 9, Status: 'Testing', Summary: 'Fix the issues reported in Safari browser.', Type: 'Bug', Priority: 'Release Breaker', Tags: 'Fix,Safari', Estimate: 1.5, Assignee: 'Laura Callahan', ImgUrl: 'images/kanban/1.png', RankId: 2 },
           { Id: 10, Status: 'Close', Summary: 'Test the application in the IE browser.', Type: 'Story', Priority: 'Low', Tags: 'Testing,IE', Estimate: 5.5, Assignee: 'Andrew Fuller', ImgUrl: 'images/kanban/4.png', RankId: 3 }];
         this.Field = { primaryKey: 'Id', content: 'Summary'};
-    }
+        }
     }
 
 
@@ -190,7 +190,7 @@ N>  `primaryKey` field is mandatory for “Drag and Drop” ,”Selection” and
           { Id: 9, Status: 'Testing', Summary: 'Fix the issues reported in Safari browser.', Type: 'Bug', Priority: 'Release Breaker', Tags: 'Fix,Safari', Estimate: 1.5, Assignee: 'Laura Callahan', ImgUrl: 'images/kanban/1.png', RankId: 2 },
           { Id: 10, Status: 'Close', Summary: 'Test the application in the IE browser.', Type: 'Story', Priority: 'Low', Tags: 'Testing,IE', Estimate: 5.5, Assignee: 'Andrew Fuller', ImgUrl: 'images/kanban/4.png', RankId: 3 }];
         this.Field = { primaryKey: 'Id', content: 'Summary',swimlaneKey: 'Assignee'};
-    }
+        }
     }
 
 {% endhighlight %} 
@@ -236,9 +236,8 @@ Filter settings can be defined under constructor method as array of objects with
           { Id: 10, Status: 'Close', Summary: 'Test the application in the IE browser.', Type: 'Story', Priority: 'Low', Tags: 'Testing,IE', Estimate: 5.5, Assignee: 'Andrew Fuller', ImgUrl: 'images/kanban/4.png', RankId: 3 }];
         this.Field = { primaryKey: 'Id', content: 'Summary',swimlaneKey: 'Assignee'};
         this.Filter = [{ text: 'Janet Issues', query: new ej.Query().where('Assignee', 'equal', 'Janet Leverling'), description: 'Displays issues which matches the assignee as Janet Leverling' }, { text: 'Testing Issues', query: new ej.Query().where('Status', 'equal', 'Testing'), description: 'Display the issues of Testing'}];
+        }
     }
-    }
-
 
 {% endhighlight %} 
 
