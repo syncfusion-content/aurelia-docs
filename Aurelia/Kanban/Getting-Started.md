@@ -24,20 +24,20 @@ For quick start, we already configured a template project in GitHub repository [
 The below steps describes to create Syncfusion Aurelia Kanban component.
 
     Create kanban folder inside src/samples/ location.
-    Create kanban.html file inside src/samples/kanban folder and use the below code example to render the Kanban component.
-    Kanban sample level css can be loaded using `default.css` from the location "src/samples/default-css".
-    
+    Create kanban.html file inside src/samples/kanban folder and use the below code example to render the Kanban component.    
+    Properties can be defined with `e-` prefix and long text properties needs to separated by `-`. E.g. ( `e-kanban` , `e-header-text`).
+
 {% highlight html %}
 
     <template>
-    <div>
-     <ej-kanban id="Kanban">
-      <ej-kanban-column  e-header-text="Backlog"></ej-kanban-column>
-	   <ej-kanban-column  e-header-text="In Progress"></ej-kanban-column>
-	   <ej-kanban-column  e-header-text="Testing"></ej-kanban-column>
-	   <ej-kanban-column  e-header-text="Done"></ej-kanban-column>
-    </ej-kanban>
-    </div>
+        <div>
+            <ej-kanban id="Kanban">
+                <ej-kanban-column  e-header-text="Backlog"></ej-kanban-column>
+                <ej-kanban-column  e-header-text="In Progress"></ej-kanban-column>
+                <ej-kanban-column  e-header-text="Testing"></ej-kanban-column>
+                <ej-kanban-column  e-header-text="Done"></ej-kanban-column>
+            </ej-kanban>
+        </div>
     </template>
 
 {% endhighlight %}
@@ -47,8 +47,8 @@ The below steps describes to create Syncfusion Aurelia Kanban component.
 {% highlight html %}
 
     export class Kanban {
-    constructor() {
-    }
+        constructor() {
+        }
     }
 
 {% endhighlight %}
@@ -57,18 +57,16 @@ The below steps describes to create Syncfusion Aurelia Kanban component.
 
 ## Data Binding
 
-`Data binding` in the Kanban is achieved by using the [`ej.DataManager`](http://help.syncfusion.com/js/datamanager/overview) that supports both RESTful JSON data services binding and local JSON array binding. 
+`Data binding` in the Kanban is achieved by using the `ej.DataManager` that supports both RESTful JSON data services binding and local JSON array binding. 
 
-To set the data source to Kanban, the `e-data-source.bind` property is assigned with the instance of the `KanbanData`
+To set the data source to Kanban, the `e-data-source.bind` property is assigned with the instance of the `this.KanbanData` which is specified in constructor.
 
-kanban datasource can be loaded using `KanbanJsonData` from the location "src/samples/KanbanJsonData".
 
 {% highlight html %}
 
     <template>
     <div>
         <ej-kanban id="Kanban" e-data-source.bind="KanbanData">
-
             <ej-kanban-column e-header-text="Backlog"></ej-kanban-column>
             <ej-kanban-column e-header-text="In Progress"></ej-kanban-column>
             <ej-kanban-column e-header-text="Testing"></ej-kanban-column>
@@ -82,12 +80,10 @@ kanban datasource can be loaded using `KanbanJsonData` from the location "src/sa
 
 {% highlight html %}
 
-    import './KanbanJsonData';
     export class Kanban {
-    constructor() {
-        this.KanbanData = KanbanData;
-   
-    }
+        constructor() {
+            this.KanbanData = KanbanData;    
+        }
     }
 
 {% endhighlight %}
@@ -98,11 +94,11 @@ kanban datasource can be loaded using `KanbanJsonData` from the location "src/sa
 
 In order to display cards in Kanban control, you need to map the database fields to Kanban cards and columns. The required mapping field are listed as follows
 
-* `e-fields.bind` - Field value can be bind in the `e-fields.bind` data.
+* `e-fields.bind` - Field values can be bind with `this.Fields` which is specified in constructor.
 * `e-key-field` - Map the column name to use as `e-key` values to columns.
 * `columns` -  Map the corresponding `e-key` values of `e-key-field` column to each columns
-* `fields.content` - Map the column name to use as content to cards.
-* `fields.primaryKey` - Map the column name to use as primary Key.
+* `content` - Map the column name to use as content to cards which is specified `this.Fields` under constructor method.
+* `primaryKey` - Map the column name to use as primary Key which is specified `this.Fields` under constructor method.
 
 
 {% highlight html %}
@@ -121,24 +117,23 @@ In order to display cards in Kanban control, you need to map the database fields
 {% endhighlight %} 
 
 {% highlight html %}
-
-    import './KanbanJsonData';
+    
     export class Kanban {
-    constructor() {
-        this.KanbanData = KanbanData;
-        this.Field = { primaryKey: 'Id', content: 'Summary'};
-    }
+        constructor() {
+            this.KanbanData = KanbanData;
+            this.Field = { primaryKey: 'Id', content: 'Summary'};
+        }
     }
 
 {% endhighlight %} 
 
 ![](Getting-Started_images/Getting_Started_img3.png)
 
-N>  `fields.primaryKey` field is mandatory for “Drag and Drop” ,”Selection” and “Editing” Features.
+N>  `primaryKey` field is mandatory for “Drag and Drop” ,”Selection” and “Editing” Features.
 
 ## Enable Swimlane
 
-`Swimlane` can be enabled by mapping the `fields.swimlaneKey` to appropriate column name in `dataSource`. This enables the grouping of the cards based on the mapped column values.
+`Swimlane` can be enabled by mapping the `swimlaneKey` to appropriate column name in `dataSource`. This enables the grouping of the cards based on the mapped column values.
 
 
 {% highlight html %}
@@ -146,7 +141,6 @@ N>  `fields.primaryKey` field is mandatory for “Drag and Drop” ,”Selection
     <template>
     <div>
         <ej-kanban id="Kanban" e-data-source.bind="KanbanData" e-key-field="Status" e-fields.bind="Field">
-
             <ej-kanban-column e-header-text="Backlog" e-key="Open"></ej-kanban-column>
             <ej-kanban-column e-header-text="In Progress" e-key="InProgress"></ej-kanban-column>
             <ej-kanban-column e-header-text="Testing" e-key="Testing"></ej-kanban-column>
@@ -162,10 +156,10 @@ N>  `fields.primaryKey` field is mandatory for “Drag and Drop” ,”Selection
 
     import './KanbanJsonData';
     export class Kanban {
-    constructor() {
-        this.KanbanData = KanbanData;
-        this.Field = { primaryKey: 'Id', content: 'Summary', swimlaneKey: 'Assignee'};
-    }
+        constructor() {
+            this.KanbanData = KanbanData;
+            this.Field = { primaryKey: 'Id', content: 'Summary', swimlaneKey: 'Assignee'};
+        }
     }
 
 {% endhighlight %} 
@@ -174,14 +168,15 @@ N>  `fields.primaryKey` field is mandatory for “Drag and Drop” ,”Selection
 
 ## Adding Filters
 
-Filters allows to filter the collection of cards from `dataSource` which meets the predefined `query` in the filters collection. To enable filtering, define `filterSettings` collection with display `text` and [`ej.Query`](http://help.syncfusion.com/js/datamanager/query).
- 
+Filters allows to filter the collection of cards from `dataSource` which meets the predefined `query` in the filters collection. To enable filtering, define `filterSettings` collection with display `text` and `ej.Query`.
+
+Filter settings can be defined under constructor method as array of objects with the name `this.Filter`.
+
 {% highlight html %}
 
     <template>
     <div>
         <ej-kanban id="Kanban" e-data-source.bind="KanbanData" e-key-field="Status" e-fields.bind="Field" e-filter-settings.bind="Filter">
-
             <ej-kanban-column e-header-text="Backlog" e-key="Open"></ej-kanban-column>
             <ej-kanban-column e-header-text="In Progress" e-key="InProgress"></ej-kanban-column>
             <ej-kanban-column e-header-text="Testing" e-key="Testing"></ej-kanban-column>
@@ -195,13 +190,12 @@ Filters allows to filter the collection of cards from `dataSource` which meets t
 
 {% highlight html %}
 
-    import './KanbanJsonData';
     export class Kanban {
-    constructor() {
-        this.KanbanData = KanbanData;
-        this.Field = { primaryKey: 'Id', content: 'Summary',swimlaneKey: 'Assignee'};
-        this.Filter = [{ text: 'Janet Issues', query: new ej.Query().where('Assignee', 'equal', 'Janet Leverling'), description: 'Displays issues which matches the assignee as Janet Leverling' }, { text: 'Testing Issues', query: new ej.Query().where('Status', 'equal', 'Testing'), description: 'Display the issues of Testing'}];
-    }
+        constructor() {
+            this.KanbanData = KanbanData;
+            this.Field = { primaryKey: 'Id', content: 'Summary',swimlaneKey: 'Assignee'};
+            this.Filter = [{ text: 'Janet Issues', query: new ej.Query().where('Assignee', 'equal', 'Janet Leverling'), description: 'Displays issues which matches the assignee as Janet Leverling' }, { text: 'Testing Issues', query: new ej.Query().where('Status', 'equal', 'Testing'), description: 'Display the issues of Testing'}];
+        }
     }
 
 {% endhighlight %} 
