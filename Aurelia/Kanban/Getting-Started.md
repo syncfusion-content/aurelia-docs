@@ -21,6 +21,8 @@ For quick start, we already configured a template project in GitHub repository [
 
 {% endhighlight %}
 
+## Control Initialization
+
 The below steps describes to create Syncfusion Aurelia Kanban component.
 
     Create kanban folder inside src/samples/ location.
