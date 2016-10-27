@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Syncfusion Essential HeatMap for Aurelia
 description: Getting started walk through to create your first Heat map.
-platform: js
+platform: Aurelia
 control: ejHeatMap
 keywords: HeatMap, js heatmap, Populating data
 ---
