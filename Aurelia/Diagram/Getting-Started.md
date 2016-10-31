@@ -12,15 +12,27 @@ This section explains briefly about how to create a **Diagram** control in your 
 
 ## Initialize Diagram
 
-Add a `template` container to render the Diagram.
+* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+* Create `diagram` folder inside `src/samples` location.
+* Create `diagram.html` file inside  `src/samples/diagram` folder and use the below code for rendering Diagram component 
 
 {% highlight html %}
 
 <!DOCTYPE html>
 <template>
      <ej-diagram e-width="100%" e-height="600px">
-    </ej-diagram>
+        </ej-diagram>
 </template>
+
+{% endhighlight %}
+
+* Create `diagram.js` file inside `src/samples/diagram` folder with below code snippet.
+
+{% highlight html %}
+
+export class Diagram {
+    constructor() {}
+    }
 
 {% endhighlight %}
 

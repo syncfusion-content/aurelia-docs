@@ -12,6 +12,9 @@ keywords: HeatMap, js heatmap, Populating data
 This section helps to get started of the HeatMap component for Aurelia. 
 
 ## Initialize HeatMap
+* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+* Create `heatmap` folder inside `src/samples` location.
+* Create `heatmap.html` file inside  `src/samples/heatmap` folder and use the below code for rendering HeatMap component 
 
 The HeatMap can be created from a HTML ‘div’ element. To create the HeatMap, you should call the 'ejHeatMap' jQuery plug-in function.
 
@@ -37,7 +40,9 @@ Populate product information in a collection called `ItemsSource`.
 
 Now data is ready, next we need to configure data source and map rows and columns to visualize. For that, need to prepare `ItemsMapping` add it in resource and set items source and mapping.
 Next we can configure color range for these values using color mapping and also configure items mapping based on items source.
- 
+
+* Create `heatmap.js` file inside `src/samples/heatmap` folder with below code snippet.
+
 {% highlight javascript %}
 
 export class BasicUse {
