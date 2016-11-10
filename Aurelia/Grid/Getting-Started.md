@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-Before we start with the Grid, please refer [this page](https://help.syncfusion.com/aurelia/overview#getting-started) page for general information regarding integrating Syncfusion widgetâ€™s.
+Before we start with the Grid, please refer [this page](https://help.syncfusion.com/aurelia/overview#getting-started) page for general information regarding integrating Syncfusion widget’s.
 
 For quick start, we already configured a template project in GitHub repository [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository). Run the below set of commands to clone the repository and install the required packages for Syncfusion Aurelia application.
 
@@ -127,7 +127,7 @@ Configure the `e-page-settings` bind value `this.pageSettings` in Aurelia view-m
 
 {% endhighlight %}
 
-N> Pager settings can be customized by using the `e-page-settings` property. When it is not given the default values for `pageSize` and `pageCount` are 12 and 8 respectively.
+N> Pager settings can be customized by using the `e-page-settings` property. When it is not given the default values for `e-page-size` and `e-page-count` are 12 and 8 respectively.
 
 
 ![](Getting-started_images/Getting-started_img3.png)
