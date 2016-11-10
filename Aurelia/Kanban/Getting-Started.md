@@ -27,7 +27,7 @@ The below steps describes to create Syncfusion Aurelia Kanban component.
 
     Create kanban folder inside src/samples/ location.
     Create kanban.html file inside src/samples/kanban folder and use the below code example to render the Kanban component.    
-    Properties can be defined with `e-` prefix and long text properties needs to separated by `-`. E.g. ( `e-kanban` , `e-header-text`).
+    Properties can be defined with `e-` prefix and long text properties needs to separated by `-`. E.g. ( `e-key` , `e-header-text`).
 
 {% highlight html %}
 
