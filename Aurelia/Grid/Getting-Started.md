@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-Before we start with the Grid, please refer [this page](https://help.syncfusion.com/aurelia/overview#getting-started) page for general information regarding integrating Syncfusion widgetâ€™s.
+Before we start with the Grid, please refer [this page](https://help.syncfusion.com/aurelia/overview#getting-started) page for general information regarding integrating Syncfusion widget’s.
 
 For quick start, we already configured a template project in GitHub repository [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository). Run the below set of commands to clone the repository and install the required packages for Syncfusion Aurelia application.
 
@@ -26,6 +26,7 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 
     Create grid folder inside src/samples/ location.
     Create grid.html file inside src/samples/grid folder and use the below code example to render the Grid component.
+    Properties can be defined with `e-` prefix and long text properties needs to separated by `-`. E.g. ( `e-field` , `e-header-text`).
 	
 {% highlight html %}
 
