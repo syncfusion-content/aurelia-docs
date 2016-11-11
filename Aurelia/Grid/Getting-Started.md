@@ -137,7 +137,7 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
 ## Enable Filtering
 
-[`Filtering`](/js/grid/filter) can be enabled by setting the `e-allow-filtering` to `true`. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using the `e-filter-setting` property.
+[`Filtering`](http://helpjs.syncfusion.com/js/grid/filter) can be enabled by setting the `e-allow-filtering` to `true`. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using the `e-filter-setting` property.
 
 
 {% highlight html %}
@@ -172,7 +172,7 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
 ## Enable Grouping
 
-[`Grouping`](/js/grid/grouping) can be enabled by setting the `e-allow-grouping` to `true`. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in the `e-group-settings` property.
+[`Grouping`](http://helpjs.syncfusion.com/js/grid/grouping) can be enabled by setting the `e-allow-grouping` to `true`. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in the `e-group-settings` property.
 
 
 {% highlight html %}
