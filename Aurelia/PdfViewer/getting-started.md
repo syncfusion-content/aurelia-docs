@@ -24,7 +24,7 @@ For quick start, we already configured a template project in GitHub repository [
 
 ### Control Initialization
 
-The below steps describes to create Syncfusion Aurelia PDF viewer component.
+The below steps describe about, how to create Syncfusion Aurelia PDF viewer component.
 
     Create `pdfviewer` folder inside `src/samples/` location.
     Create `pdfviewer.html` file inside `src/samples/pdfviewer` folder and use the below code example to render the PDF viewer component.
@@ -63,6 +63,6 @@ ej-pdf-viewer {
 
 {% endhighlight %}
 
-Now, the PDF viewer control is rendered with default PDF document, which used in the services.
+Now, the PDF viewer control will be rendered with the default PDF document, which is used in the service.
 
 ![](getting-started_images/pdfviewer.png)
