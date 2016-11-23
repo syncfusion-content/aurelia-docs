@@ -17,7 +17,7 @@ To get started Syncfusion Aurelia application refer [`this`](https://help.syncfu
 
 In this tutorial, you can learn how to create a simple Gantt chart, add tasks or subtasks, and set relationship between tasks during the design phase of a software project. The following screenshot displays the desired output after completing this tutorial,
 
-![](/Getting-Started_images/Getting-Started_img4.png)
+![](Getting-Started_images/Getting-Started_img4.png)
 
 ## Adding script references
 
@@ -109,7 +109,7 @@ Initialize the Gantt with data source created in the last step.
 
 A Gantt chart is created as shown in the following screen shot.
 
-![](/Getting-Started_images/Getting-Started_img5.png)
+![](Getting-Started_images/Getting-Started_img5.png)
 
 ## Enable Toolbar
 
@@ -162,7 +162,7 @@ export class DefaultFuntionalities {
 
 The following screen shot displays a Tool bar in Gantt chart control:
 
-![](/Getting-Started_images/Getting-Started_img6.png)
+![](Getting-Started_images/Getting-Started_img6.png)
 
 N>  Add, edit, delete, indent and outdent options are enabled when enabling the allowEditing, allowAdding, allowDelete, allowIndent and allowOutdent properties in the edit Options.
 
@@ -241,7 +241,7 @@ export class DefaultFuntionalities {
 
 The following screen shot displays a Gantt chart control with Enable Editing options.
 
-![](/Getting-Started_images/Getting-Started_img7.png)
+![](Getting-Started_images/Getting-Started_img7.png)
 
 N>  Both cellEditing and  normal  editing operations are performed through double-click action.
 
@@ -264,7 +264,7 @@ You can enable the context menu in Gantt, by setting the [`e-enable-context-menu
 
 The following screen shot displays Gantt chart in which Context menu option is enabled:
 
-![](/Getting-Started_images/Getting-Started_img8.png)
+![](Getting-Started_images/Getting-Started_img8.png)
 
 ## Enable Column Menu
 
@@ -285,7 +285,7 @@ You can enable the column menu in Gantt, by setting the [`e-show-column-chooser`
 
 The following screen shot displays Gantt chart in which column chooser option is enabled:
 
-![](/Getting-Started_images/Getting-Started_img11.png)
+![](Getting-Started_images/Getting-Started_img11.png)
 
 ## Provide tasks relationship
 
@@ -316,7 +316,7 @@ You can show the relationship in tasks, by using the [`e-predecessor-mapping`](h
 
 The following screenshot displays the relationship between tasks.
 
-![](/Getting-Started_images/Getting-Started_img9.png)
+![](Getting-Started_images/Getting-Started_img9.png)
 
 ## Provide Resources
 
@@ -366,7 +366,7 @@ export class DefaultFuntionalities {
 
 The following screenshot displays resource allocation for tasks in Gantt chart.
 
-![](/Getting-Started_images/Getting-Started_img10.png)
+![](Getting-Started_images/Getting-Started_img10.png)
 
 By following these steps, you have learned how to provide data source to Gantt chart, how to configure Gantt to set task relationships, assign resources for each task, and add toolbar with necessary buttons.
 
@@ -390,4 +390,4 @@ In Gantt, you can on or off weekends high lighting by setting the [`e-highlight-
 
 The following screen shot displays Gantt chart in which highlight weekends is disabled:
 
-![](/Getting-Started_images/Getting-Started_img12.png)
+![](Getting-Started_images/Getting-Started_img12.png)
