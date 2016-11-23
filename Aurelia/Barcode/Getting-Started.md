@@ -57,4 +57,5 @@ export class BasicUse {
 {% endhighlight %}
 
 The above code will create a Barcode as shown below.
+
 ![](getting-started-images/default.png)
