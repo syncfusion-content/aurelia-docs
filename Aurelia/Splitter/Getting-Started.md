@@ -17,8 +17,8 @@ From the following guidelines, you can create a Splitter, add Tree view in the S
 
 ## Create a Splitter Component
 
-*	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
-*	Create `splitter` folder inside `src/samples` location.
+* To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
+* Create `splitter` folder inside `src/samples` location.
 * Create `splitter.html` file inside `src/samples/splitter` folder and use the below code for rendering Splitter component.
 
 {% highlight html %}

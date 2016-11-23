@@ -14,8 +14,8 @@ This section helps you to understand the getting started of the Dialog component
 
 ## Create a Dialog Component
 
-*	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
-*	Create `dialog` folder inside `src/samples` location.
+* To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
+* Create `dialog` folder inside `src/samples` location.
 * Create `dialog.html` file inside `src/samples/dialog` folder and use the below code for rendering Dialog component.
 
 {% highlight html %}
