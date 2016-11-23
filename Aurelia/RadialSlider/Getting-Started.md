@@ -14,7 +14,7 @@ This section helps to get started of the RadialSlider component in an Aurelia ap
 
 ![](Getting_Started_images/getting-started-img1.png)
 
-## Create a RadialSlider Widget
+## Create a RadialSlider Component
 
 *	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
 *	Create `radialslider` folder inside `src/samples` location.

@@ -14,7 +14,7 @@ This section helps to understand the getting started of the RadialMenu component
 
 ![](Getting_Started_images/Getting-Started_img1.png)
 
-## Create a RadialMenu Widget
+## Create a RadialMenu Component
 
 *	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
 *	Create `radialmenu` folder inside `src/samples` location.

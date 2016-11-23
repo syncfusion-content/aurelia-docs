@@ -14,7 +14,7 @@ This section helps to get started of the Rotator component for Aurelia.
 
 ![](Getting_Started_images/getting-started1.png)
 
-## Create a Rotator Widget
+## Create a Rotator Component
 
 * To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
 * Create `rotator` folder inside `src/samples` location.

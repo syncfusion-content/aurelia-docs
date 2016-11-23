@@ -15,11 +15,11 @@ From the following guidelines, you can create a Splitter, add Tree view in the S
 
 ![](Getting_Started_images/Getting_Started_img1.png)
 
-## Create a Splitter Widget
+## Create a Splitter Component
 
 *	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
 *	Create `splitter` folder inside `src/samples` location.
-* Create `splitter.html` file inside `src/samples/splitter` folder and use the below code for rendering RadialMenu component.
+* Create `splitter.html` file inside `src/samples/splitter` folder and use the below code for rendering Splitter component.
 
 {% highlight html %}
 
@@ -38,7 +38,8 @@ From the following guidelines, you can create a Splitter, add Tree view in the S
 {% highlight javascript %}
 
     export class BasicUse {
-    constructor() {    
+    constructor() {  
+        this.properties = [{ paneSize: '50%' }, {}];  
     }
     }
 
