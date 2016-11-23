@@ -18,7 +18,7 @@ The **Essential Aurelia TreeGrid** has been designed to represent and edit the h
 
 This section explains how to create a TreeGrid widget in your application with hierarchical data source and enable sorting and editing. The following screenshot displays the output.
 
-![](/Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 * Create TreeGrid folder inside src/samples/ location.
 * Create treegrid.html file inside src/samples/TreeGrid folder and use the below code example to render the TreeGrid component.
@@ -74,7 +74,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 
-![](/Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 TreeGrid with empty datasource 
 {:.caption}
@@ -190,7 +190,7 @@ this.columns = [{ field: 'taskID', headerText: 'Task Id', width: '45'},
 
 TreeGrid widget is displayed as the output in the following screenshot.
 
-![](/Getting-Started_images/Getting-Started_img3.png)
+![](Getting-Started_images/Getting-Started_img3.png)
 
 ### Enable Sorting
 
@@ -215,7 +215,7 @@ Enable the multicolumn sorting in TreeGrid by setting [`e-allow-multi-sorting`](
 
 {% endhighlight %}
 
-![](/Getting-Started_images/Getting-Started_img4.png)
+![](Getting-Started_images/Getting-Started_img4.png)
 
 ### Enable Editing
 
@@ -295,5 +295,5 @@ export class DefaultSample {
 
 The output of the DateTimePicker editor in TreeGrid control is as follows.
 
-![](/Getting-Started_images/Getting-Started_img5.png)
+![](Getting-Started_images/Getting-Started_img5.png)
 
