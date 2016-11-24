@@ -30,7 +30,7 @@ For quick start, we already configured a template project in GitHub repository [
 The below steps describes to create Syncfusion Aurelia Chart component.
 
     Create Chart folder inside src/samples/ location.
-    Create Chart.html file inside src/samples/Accordion folder and use the below code example to render the Chart component.
+    Create Chart.html file inside src/samples/Chart folder and use the below code example to render the Chart component.
 
 ## Adding script reference
 

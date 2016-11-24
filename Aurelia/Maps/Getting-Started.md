@@ -30,7 +30,7 @@ For quick start, we already configured a template project in GitHub repository [
 The below steps describes to create Syncfusion Aurelia Map component.
 
     Create Map folder inside src/samples/ location.
-    Create Map.html file inside src/samples/Accordion folder and use the below code example to render the Map component.
+    Create Map.html file inside src/samples/Map folder and use the below code example to render the Map component.
 
 You can configure an **Essential Aurelia** Map in simple steps. In this example, you can learn how to configure USA population map with customized appearance and tooltip.
 

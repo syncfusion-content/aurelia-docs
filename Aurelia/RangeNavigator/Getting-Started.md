@@ -36,7 +36,7 @@ For quick start, we already configured a template project in GitHub repository [
 The below steps describes to create Syncfusion Aurelia RangeNavigator component.
 
     Create RangeNavigator folder inside src/samples/ location.
-    Create RangeNavigator.html file inside src/samples/Accordion folder and use the below code example to render the RangeNavigator component.
+    Create RangeNavigator.html file inside src/samples/RangeNavigator folder and use the below code example to render the RangeNavigator component.
 
 ## Adding script reference
 

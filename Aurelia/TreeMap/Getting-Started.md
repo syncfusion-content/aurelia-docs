@@ -59,7 +59,7 @@ For quick start, we already configured a template project in GitHub repository [
 The below steps describes to create Syncfusion Aurelia TreeMap component.
 
     Create TreeMap folder inside src/samples/ location.
-    Create TreeMap.html file inside src/samples/Accordion folder and use the below code example to render the TreeMap component.
+    Create TreeMap.html file inside src/samples/TreeMap folder and use the below code example to render the TreeMap component.
 
 
 Create a **&lt;div&gt;** tag with a specific id and set the height and width to determine the **TreeMap** size to be rendered.
