@@ -348,8 +348,6 @@ You need to add a title to the chart to provide quick information to the user ab
 
 {% endhighlight %}
 
-{% endhighlight %}
-
 ![](Getting-Started_images/Getting-Started_img8.png)
 
 
