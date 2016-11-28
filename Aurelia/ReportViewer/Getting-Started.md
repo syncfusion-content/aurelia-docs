@@ -3,7 +3,7 @@ title: Getting Started for Aurelia ReportViewer
 description: getting started
 platform: Aurelia
 control: ReportViewer
-documentation: ug 
+documentation: ug
 keywords: ejReportViewer, ReportViewer, js ReportViewer 
 ---
 
@@ -24,14 +24,15 @@ For quick start, we already configured a template project in GitHub repository [
 
 ## Create your first ReportViewer in Aurelia
 
-This section covers the information that you need to know to populate a simple ReportViewer.
+This section explains briefly about how to create a ReportViewer in your web application with Aurelia.
 
 ### Control Initialization
 
 The below steps describes to create Syncfusion Aurelia ReportViewer component.
 
-    Create `reportviewer` folder inside `src/samples/` location.
-    Create `reportviewer.html` file inside `src/samples/reportviewer` folder and use the below code example to render the ReportViewer component.
+    Create `reportviewer` folder inside `src/samples/` location.    
+    
+1.Create `reportviewer.html` file inside `src/samples/reportviewer` folder and use the below code example to render the ReportViewer component.   
  
 {% highlight html %}
 
@@ -44,9 +45,9 @@ The below steps describes to create Syncfusion Aurelia ReportViewer component.
 
 {% endhighlight %}
 
-N> Default RDL Report will be rendered, which is used in the online service.
+N> Default RDL Report will be rendered, which is used in the online service.You can obtain sample rdl/rdlc files from Syncfusion installed location (%userprofile%\AppData\Local\Syncfusion\EssentialStudio\{{ site.releaseversion }}\Common\Data\ejReportTemplate).
 
-* Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
+2.Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
 
 {% highlight js %}
 
@@ -58,7 +59,7 @@ export class RDLSample {
 
 {% endhighlight %}
 
-* Create `reportviewer.css` file inside `src/samples/reportviewer` folder with below code snippet.
+3.Create `reportviewer.css` file inside `src/samples/reportviewer` folder with below code snippet.
 
 {% highlight css %}
 
@@ -82,7 +83,7 @@ ReportViewer with Grouping Aggregate Report
 
 ReportViewer supports to load RDL/RDLC files from SSRS Server. The following steps help you to load reports from SSRS Server.
 
-1. Create `reportviewer.html` file inside `src/samples/reportviewer` folder and Set the `reportPath` from SSRS and SSRS `reportServerUrl` in the ReportViewer properties.   
+1.Create `reportviewer.html` file inside `src/samples/reportviewer` folder and Set the `reportPath` from SSRS and SSRS `reportServerUrl` in the ReportViewer properties.   
  
 {% highlight html %}
 
@@ -97,7 +98,7 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
 
 N> The credential information for Report Server is provided in online service. 
 
-2. Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
+2.Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
 
 {% highlight js %}
 
@@ -109,7 +110,7 @@ export class TerritorySales {
 
 {% endhighlight %}
 
-3. Create `reportviewer.css` file inside `src/samples/reportviewer` folder with below code snippet.
+3.Create `reportviewer.css` file inside `src/samples/reportviewer` folder with below code snippet.
 
 {% highlight css %}
 
@@ -120,7 +121,7 @@ ej-report-viewer{
 
 {% endhighlight %}
 
-4. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
+4.Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
    ![](Getting-Started_images/Getting-Started_img2.png) 
    
@@ -131,7 +132,7 @@ ej-report-viewer{
 
 The ReportViewer has data binding support to visualize the RDLC reports. The following code example helps you to bind data to ReportViewer.
 
-1. Create `reportviewer.html` file inside `src/samples/reportviewer` folder and assign the RDLC report path to ReportViewer’s `reportPath` property and specify the `processingMode` as local in the ReportViewer properties.   
+1.Create `reportviewer.html` file inside `src/samples/reportviewer` folder and assign the RDLC report path to ReportViewer’s `reportPath` property and specify the `processingMode` as local in the ReportViewer properties.   
  
 {% highlight html %}
 
@@ -144,9 +145,9 @@ The ReportViewer has data binding support to visualize the RDLC reports. The fol
 
 {% endhighlight %}
 
-N> Default RDLC Report will be rendered, which is used in the online service.
+N> Default RDLC Report will be rendered, which is used in the online service. You can obtain sample rdl/rdlc files from Syncfusion installed location (%userprofile%\AppData\Local\Syncfusion\EssentialStudio\{{ site.releaseversion }}\Common\Data\ejReportTemplate).
 
-2. Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
+2.Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
 
 {% highlight js %}
 
@@ -170,7 +171,7 @@ export class Areachart {
 
 {% endhighlight %}
 
-3. Create `reportviewer.css` file inside `src/samples/reportviewer` folder with below code snippet.
+3.Create `reportviewer.css` file inside `src/samples/reportviewer` folder with below code snippet.
 
 {% highlight css %}
 
@@ -181,7 +182,7 @@ ej-report-viewer{
 
 {% endhighlight %}
 
-4. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
+4.Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
    ![](Getting-Started_images/Getting-Started_img3.png) 
    
