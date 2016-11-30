@@ -103,6 +103,8 @@ The following steps explain the showError property in the MaskEdit control.
 
 {% endhighlight %}
 
+{% highlight javascript %}
+
 export class Default {
     constructor() {
       this.mvalue = '123456';

@@ -4,7 +4,7 @@ description: Getting Started for  Accordion
 platform: Aurelia
 control: Accordion
 documentation: Ug
-keywords:ejaccordion, js accordion, accordion
+keywords: ejaccordion, js accordion, accordion
 ---
 # Getting started
 

@@ -2,10 +2,10 @@
 layout: post
 title: Getting-Started for Menu
 description: getting started for Menu
-platform:Aurelia
+platform: Aurelia
 control: Menu
 documentation: ug
-keywords:ejmenu, js menu, menu
+keywords: ejmenu, js menu, menu
 ---
 
 # Getting Started 
