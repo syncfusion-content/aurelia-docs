@@ -2,7 +2,7 @@
 layout: post
 title: Getting-Started for Upload box
 description: getting started for Upload box
-platform:Aurelia
+platform: Aurelia
 control: Uploadbox
 documentation: ug
 keywords:Uploadbox,js uploadbox,ejuploadbox

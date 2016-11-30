@@ -2,7 +2,7 @@
 layout: post
 title: Overview
 description: overview
-platform:Aurelia
+platform: Aurelia
 control: Uploadbox
 documentation: ug
 ---
