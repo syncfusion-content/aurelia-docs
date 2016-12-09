@@ -11,37 +11,48 @@ This section explains you the steps required to populate the Spreadsheet with da
 
 ## Initialize Spreadsheet
 
-* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+To get some general information about Syncfusion Aurelia widgets integration refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started) link.
+
+Run the below set of commands to clone the [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository) and install the required packages for Syncfusion Aurelia application
+
+{% highlight html %}
+
+> git clone "https://github.com/aurelia-ui-toolkits/syncfusion-template-repository"
+> cd syncfusion-template-repository
+> npm install
+> jspm install
+
+{% endhighlight %}
+
+The below steps helps to create Syncfusion Aurelia Spreadsheet component,
+
 * Create `spreadsheet` folder inside `src/samples` location.
-* Create `spreadsheet.html` file inside  `src/samples/spreadsheet` folder and use the below code for rendering Spreadsheet component 
+* Create `spreadsheet.html` file inside  `src/samples/spreadsheet` folder and use the below code for rendering Spreadsheet component. 
+* Spreadsheet component is named with 'ej-' prefix and properties in this component is named with 'e-' prefix. E.g.: (ej-spreadsheet ,e-allow-conditional-formats)
 
 {% highlight html %}
 
 <template>	
-	<div>
-			<ej-spreadsheet id="Spreadsheet"></ej-spreadsheet>
-	</div>
+  <div>
+    <ej-spreadsheet id="Spreadsheet"></ej-spreadsheet>
+  </div>
 </template>
 
 {% endhighlight %}
 
 * Create `spreadsheet.js` file inside `src/samples/spreadsheet` folder with below code snippet.
 
-{% highlight html %}
+{% highlight javascript %}
 
 export class Spreadsheet {
-  
-        constructor() {}
-
+    constructor() {}
 }
 
 {% endhighlight %}
 
-* Now, we are going to configure the navigation for created Spreadsheet sample in `src/app.js` file
+* Now, we are going to configure the navigation for created Spreadsheet sample in `src/app.js` file
 
-
-{% highlight html %}
-
+{% highlight javascript %}
 
 export class App {
   configureRouter(config, router) {
@@ -50,14 +61,19 @@ export class App {
       { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',                              nav: true, title: 'Welcome' },
       { route: 'child-router',  name: 'child-router', moduleId: 'child-router',                         nav: true, title: 'Child Router' },
       { route: 'button',        name: 'button',       moduleId: 'samples/button/button',                nav: true, title: 'Button' },
-	  { route: 'spreadsheet',   name: 'spreadsheet',  moduleId: 'samples/spreadsheet/spreadsheet',      nav: true, title: 'Spreadsheet' }
-	  
+      { route: 'spreadsheet',   name: 'spreadsheet',  moduleId: 'samples/spreadsheet/spreadsheet',      nav: true, title: 'Spreadsheet' }
     ]);
-
     this.router = router;
-}
+  }
 }
 
+{% endhighlight %}
+
+* To run the application execute the following command, 
+
+{% highlight javascript %}
+
+gulp watch
 
 {% endhighlight %}
 
@@ -67,28 +83,39 @@ Now, the Spreadsheet is rendered with default row and column count.
 
 ## Populate Spreadsheet with data
 
-Now, this section explains how to populate JSON data to the Spreadsheet. You can set`dataSource` attribute in `ej-sheet` tag to populate JSON data in Spreadsheet.
+Now, this section explains how to populate JSON data to the Spreadsheet. 
+
+Datasource for Spreadsheet can be set using `e-range-settings.bind` property which has an instance `this.range` in constructor.
 
 {% highlight html %}
 
 <template>
-	<div>
-			<ej-spreadsheet id="Spreadsheet">
-			    <ej-sheet e-range-settings.bind = "range"></ej-sheet>
-			</ej-spreadsheet>
-	</div>
+  <div>
+    <ej-spreadsheet id="Spreadsheet">
+      <ej-sheet e-range-settings.bind = "range"></ej-sheet>
+    </ej-spreadsheet>
+  </div>
 </template>
 
 {% endhighlight %}
 
+{% highlight javascript %}
 
-{% highlight html %}
-
-import '../scripts/xljsondata.js';
 export class Spreadsheet {
   constructor() {
-    this.range = [{ dataSource: window.defaultData }];
-  }
+    this.range = [{ dataSource: [
+      { 'Item Name': 'Casual Shoes', Date: '02/14/2014', Time: '11:34:32 AM', Quantity: 10, Price: 20, Amount: 200, Discount: 1, Profit: 10 },
+      { 'Item Name': 'Sports Shoes', Date: '06/11/2014', Time: '05:56:32 AM', Quantity: 20, Price: 30, Amount: 600, Discount: 5, Profit: 50 },
+      { 'Item Name': 'Formal Shoes', Date: '07/27/2014', Time: '03:32:44 AM', Quantity: 20, Price: 15, Amount: 300, Discount: 7, Profit: 27 },
+      { 'Item Name': 'Sandals & Floaters', Date: '11/21/2014', Time: '06:23:54 AM', Quantity: 15, Price: 20, Amount: 300, Discount: 11, Profit: 67 },
+      { 'Item Name': 'Flip- Flops & Slippers', Date: '06/23/2014', Time: '12:43:59 AM', Quantity: 30, Price: 10, Amount: 300, Discount: 10, Profit: 70 },
+      { 'Item Name': 'Sneakers', Date: '07/22/2014', Time: '10:55:53 AM', Quantity: 40, Price: 20, Amount: 800, Discount: 13, Profit: 66 },
+      { 'Item Name': 'Running Shoes', Date: '02/04/2014', Time: '03:44:34 AM', Quantity: 20, Price: 10, Amount: 200, Discount: 3, Profit: 14 },
+      { 'Item Name': 'Loafers', Date: '11/30/2014', Time: '03:12:52 AM', Quantity: 31, Price: 10, Amount: 310, Discount: 6, Profit: 29 },
+      { 'Item Name': 'Cricket Shoes', Date: '07/09/2014', Time: '11:32:14 AM', Quantity: 41, Price: 30, Amount: 1210, Discount: 12, Profit: 166 },
+      { 'Item Name': 'T-Shirts', Date: '10/31/2014', Time: '12:01:44 AM', Quantity: 50, Price: 10, Amount: 500, Discount: 9, Profit: 55 }]
+    }];
+  }    
 }
 
 {% endhighlight %}
@@ -97,30 +124,40 @@ export class Spreadsheet {
 
 ## Apply Conditional Formatting
 
-Conditional formatting helps you to apply formats to a cell or range with certain colour based on the cells values. You can use `e-allow-conditional-formats` attribute to enable/disable Conditional formats.
+Conditional formatting helps you to apply formats to a cell or range with certain colour based on the cells values. You can use `e-allow-conditional-formats` property to enable/disable Conditional formats.
 
-To apply conditional formats for a range use `e-c-format-rule` attribute. The following code example illustrates this,
+To apply conditional formats for a range use `e-c-format-rule.bind` property which has an instance `this.format` in constructor. The following code example illustrates this,
 
 {% highlight html %}
 
 <template>	
-	<div>
-			<ej-spreadsheet id="Spreadsheet">
-			    <ej-sheet e-range-settings.bind = "range" e-c-format-rule.bind="format"></ej-sheet>
-		    </ej-spreadsheet>
-	</div>
+  <div>
+    <ej-spreadsheet id="Spreadsheet">
+      <ej-sheet e-range-settings.bind = "range" e-c-format-rule.bind="format"></ej-sheet>
+    </ej-spreadsheet>
+  </div>
 </template>
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight javascript %}
 
-import '../scripts/xljsondata.js';
-export class DefaultFunctionalities {
-    constructor() {
-        this.range = [{ dataSource: window.defaultData }];
-        this.format = [{ action: ej.Spreadsheet.CFormatRule.GreaterThan, inputs: ["10"], color: ej.Spreadsheet.CFormatHighlightColor.RedFill, range: "D2:D8" }];
-        }
+export class Spreadsheet {
+  constructor() {
+    this.range = [{ dataSource: [
+      { 'Item Name': 'Casual Shoes', Date: '02/14/2014', Time: '11:34:32 AM', Quantity: 10, Price: 20, Amount: 200, Discount: 1, Profit: 10 },
+      { 'Item Name': 'Sports Shoes', Date: '06/11/2014', Time: '05:56:32 AM', Quantity: 20, Price: 30, Amount: 600, Discount: 5, Profit: 50 },
+      { 'Item Name': 'Formal Shoes', Date: '07/27/2014', Time: '03:32:44 AM', Quantity: 20, Price: 15, Amount: 300, Discount: 7, Profit: 27 },
+      { 'Item Name': 'Sandals & Floaters', Date: '11/21/2014', Time: '06:23:54 AM', Quantity: 15, Price: 20, Amount: 300, Discount: 11, Profit: 67 },
+      { 'Item Name': 'Flip- Flops & Slippers', Date: '06/23/2014', Time: '12:43:59 AM', Quantity: 30, Price: 10, Amount: 300, Discount: 10, Profit: 70 },
+      { 'Item Name': 'Sneakers', Date: '07/22/2014', Time: '10:55:53 AM', Quantity: 40, Price: 20, Amount: 800, Discount: 13, Profit: 66 },
+      { 'Item Name': 'Running Shoes', Date: '02/04/2014', Time: '03:44:34 AM', Quantity: 20, Price: 10, Amount: 200, Discount: 3, Profit: 14 },
+      { 'Item Name': 'Loafers', Date: '11/30/2014', Time: '03:12:52 AM', Quantity: 31, Price: 10, Amount: 310, Discount: 6, Profit: 29 },
+      { 'Item Name': 'Cricket Shoes', Date: '07/09/2014', Time: '11:32:14 AM', Quantity: 41, Price: 30, Amount: 1210, Discount: 12, Profit: 166 },
+      { 'Item Name': 'T-Shirts', Date: '10/31/2014', Time: '12:01:44 AM', Quantity: 50, Price: 10, Amount: 500, Discount: 9, Profit: 55 }]
+    }];
+    this.format = [{ action: ej.Spreadsheet.CFormatRule.GreaterThan, inputs: ["10"], color: ej.Spreadsheet.CFormatHighlightColor.RedFill, range: "D2:D8" }];
+  }
 }
 
 {% endhighlight %}
@@ -129,24 +166,25 @@ export class DefaultFunctionalities {
 
 ## Export Spreadsheet as Excel File
 
-The Spreadsheet can save its data, style, format into an excel file. To enable save option in Spreadsheet set `e-allow-exporting` option in `e-export-settings` as `true`. Since Spreadsheet uses server side helper to save documents set `excelUrl` in `e-export-settings` option. The following code example illustrates this,
+The Spreadsheet can save its data, style, format into an excel file. To perform save operation `allowExporting` must be enabled in `e-export-settings.bind` property.
+
+Now the data in Spreadsheet can be saved by providing `excelUrl` in `e-export-settings.bind` property which has an instance `this.export` in constructor.
 
 {% highlight html %}
 
 <template>
-	<div>
-			<ej-spreadsheet id="Spreadsheet" e-export-settings.bind = "export"></ej-spreadsheet>
-	</div>
+  <div>
+    <ej-spreadsheet id="Spreadsheet" e-export-settings.bind = "export"></ej-spreadsheet>
+  </div>
 </template>
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight javascript %}
 
-import '../scripts/xljsondata.js';
 export class Spreadsheet {
   constructor() {
-	  this.export = { excelUrl: 'http://js.syncfusion.com/demos/ejservices/api/JSXLExport/ExportToExcel'};
+    this.export = { excelUrl: 'http://js.syncfusion.com/demos/ejservices/api/JSXLExport/ExportToExcel'};
   }
 }
 
