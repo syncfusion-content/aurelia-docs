@@ -13,7 +13,7 @@ This section explains you the steps required to populate the Spreadsheet with da
 
 To get some general information about Syncfusion Aurelia widgets integration refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started) link.
 
-Run the below set of commands to clone the [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository) and install the required packages for Syncfusion Aurelia application
+For quick start, we already configured a template project in GitHub repository [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository). Run the below set of commands to clone the repository and install the required packages for Syncfusion Aurelia application.
 
 {% highlight html %}
 
@@ -28,7 +28,7 @@ The below steps helps to create Syncfusion Aurelia Spreadsheet component,
 
 * Create `spreadsheet` folder inside `src/samples` location.
 * Create `spreadsheet.html` file inside  `src/samples/spreadsheet` folder and use the below code for rendering Spreadsheet component. 
-* Spreadsheet component is named with 'ej-' prefix and properties in this component is named with 'e-' prefix. E.g.: (ej-spreadsheet ,e-allow-conditional-formats)
+* Spreadsheet component is named with 'ej-' prefix and properties in this component is named with 'e-' prefix. E.g. (ej-spreadsheet, e-allow-conditional-formats).
 
 {% highlight html %}
 
@@ -85,7 +85,7 @@ Now, the Spreadsheet is rendered with default row and column count.
 
 Now, this section explains how to populate JSON data to the Spreadsheet. 
 
-Datasource for Spreadsheet can be set using `e-range-settings.bind` property which has an instance `this.range` in constructor.
+To set data source to Spreadsheet, the `e-range-settings.bind` property is assigned with an instance `this.range` which is specified in constructor.
 
 {% highlight html %}
 
@@ -126,7 +126,7 @@ export class Spreadsheet {
 
 Conditional formatting helps you to apply formats to a cell or range with certain colour based on the cells values. You can use `e-allow-conditional-formats` property to enable/disable Conditional formats.
 
-To apply conditional formats for a range use `e-c-format-rule.bind` property which has an instance `this.format` in constructor. The following code example illustrates this,
+To apply conditional formats for a range, the `e-c-format-rule.bind` property is assigned with an instance `this.format` which is specified in constructor. The following code example illustrates this,
 
 {% highlight html %}
 
@@ -168,7 +168,7 @@ export class Spreadsheet {
 
 The Spreadsheet can save its data, style, format into an excel file. To perform save operation `allowExporting` must be enabled in `e-export-settings.bind` property.
 
-Now the data in Spreadsheet can be saved by providing `excelUrl` in `e-export-settings.bind` property which has an instance `this.export` in constructor.
+Now the data in Spreadsheet can be saved by providing `excelUrl` in `e-export-settings.bind` property which is assigned with an instance `this.export` in constructor.
 
 {% highlight html %}
 
