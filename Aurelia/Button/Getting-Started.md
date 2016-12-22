@@ -33,10 +33,14 @@ Create an HTML file (here Button.html file) inside newly created folder and use 
 
 {% highlight HTML %}
 
-<h3>Basic Syncfusion JavaScript Button API sample</h3>
-
-<button id="button" ej-button>Button</button>
-
+<table>
+    <tr>
+        <td >My First Button</td>
+        <td>
+            <button id="button" ej-button>Button</button>
+        </td>
+    </tr>
+</table>
 
 {% endhighlight %}
 
@@ -75,8 +79,7 @@ Execute the following command to run the application
 {% endhighlight %}
 
 Execution of above code will render the following output.
-
-![](getting-started_images/default.png)   
+  
 
 ## Configuring Button control
 
@@ -89,7 +92,7 @@ To modify the size of the Button and rename the button, add the following snippe
 <template>    
 <section>
     <h3>Basic Syncfusion JavaScript Button API sample</h3>
-	<input id="button" ej-button="e-size.bind:'Large';e-text.bind:'Click here'"></input>        
+	<input id="button" ej-button="e-text.bind:'Button'"></input>        
 </section>
 </template>
 
@@ -97,4 +100,4 @@ To modify the size of the Button and rename the button, add the following snippe
 
 The following screenshot illustrates the Button control with text and size properties.
  
-![](Getting-Started_images/configuration.png)
+![](Getting-Started_images/Getting-Started_img1.jpg)
