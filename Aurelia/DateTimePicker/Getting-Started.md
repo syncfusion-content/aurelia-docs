@@ -85,7 +85,7 @@ Check Below code example to know about two way binding
 
 <input id="datepick" ej-date-picker="e-value.two-way:dateValue;"  ></input>      
 
-{% enhighlight %}
+{% endhighlight%}
 
 In script section set the Model values,
 
@@ -97,7 +97,7 @@ export class DateTimePicker {
     }
 }
 
-{% enhighlight %}
+{% endhighlight%}
 
 The following screenshot illustrates the output of above code.
 
