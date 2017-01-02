@@ -159,7 +159,7 @@ Check Below code example to know about two way binding
             </table>
         </div>
 
-{% enhighlight %}
+{% endhighlight %}
 
 In script section set the Model values,
 
@@ -172,7 +172,7 @@ export class RadioButton {
     }
 }
 
-{% enhighlight %}
+{% endhighlight %}
 
 The following screenshot illustrates the output of above code.
 
