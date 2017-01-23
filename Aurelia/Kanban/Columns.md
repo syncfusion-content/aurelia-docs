@@ -496,7 +496,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img6.png)
 
-##Items Count
+## Items Count
 
 You can show total cards count in each column's header using the property `e-enable-total-count` and the default value is `false`.
 
