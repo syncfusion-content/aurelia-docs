@@ -4,7 +4,7 @@ title:  Globalization and Localization
 description: Globalization and Localization
 documentation: ug
 platform: Aurelia
-keywords: globalization and localization,kanban globalization and localizationards
+keywords: globalization and localization,kanban globalization and localization
 ---
 
 # Localization
