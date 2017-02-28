@@ -3,7 +3,7 @@ layout: post
 title:  Ribbon - Getting-Started
 description: Getting-Started
 documentation: ug
-platform: js
+platform: Aurelia
 keywords: getting started,ribbon getting started
 ---
 
