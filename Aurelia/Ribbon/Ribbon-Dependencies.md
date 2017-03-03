@@ -52,6 +52,14 @@ documentation: ug
          Should be referred when using <i><b>Ribbon</b></i><b> </b>control.
       </td>
    </tr>
+    <tr>
+      <td>
+         ej.waitingpopup.min.js
+      </td>
+      <td>
+         This file is used to render waiting popup when on-demand functionality is enabled in <i><b>Ribbon</b></i><b> </b>control.
+      </td>
+   </tr>
    <tr>
       <td>
          ej.menu.min.js
