@@ -46,8 +46,8 @@ The below steps describes to create Syncfusion Aurelia FileExplorer component.
 
 export class Default {
     constructor() {
-      this.path = 'http://mvc.syncfusion.com/ODataServices/FileBrowser/';
-      this.ajaxAction = 'http://mvc.syncfusion.com/OdataServices/fileExplorer/fileoperation/doJSONAction';
+      this.path = 'http://js.syncfusion.com/demos/ejServices/Content/FileBrowser/';
+      this.ajaxAction = "http://js.syncfusion.com/demos/ejServices/api/FileExplorer/FileOperations",;
     }
 }
 
@@ -106,8 +106,8 @@ The FileExplorer has the resize support through the resize handle which appears 
 
 export class Default {
     constructor() {
-      this.path = 'http://mvc.syncfusion.com/ODataServices/FileBrowser/';
-      this.ajaxAction = 'http://mvc.syncfusion.com/OdataServices/fileExplorer/fileoperation/doJSONAction';
+      this.path = 'http://js.syncfusion.com/demos/ejServices/Content/FileBrowser/';
+      this.ajaxAction = "http://js.syncfusion.com/demos/ejServices/api/FileExplorer/FileOperations",;
     }
 }
 
