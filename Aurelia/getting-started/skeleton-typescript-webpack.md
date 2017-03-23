@@ -13,10 +13,6 @@ keywords: Aurelia,Syncfusion,aurelia-syncfusion-bridge,Aurelia skeleton-navigati
 
 The [aurelia-syncfusion-bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge) plugin brings the [Syncfusion Essential Studio for JavaScript Widgets](https://github.com/syncfusion/JavaScript-Widgets) into Aurelia world. So, by configuring aurelia-syncfusion-bridge plugin with Aurelia skeleton-navigation-typescript-webpack, we can use Syncfusion components in Aurelia application.
 
-The upcoming sections will describe about the installation and configuration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-webpack.
-
-N> For quick start, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-webpack. Those who are wish to directly getting started with Syncfusion Aurelia components navigate to here.
-
 ## Synopsis
 
 * [Prerequisites](#prerequisites)
@@ -30,6 +26,18 @@ N> For quick start, we have already configured aurelia-syncfusion-bridge with Au
 ## Prerequisites
 
 *	[NodeJS](https://nodejs.org/en/) version >=4.0
+
+In the upcoming sections, we will discuss about the integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-webpack. 
+
+To quick start with Syncfusion Aurelia components, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-webpack. Those who are wish to directly getting started with Syncfusion Aurelia components execute the below commands and navigate to [here](#getting-started).
+
+{% highlight html %}
+
+> git clone https://github.com/aurelia-ui-toolkits/syncfusion-templates-repository.git
+> cd syncfusion-templates-repository/skeleton-typescript-webpack
+> npm install
+
+{% endhighlight %}
 
 ## Aurelia skeleton-navigation-typescript-webpack
 
