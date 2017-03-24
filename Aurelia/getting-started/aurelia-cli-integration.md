@@ -302,7 +302,7 @@ export class App {
 
 ## Running the Application
 
-To run the app, execute the following command and browse to http://localhost:9000 to see the application.
+To run the app, execute the following command and browse to [http://localhost:9000](http://localhost:9000) to see the application.
 
 {% highlight html %}
 
