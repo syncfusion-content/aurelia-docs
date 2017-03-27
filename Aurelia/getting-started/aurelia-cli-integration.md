@@ -21,6 +21,7 @@ The upcoming sections will describe about the installation and configuration of 
 * [Aurelia CLI project](#aurelia-cli-project)
 * [Installation of syncfusion-javascript Widgets and aurelia-syncfusion-bridge](#installation-of-syncfusion-javascript-widgets-and-aurelia-syncfusion-bridge)
 * [Aurelia CLI configuration](#aurelia-cli-configuration)
+* [Bridge registration](#bridge-registration)
 * [Getting started](#getting-started)
 * [Running the Application](#running-the-application)
 
@@ -34,7 +35,7 @@ In this section, we will discuss about the creation of [Aurelia CLI](http://aure
 
 * To create a new Aurelia project, we should run the following command which will show some configuration options to customize your project.
 
-{% highlight html %}
+{% highlight bash %}
 
 > npm install aurelia-cli -g
 > au new
@@ -126,7 +127,7 @@ E:\>
 
 Install syncfusion-javascript Widgets and aurelia-syncfusion-bridge by executing the following commands.
 
-{% highlight html %}
+{% highlight bash %}
 
 > npm install syncfusion-javascript --save
 > npm install aurelia-syncfusion-bridge --save
@@ -304,7 +305,7 @@ export class App {
 
 To run the app, execute the following command and browse to [http://localhost:9000](http://localhost:9000) to see the application.
 
-{% highlight html %}
+{% highlight bash %}
 
 > au run –watch
 

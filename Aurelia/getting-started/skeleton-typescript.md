@@ -32,7 +32,7 @@ In the upcoming sections, we will discuss about the integration of aurelia-syncf
 
 To quick start with Syncfusion Aurelia components, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript. Those who are wish to directly getting started with Syncfusion Aurelia components execute the below commands and navigate to [here](#getting-started).
 
-{% highlight html %}
+{% highlight bash %}
 
 > git clone https://github.com/aurelia-ui-toolkits/syncfusion-templates-repository.git
 > cd syncfusion-templates-repository/skeleton-typescript
@@ -48,7 +48,7 @@ In this section, we will discuss about the installation of Aurelia project depen
 *	Download Aurelia skeleton-navigation from this [link](https://github.com/aurelia/skeleton-navigation/archive/1.1.2.zip) and extract it.
 *	From the extracted folder, execute the following commands to install project dependencies.
 
-{% highlight html %}
+{% highlight bash %}
 
 > cd skeleton-typescript
 > npm install
@@ -73,7 +73,7 @@ N> While running the application, we may encounter issues like `error TS***: Dup
 
 Install syncfusion-javascript Widgets and aurelia-syncfusion-bridge by executing the following commands.
 
-{% highlight html %}
+{% highlight bash %}
 
 > jspm install npm:syncfusion-javascript
 > jspm install npm:aurelia-syncfusion-bridge css
@@ -205,7 +205,7 @@ export class App {
 
 To run the app, execute the following command and browse to [http://localhost:9000](http://localhost:9000) to see the application.
 
-{% highlight html %}
+{% highlight bash %}
 
 > gulp watch
 

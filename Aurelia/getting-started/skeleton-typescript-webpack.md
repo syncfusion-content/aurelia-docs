@@ -31,7 +31,7 @@ In the upcoming sections, we will discuss about the integration of aurelia-syncf
 
 To quick start with Syncfusion Aurelia components, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-webpack. Those who are wish to directly getting started with Syncfusion Aurelia components execute the below commands and navigate to [here](#getting-started).
 
-{% highlight html %}
+{% highlight bash %}
 
 > git clone https://github.com/aurelia-ui-toolkits/syncfusion-templates-repository.git
 > cd syncfusion-templates-repository/skeleton-typescript-webpack
@@ -46,7 +46,7 @@ In this section, we will discuss about the installation of Aurelia project depen
 * Download Aurelia skeleton-navigation from this [link](https://github.com/aurelia/skeleton-navigation/archive/1.1.2.zip) and extract it.
 * From the extracted folder, execute the following commands to install project dependencies.
 
-{% highlight html %}
+{% highlight bash %}
 
 > cd skeleton-typescript-webpack
 > npm install
@@ -75,7 +75,7 @@ And, remove the following reference path from `custom_typings/fetch.d.ts` file
 
 Install syncfusion-javascript Widgets and aurelia-syncfusion-bridge by executing the following commands.
 
-{% highlight html %}
+{% highlight bash %}
 
 > npm install syncfusion-javascript --save
 > npm install aurelia-syncfusion-bridge --save
@@ -251,7 +251,7 @@ export class App {
 
 To run the app, execute the following command and browse to [http://localhost:9000](http://localhost:9000) to see the application.
 
-{% highlight html %}
+{% highlight bash %}
 
 > npm start
 
@@ -259,7 +259,7 @@ To run the app, execute the following command and browse to [http://localhost:90
 
 N> We need to execute the below command to overcome the issue `You may need an appropriate loader to handle this file type(cur)`. Since, the Syncfusion JavaScript component’s theme uses `.cur` file.
 
-{% highlight html %}
+{% highlight bash %}
 
 > npm install @easy-webpack/config-fonts-and-images@^3.1.0 --save-dev
 

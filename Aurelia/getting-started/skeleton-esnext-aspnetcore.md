@@ -34,7 +34,7 @@ In the upcoming sections, we will discuss about the integration of aurelia-syncf
 
 To quick start with Syncfusion Aurelia components, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-esnext-aspnetcore. Those who are wish to directly getting started with Syncfusion Aurelia components execute the below commands and navigate to [here](#getting-started).
 
-{% highlight html %}
+{% highlight bash %}
 
 > git clone https://github.com/aurelia-ui-toolkits/syncfusion-templates-repository.git
 > cd syncfusion-templates-repository/skeleton-esnext-aspnetcore/src/skeleton
@@ -49,7 +49,7 @@ In this section, we will discuss about the installation of Aurelia project depen
 *	Download Aurelia skeleton-navigation from this [link](https://github.com/aurelia/skeleton-navigation/archive/1.1.2.zip) and extract it.
 *	From the extracted folder, execute the following commands to install project dependencies.
 
-{% highlight html %}
+{% highlight bash %}
 
 > cd skeleton-esnext-aspnetcore/src/skeleton
 > npm install
@@ -62,7 +62,7 @@ N> Ensure all the dependencies are installed without any errors.
 
 Install syncfusion-javascript Widgets and aurelia-syncfusion-bridge by executing the following commands.
 
-{% highlight html %}
+{% highlight bash %}
 
 > jspm install npm:syncfusion-javascript
 > jspm install npm:aurelia-syncfusion-bridge css
@@ -190,7 +190,7 @@ export class App {
 
 To restore project dependencies and build application, execute the following commands
 
-{% highlight html %}
+{% highlight bash %}
 
 > dotnet restore
 > gulp build
@@ -201,7 +201,7 @@ To restore project dependencies and build application, execute the following com
 
 To run the app, execute the following command and browse to [http://localhost:5000](http://localhost:5000) to see the application.
 
-{% highlight html %}
+{% highlight bash %}
 
 > dotnet run
 
