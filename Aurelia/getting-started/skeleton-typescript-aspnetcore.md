@@ -1,47 +1,48 @@
 ---
 layout: post
-title: Integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript
-description: How to integrate aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript
+title: Integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-aspnetcore
+description: How to integrate aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-aspnetcore
 platform: Aurelia
 control: Getting started
 documentation: ug
-keywords: Aurelia,Syncfusion,aurelia-syncfusion-bridge,Aurelia skeleton-navigation-typescript
+keywords: Aurelia,Syncfusion,aurelia-syncfusion-bridge,Aurelia skeleton-navigation-typescript-aspnetcore
 ---
-# Integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript
+# Integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-aspnetcore
 
-[Aurelia skeleton-navigation-typescript](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-typescript) uses the [TypeScript](https://www.typescriptlang.org/) transpiler so that we can write our application with TypeScript code which works well with any standard text editor. This skeleton uses [JSPM](http://jspm.io/) for package management and [SystemJS](https://github.com/systemjs/systemjs) for loading and bundling.
+[Aurelia skeleton-navigation-typescript-aspnetcore](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-typescript-aspnetcore/src/skeleton) is an ASP.NET Core web project pre-configured for building a .NET backend and an Aurelia front-end. It is configured for [TypeScript](https://www.typescriptlang.org/) support. This skeleton uses [JSPM](http://jspm.io/) for package management and [SystemJS](https://github.com/systemjs/systemjs) for loading and bundling.
 
-The [aurelia-syncfusion-bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge) plugin brings the [Syncfusion Essential Studio for JavaScript Widgets](https://github.com/syncfusion/JavaScript-Widgets) into Aurelia world. So, by configuring aurelia-syncfusion-bridge plugin with Aurelia skeleton-navigation-typescript, we can use Syncfusion components in Aurelia application.
+The [aurelia-syncfusion-bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge) plugin brings the [Syncfusion Essential Studio for JavaScript Widgets](https://github.com/syncfusion/JavaScript-Widgets) into Aurelia world. So, by configuring aurelia-syncfusion-bridge plugin with Aurelia skeleton-navigation-typescript-aspnetcore, we can use Syncfusion components in Aurelia application.
 
 ## Synopsis
 
-*	[Prerequisites](#prerequisites)
-*	[Aurelia skeleton-navigation-typescript](#aurelia-skeleton-navigation-typescript)
-*	[Installation of syncfusion-javascript Widgets and aurelia-syncfusion-bridge](#installation-of-syncfusion-javascript-widgets-and-aurelia-syncfusion-bridge)
-*	[Bridge registration](#bridge-registration)
-*	[Getting started](#getting-started)
-*	[Running the Application](#running-the-application)
+* [Prerequisites](#prerequisites)
+* [Aurelia skeleton-navigation-typescript-aspnetcore](#aurelia-skeleton-navigation-typescript-aspnetcore)
+* [Installation of syncfusion-javascript Widgets and aurelia-syncfusion-bridge](#installation-of-syncfusion-javascript-widgets-and-aurelia-syncfusion-bridge)
+* [Bridge registration](#bridge-registration)
+* [Getting started](#getting-started)
+* [Building the Application](#building-the-application)
+* [Running the Application](#running-the-application)
 
 ## Prerequisites
 
-*	[NodeJS](https://nodejs.org/en/) version >=4.0
-*	[Gulp](http://gulpjs.com/)
-*	[JSPM](http://jspm.io/)
+* [NodeJS](https://nodejs.org/en/) version >=4.0
+* [Gulp](http://gulpjs.com/)
+* [JSPM](http://jspm.io/)
+* [.NET Core SDK for Windows](https://www.microsoft.com/net/download/core)
 
-In the upcoming sections, we will discuss about the integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript. 
+In the upcoming sections, we will discuss about the integration of aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-aspnetcore. 
 
-To quick start with Syncfusion Aurelia components, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript. Those who are wish to directly getting started with Syncfusion Aurelia components execute the below commands and navigate to [here](#getting-started).
+To quick start with Syncfusion Aurelia components, we have already configured aurelia-syncfusion-bridge with Aurelia skeleton-navigation-typescript-aspnetcore. Those who are wish to directly getting started with Syncfusion Aurelia components execute the below commands and navigate to [here](#getting-started).
 
 {% highlight html %}
 
 > git clone https://github.com/aurelia-ui-toolkits/syncfusion-templates-repository.git
-> cd syncfusion-templates-repository/skeleton-typescript
+> cd syncfusion-templates-repository/skeleton-typescript-aspnetcore/src/skeleton
 > npm install
-> jspm install
 
 {% endhighlight %}
 
-## Aurelia skeleton-navigation-typescript
+## Aurelia skeleton-navigation-typescript-aspnetcore
 
 In this section, we will discuss about the installation of Aurelia project dependencies.
 
@@ -50,9 +51,8 @@ In this section, we will discuss about the installation of Aurelia project depen
 
 {% highlight html %}
 
-> cd skeleton-typescript
+> cd skeleton-typescript-aspnetcore/src/skeleton
 > npm install
-> jspm install
 
 {% endhighlight %}
 
@@ -201,12 +201,23 @@ export class App {
 
 {% endhighlight %}
 
-## Running the Application
+## Building the Application
 
-To run the app, execute the following command and browse to [http://localhost:9000](http://localhost:9000) to see the application.
+To restore project dependencies and build application, execute the following commands
 
 {% highlight html %}
 
-> gulp watch
+> dotnet restore
+> gulp build
+
+{% endhighlight %}
+
+## Running the Application
+
+To run the app, execute the following command and browse to [http://localhost:5000](http://localhost:5000) to see the application.
+
+{% highlight html %}
+
+> dotnet run
 
 {% endhighlight %}
