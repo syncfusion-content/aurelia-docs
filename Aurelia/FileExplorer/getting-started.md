@@ -51,6 +51,7 @@ export class Default {
     }
 }
 
+To perform the server side actions using local web API service, please refer the [link](https://help.syncfusion.com/js/fileexplorer/how-to#service-for-fileexplorer).
 
 {% endhighlight %}
 
