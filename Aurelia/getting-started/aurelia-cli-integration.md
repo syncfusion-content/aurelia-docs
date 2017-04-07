@@ -24,6 +24,7 @@ The upcoming sections will describe about the installation and configuration of 
 * [Bridge registration](#bridge-registration)
 * [Getting started](#getting-started)
 * [Running the Application](#running-the-application)
+* [Deploying the Application in production](#deploying-the-application-in-production)
 
 ## Prerequisites
 
@@ -167,12 +168,19 @@ In this section, we will discuss about the configuration of Aurelia to seamlessl
           {
             "name": "aurelia-syncfusion-bridge",
             "path": "../node_modules/aurelia-syncfusion-bridge/dist/amd",
-            "main": "index"
+            "main": "index",
+            "resources": [
+              "**/*.js"
+            ]
           },
           {
             "name": "syncfusion-javascript",
             "path": "../node_modules/syncfusion-javascript/",
-            "main": false
+            "main": false,
+            "resources": [
+              "Content/ej/web/ej.widgets.core.bootstrap.min.css",
+              "Content/ej/web/bootstrap-theme/ej.theme.min.css"
+            ]
           },
           {
             "name": "jsrender",
@@ -182,6 +190,23 @@ In this section, we will discuss about the configuration of Aurelia to seamlessl
         ]
 
 {% endhighlight %}
+
+* We need to copy the `fonts/images` to the location where Syncfusion themes expects them. This can be done by using `copyFiles` in `aurelia.json`
+
+{% highlight javascript %}
+
+   "options": {
+      "minify": "stage & prod",
+      "sourcemaps": "dev & stage"
+    },
+    "copyFiles": {
+      "node_modules/syncfusion-javascript/Content/ej/web/common-images/**/*": "common-images",
+      "node_modules/syncfusion-javascript/Content/ej/web/bootstrap-theme/images/**": "images"
+    },
+
+{% endhighlight %}
+
+N> If we are switching to any other theme, modify `copyFiles` according to our theme as well as update `syncfusion-javascript` resources in `build.bundles.dependencies`
 
 * Also, change the `stub` property to `false` in `aurelia.json` file.
 
@@ -251,8 +276,8 @@ The below step describes to create Syncfusion Aurelia Grid component.
 {% highlight html %}
 
 <template>
-  <require from="../node_modules/syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.web.all.min.css"></require>
-  <require from="../node_modules/syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css"></require>
+    <require from="syncfusion-javascript/Content/ej/web/ej.widgets.core.bootstrap.min.css"></require>
+    <require from="syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.theme.min.css"></require>
   <div>
     <ej-grid e-data-source.two-way="gridData" e-allow-paging=true e-allow-sorting=true e-on-record-click.delegate="recordClick($event.detail)">
       <ej-column e-field="OrderID" e-header-text="Order ID" e-text-align="right"></ej-column>
@@ -310,3 +335,19 @@ To run the app, execute the following command and browse to [http://localhost:90
 > au run –watch
 
 {% endhighlight %}
+
+## Deploying the Application in production
+
+Run the following build command
+
+{% highlight bash %}
+
+> au build --env prod
+
+{% endhighlight %}
+
+Then copy below file/folder to main deployment folder on our server.
+
+* index.html
+* favicon.ico
+* Assets files mentioned in aurelia.json `copyFiles`. Here we mentioned the `common-images`, `images` folder which is used for Syncfusion themes.
