@@ -118,20 +118,21 @@ The DropDownList can be bounded to both local array and remote data services .Yo
 	
 {% highlight html%}	
 	
-   export class DDL{
-        constructor() {
-        this.fields = {text: 'CustomerID'};
-        this.dataSource = ej.DataManager({ 
-        url: 'http://mvc.syncfusion.com/Services/Northwnd.svc/Customers'
-       });
-   
-  }
-  
-}
+    export class DDL{
+        
+     customers= [
+                 { id: "1", text: "ALFKI" }, { id: "2", text: "ANATR" }, { id: "3", text: "ANTON" },
+                 { id: "4", text: "AROUT" }, { id: "5", text: "BERGS" }, { id: "6", text: "BLAUS" }
+            ];
+    constructor() {   
+        this.fields = {text: 'text',id:'id',value:'text'};
+        this.dataSource = ej.DataManager(this.customers);
+       }
+    }
 	
 {% endhighlight %}
 	
-![](Getting-Started-images/Getting-Started2.jpg)
+![](Getting-Started-images/Getteing-Started_img2.jpeg)
 
 ## Setting Dimensions
 
