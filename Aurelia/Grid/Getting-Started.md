@@ -64,7 +64,7 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 
 ## Data binding
 
-[`Data binding`](http://helpjs.syncfusion.com/js/grid/data-binding) in the grid is achieved by assigning a array of JavaScript objects to the [`dataSource`](http://help.syncfusion.com/api/js/ejgrid#members:columns-datasource) property. Refer to the following code example.
+[`Data binding`](http://helpjs.syncfusion.com/js/grid/data-binding) in the grid is achieved by assigning an array of JavaScript objects to the [`dataSource`](http://help.syncfusion.com/api/js/ejgrid#members:columns-datasource) property. Refer to the following code example.
 
 {% highlight html %}
 
