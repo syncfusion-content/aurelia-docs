@@ -64,14 +64,13 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 
 ## Data binding
 
-[`Data binding`](http://helpjs.syncfusion.com/js/grid/data-binding) in the grid is achieved by using the [`ej.DataManager`](http://helpjs.syncfusion.com/js/datamanager/overview) that supports both RESTful JSON data services binding and local JSON array binding.  To set the data source to the grid, the [`dataSource`](http://help.syncfusion.com/api/js/ejgrid#members:columns-datasource) property is assigned with the instance of the `ej.DataManger`. For demonstration purpose, [Northwind OData service](http://mvc.syncfusion.com/Services/Northwnd.svc/) is used in this tutorial. Refer to the following code example.
+[`Data binding`](http://helpjs.syncfusion.com/js/grid/data-binding) in the grid is achieved by assigning an array of JavaScript objects to the [`dataSource`](http://help.syncfusion.com/api/js/ejgrid#members:columns-datasource) property. Refer to the following code example.
 
 {% highlight html %}
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="dataManager" >
-            
+        <ej-grid e-data-source.bind="gridData" e-columns.bind="cols">
         </ej-grid>
     </div>
     </template>
@@ -81,11 +80,12 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 Configure the `e-data-source` bind value `this.datamanager` in Aurelia view-model as shown in the following code.
 
 {% highlight js %}
-
+    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
-			    this.dataManager = new ej.DataManager("http://mvc.syncfusion.com/Services/Northwnd.svc/Foods");
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 			}
     }
 
@@ -93,9 +93,6 @@ Configure the `e-data-source` bind value `this.datamanager` in Aurelia view-mode
 
 ![](Getting-started_images/Getting-started_img2.png)
 
-
-
-N> ODataAdaptor is the default adaptor for the DataManager. On binding to other web services, proper [data adaptor](http://helpjs.syncfusion.com/js/datamanager/data-adaptors) needs to be set on `adaptor` option of the DataManager.
 
 ## Enable Paging
 
@@ -106,7 +103,7 @@ N> ODataAdaptor is the default adaptor for the DataManager. On binding to other 
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="dataManager" e-allow-paging=true e-page-settings.bind="pageSettings">
+        <ej-grid e-data-source.bind="gridData" e-columns.bind="cols" e-allow-paging=true e-page-settings.bind="pageSettings">
             
         </ej-grid>
     </div>
@@ -117,11 +114,12 @@ N> ODataAdaptor is the default adaptor for the DataManager. On binding to other 
 Configure the `e-page-settings` bind value `this.pageSettings` in Aurelia view-model as shown in the following code.
 
 {% highlight js %}
-
+    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
-			    this.dataManager = new ej.DataManager("http://mvc.syncfusion.com/Services/Northwnd.svc/Foods");
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 				this.pageSettings = { pageSize: 8 };
 			}
     }
@@ -144,7 +142,7 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="dataManager" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-filtering=true>
+        <ej-grid e-data-source.bind="gridData" e-columns.bind="cols" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-filtering=true>
             
         </ej-grid>
     </div>
@@ -154,11 +152,12 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
 
 {% highlight js %}
-
+    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
-			    this.dataManager = new ej.DataManager("http://mvc.syncfusion.com/Services/Northwnd.svc/Foods");
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 				this.pageSettings = { pageSize: 8 };
 			}
     }
@@ -179,7 +178,7 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="dataManager" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-grouping=true>
+        <ej-grid e-data-source.bind="gridData" e-columns.bind="cols" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-grouping=true>
             
         </ej-grid>
     </div>
@@ -189,11 +188,12 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
 
 {% highlight js %}
-
+    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
-			    this.dataManager = new ej.DataManager("http://mvc.syncfusion.com/Services/Northwnd.svc/Foods");
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 				this.pageSettings = { pageSize: 8 };
 			}
     }
@@ -212,7 +212,7 @@ Refer to the following code example for initial grouping.
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="dataManager" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-grouping=true e-group-settings.bind="groupSettings">
+        <ej-grid e-data-source.bind="gridData" e-columns.bind="cols" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-grouping=true e-group-settings.bind="groupSettings">
             
         </ej-grid>
     </div>
@@ -223,13 +223,14 @@ Refer to the following code example for initial grouping.
 Configure the `e-group-settings` bind value `this.groupSettings` in Aurelia view-model as shown in the following code.
 
 {% highlight js %}
-
+    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
-			    this.dataManager = new ej.DataManager("http://mvc.syncfusion.com/Services/Northwnd.svc/Foods");
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 				this.pageSettings = { pageSize: 8 };
-				this.groupSettings= { groupedColumns: ['ItemType'] };
+				this.groupSettings= { groupedColumns: ['ShipCountry', 'CustomerID'] };
 			}
     }
 
@@ -249,7 +250,7 @@ Configure the `e-group-settings` bind value `this.groupSettings` in Aurelia view
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="dataManager" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-grouping=true e-group-settings.bind="groupSettings" e-show-summary=true e-summary-rows.bind="summaryRows">
+        <ej-grid e-data-source.bind="gridData" e-columns.bind="cols" e-allow-paging=true e-page-settings.bind="pageSettings" e-allow-grouping=true e-group-settings.bind="groupSettings" e-show-summary=true e-summary-rows.bind="summaryRows">
             
         </ej-grid>
     </div>
@@ -260,17 +261,18 @@ Configure the `e-group-settings` bind value `this.groupSettings` in Aurelia view
 Configure the `e-summary-rows` bind value `this.summaryRows` in Aurelia view-model as shown in the following code.
 
 {% highlight js %}
-
+    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
-			    this.dataManager = new ej.DataManager("http://mvc.syncfusion.com/Services/Northwnd.svc/Foods");
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 				this.pageSettings = { pageSize: 8 };
-				this.groupSettings = { groupedColumns: ['ItemType'] };
+				this.groupSettings = { groupedColumns: ["CustomerID"] },
 				this.summaryRows = [
 				     {
                   	     title: "Sum",
-                  	     summaryColumns: [{ summaryType: ej.Grid.SummaryType.Sum, displayColumn: "Stock", dataMember: "Stock" }]
+                  	     summaryColumns: [{ summaryType: ej.Grid.SummaryType.Sum, displayColumn: "Freight", dataMember: "Freight" }]
               	     }
 				];
 			}
