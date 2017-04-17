@@ -84,8 +84,8 @@ Configure the `e-data-source` bind value `this.datamanager` in Aurelia view-mode
     export class Grid {
     
             constructor() {
-			    this.gridData = window.employeeView;
-                this.cols = ["EmployeeID", "FirstName", "LastName", "City", "Country"];
+			    this.gridData = window.gridData;
+                this.cols = ["OrderID", "EmployeeID", "CustomerID", "ShipCountry", "Freight"];
 			}
     }
 
