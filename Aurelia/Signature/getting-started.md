@@ -3,7 +3,7 @@ layout: post
 title: getting started
 description: getting started
 platform: aurelia
-control: Control Name undefined
+control: signature
 documentation: ug
 ---
 
