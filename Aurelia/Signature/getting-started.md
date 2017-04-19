@@ -2,7 +2,7 @@
 layout: post
 title: getting started
 description: getting started
-platform: js
+platform: aurelia
 control: Control Name undefined
 documentation: ug
 ---
