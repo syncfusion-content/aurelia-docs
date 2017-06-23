@@ -5,7 +5,7 @@ description: getting started for Upload box
 platform: Aurelia
 control: Uploadbox
 documentation: ug
-keywords:Uploadbox,js uploadbox,ejuploadbox
+keywords: Uploadbox,js uploadbox,ejuploadbox
 ---
 
 # Getting Started
