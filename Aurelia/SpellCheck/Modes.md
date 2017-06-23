@@ -250,6 +250,8 @@ export class SpellCheck {
     }
 }
 
+{% endhighlight %}
+
 ## Context Menu Mode
 
 SpellCheck provides default context menu options to perform the spellcheck operations. It also allows to define additional custom context menu options.
