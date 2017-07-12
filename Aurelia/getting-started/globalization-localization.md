@@ -162,13 +162,13 @@ The below screenshot shows the grid sample with Localization support.
 
 ## FAQ
 
-Query : How to install syncfusion-ej-global package?
+**Query** : How to install syncfusion-ej-global package?
 
-Answer : we need not to install [npm:syncfusion-ej-global](https://www.npmjs.com/package/syncfusion-ej-global) package separately. Installation of `syncfusion-javascript` package will automatically install `syncfusion-ej-global` package.
+**Answer** : we need not to install [npm:syncfusion-ej-global](https://www.npmjs.com/package/syncfusion-ej-global) package separately. Installation of `syncfusion-javascript` package will automatically install `syncfusion-ej-global` package.
 
-Query : My native culture is not included in syncfusion-ej-global?
+**Query** : My native culture is not included in syncfusion-ej-global?
 
-Answer : `syncfusion-ej-global` package will have only 13 culture files. If our culture is not included in syncfusion-ej-global then we need to install [npm:syncfusion-ej-global-all](https://www.npmjs.com/package/syncfusion-ej-global-all) package separately.
+**Answer** : `syncfusion-ej-global` package will have only 13 culture files. If our culture is not included in syncfusion-ej-global then we need to install [npm:syncfusion-ej-global-all](https://www.npmjs.com/package/syncfusion-ej-global-all) package separately.
 
 we can install `syncfusion-ej-global-all` by either NPM or JSPM package manager.
 

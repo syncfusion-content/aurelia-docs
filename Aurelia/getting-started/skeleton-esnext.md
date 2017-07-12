@@ -21,6 +21,7 @@ The [aurelia-syncfusion-bridge](https://github.com/aurelia-ui-toolkits/aurelia-s
 *	[Bridge registration](#bridge-registration)
 *	[Getting started](#getting-started)
 *	[Running the Application](#running-the-application)
+*   [Deploying the Application in production](#deploying-the-application-in-production)
 
 ## Prerequisites
 
@@ -195,3 +196,70 @@ To run the app, execute the following command and browse to [http://localhost:90
 > gulp watch
 
 {% endhighlight %}
+
+## Deploying the Application in production
+
+To deploy the application in production, we need to configure `build/bundles.js` and `build/export.js`.
+
+In `build/bundles.js`, we need to include `aurelia-syncfusion-bridge and its resources` in `bundles`.
+
+If we are using `ejGrid` component, then we need to include `grid resources` in `build/bundles.js` as like the below code section.
+
+{% highlight javascript %}
+
+"dist/aurelia-syncfusion-bridge": {
+      "includes": [
+        "aurelia-syncfusion-bridge",
+        "aurelia-syncfusion-bridge/grid/*.js",
+        "text"
+      ],
+      "options": {
+        "inject": true,
+        "minify": false,
+        "depCache": false,
+        "rev": false
+      }
+    }
+
+{% endhighlight %}
+
+N> To bundle `ejTemplate`, add `aurelia-syncfusion-bridge/common/template.js` to `dist/aurelia-syncfusion-bridge` and include the `ejTemplate()` in `main.js` file.
+To bundle `all components`, add `aurelia-syncfusion-bridge/**/*.js` to `dist/aurelia-syncfusion-bridge`.
+
+N> While running the application in production environment, we may encounter issues like `Failed loading required CSS file`. To overcome from this error, add `text` plugin to  `dist/aurelia-syncfusion-bridge` which will load all text resources.
+
+In `build/export.js`, we need to include `Syncfusion themes` in `normalize` array.
+
+{% highlight javascript %}
+
+'normalize': [
+    // include Syncfusion theme
+    [
+      'syncfusion-javascript', [
+        '/Content/ej/web/ej.widgets.core.bootstrap.min.css',
+        '/Content/ej/web/bootstrap-theme/ej.theme.min.css',
+        '/Content/ej/web/common-images/**',
+        '/Content/ej/web/bootstrap-theme/images/**',
+        '/Content/ej/web/responsive-css/ej.responsive.css'
+      ]
+    ],
+    [
+      // include font-awesome.css and its fonts files
+      'font-awesome', [
+        '/css/font-awesome.min.css',
+        '/fonts/*'
+      ]
+    ]
+]
+
+{% endhighlight %}
+
+Then run the below command to export our application in production.
+
+{% highlight bash %}
+
+> gulp export
+
+{% endhighlight %}
+
+The app will be exported into `export` directory preserving the directory structure.
