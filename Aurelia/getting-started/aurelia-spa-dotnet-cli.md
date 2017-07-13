@@ -90,7 +90,28 @@ N> After executing the above command, restart the command prompt to make the cha
 
 In this section, we will discuss about the configuration of webpack to seamlessly work with aurelia-syncfusion-bridge.
 
-* In `webpack.config.js`, add following loader configuration in `module.rules` to support various Syncfusion file formats.
+* In `webpack.config.js` file, we need to add the path for Syncfusion Aurelia components in `ModuleDependenciesPlugin` to load the aurelia-syncfusion-bridge component source into webpack. For example, to render `ejGrid` component, we need to add the following path.
+
+{% highlight javascript %}
+
+const { AureliaPlugin, ModuleDependenciesPlugin } = require('aurelia-webpack-plugin');
+
+plugins: [
+    new AureliaPlugin({ aureliaApp: 'boot' }),
+    new ModuleDependenciesPlugin({
+        "aurelia-syncfusion-bridge": ["./grid/grid", "./grid/column"],
+    }),
+    ....
+    ....
+]
+
+{% endhighlight %}
+
+N> To use any other Syncfusion components in Aurelia application, we need to add specific Syncfusion Aurelia component path to `ModuleDependenciesPlugin` in `webpack.config.js` file. For example, To use button component, add `"aurelia-syncfusion-bridge": [ "./button/button"]` to `ModuleDependenciesPlugin`.
+
+N> To use `templates`, add `"aurelia-syncfusion-bridge": [ "./common/template"]` to `ModuleDependenciesPlugin` and include `ejTemplate()` in `boot.ts` file
+
+* Also, add the following loader configuration in `module.rules` to support various Syncfusion file formats.
 
 {% highlight javascript %}
 
@@ -132,7 +153,7 @@ declare const IS_DEV_BUILD: boolean; // The value is supplied by Webpack during 
 export function configure(aurelia: Aurelia) {
     aurelia.use.standardConfiguration()
         //register aurelia-syncfusion-bridge plugin here
-        .plugin(PLATFORM.moduleName('aurelia-syncfusion-bridge'), (syncfusion) => syncfusion.useAll());
+        .plugin(PLATFORM.moduleName('aurelia-syncfusion-bridge'), (syncfusion) => syncfusion.ejGrid());
 
     if (IS_DEV_BUILD) {
         aurelia.use.developmentLogging();
@@ -142,6 +163,8 @@ export function configure(aurelia: Aurelia) {
 }
 
 {% endhighlight %}
+
+N> To render the button component additionally, we need to add `syncfusion.ejGrid().ejButton());` in `boot.ts` file.
 
 ## Getting started
 
