@@ -170,8 +170,9 @@ export class Grid {
     <require from="nav-bar.html"></require>
     <require from="bootstrap/css/bootstrap.css"></require>
     <!--Add Syncfusion JavaScript themes here-->
-    <require from="syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.web.all.min.css!"></require>
-    <require from="syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css!"></require>
+    <require from="syncfusion-javascript/Content/ej/web/ej.widgets.core.bootstrap.min.css"></require>
+    <require from="syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.theme.min.css"></require>
+    <require from="syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css"></require>
     <nav-bar router.bind="router"></nav-bar>
     <div class="page-host">
         <router-view></router-view>
