@@ -28,7 +28,7 @@ We can get the widget instance only after the component is created. Since, the S
 
 {% endhighlight %}
 
-`Method 1`: Using TaskQueue:
+`Method 1`: **Using TaskQueue**
 
 Inject TaskQueue and get access to the underlying widget instance as like the below code snippet.
 
@@ -45,7 +45,7 @@ attached() {
 
 {% endhighlight %}
 
-`Method 2`: Using setTimeOut function:
+`Method 2`: **Using setTimeOut function**
 
 Use the setTimeout function to get the widget instance as like the below code snippet.
 
@@ -60,7 +60,7 @@ attached() {
 
 {% endhighlight %}
 
-`Method 3`: Using Event handler:
+`Method 3`: **Using Event handler**
 
 Use any event handler to get the widget instance as like the below code snippet.
 

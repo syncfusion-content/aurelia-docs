@@ -179,7 +179,8 @@ In this section, we will discuss about the configuration of Aurelia to seamlessl
             "main": false,
             "resources": [
               "Content/ej/web/ej.widgets.core.bootstrap.min.css",
-              "Content/ej/web/bootstrap-theme/ej.theme.min.css"
+              "Content/ej/web/bootstrap-theme/ej.theme.min.css",
+              "Content/ej/web/responsive-css/ej.responsive.css"
             ]
           },
           {
@@ -278,6 +279,7 @@ The below step describes to create Syncfusion Aurelia Grid component.
 <template>
     <require from="syncfusion-javascript/Content/ej/web/ej.widgets.core.bootstrap.min.css"></require>
     <require from="syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.theme.min.css"></require>
+    <require from="syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css"></require>
   <div>
     <ej-grid e-data-source.two-way="gridData" e-allow-paging=true e-allow-sorting=true e-on-record-click.delegate="recordClick($event.detail)">
       <ej-column e-field="OrderID" e-header-text="Order ID" e-text-align="right"></ej-column>
@@ -349,5 +351,6 @@ Run the following build command
 Then copy below file/folder to main deployment folder on our server.
 
 * index.html
+* scripts
 * favicon.ico
 * Assets files mentioned in aurelia.json `copyFiles`. Here we mentioned the `common-images`, `images` folder which is used for Syncfusion themes.
