@@ -39,7 +39,7 @@ The below steps describes to create Syncfusion Aurelia ReportViewer component.
 <template>
     <require from="./reportviewer.css"></require>
     <div>
-        <ej-report-viewer id="container" e-report-service-url="http://js.syncfusion.com/ejservices/api/RDLReport" e-processing-mode="Remote" e-report-path="GroupingAgg.rdl"></ej-report-viewer>
+        <ej-report-viewer id="container" e-report-service-url="http://js.syncfusion.com/ejservices/api/ReportViewer" e-processing-mode="Remote" e-report-path="GroupingAgg.rdl"></ej-report-viewer>
     </div>
 </template>
 
@@ -90,7 +90,7 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
 <template>
     <require from="./reportviewer.css"></require>
     <div>
-        <ej-report-viewer id="container" e-report-service-url="http://js.syncfusion.com/ejservices/api/SSRSReport" e-processing-mode="Remote" e-report-server-url="http://mvc.syncfusion.com/reportserver" e-report-path="/SSRSSamples2/Territory Sales new"></ej-report-viewer>
+        <ej-report-viewer id="container" e-report-service-url="http://js.syncfusion.com/ejservices/api/ReportViewer" e-processing-mode="Remote" e-report-server-url="http://mvc.syncfusion.com/reportserver" e-report-path="/SSRSSamples2/Territory Sales new"></ej-report-viewer>
     </div>
 </template>
 
@@ -139,7 +139,7 @@ The ReportViewer has data binding support to visualize the RDLC reports. The fol
 <template>
     <require from="./reportviewer.css"></require>
     <div>
-        <ej-report-viewer id="container" e-report-service-url="http://js.syncfusion.com/ejservices/api/RDLCReport" e-processing-mode="Local" e-report-path="AreaCharts.rdlc"></ej-report-viewer>
+        <ej-report-viewer id="container" e-report-service-url="http://js.syncfusion.com/ejservices/api/ReportViewer" e-processing-mode="Local" e-report-path="AreaCharts.rdlc"></ej-report-viewer>
     </div>
 </template>
 
