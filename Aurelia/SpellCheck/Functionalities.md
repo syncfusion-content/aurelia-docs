@@ -301,3 +301,118 @@ You can also add the custom words into the custom dictionary file through the di
 
 * Dialog Mode - Add To Dictionary button is available in the dialog window, while highlighting the error word in the given input string and clicking this button then the word will be adding into the custom dictionary file.
 * Context Menu Mode - Add To Dictionary option is available while right click on the error word and selecting this option, the word will be adding into the custom dictionary file.
+
+## Checking content on typing
+
+SpellCheck control provides support for checking the content, on pressing the `Enter` and `Space` key. The cursor position will also be properly retained, while processing the SpellCheck operations. If you enable “enableValidateOnType” property, the spellcheck operation will be carried out on typing.
+
+The following code example describes the above behavior.
+
+{% highlight html %}
+
+<template>
+    <div id="SpellControl">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-enable-validate-on-type.bind="enableValidate">
+        </ej-spell-check>
+    </div>
+</template>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+export class SpellCheck {
+    constructor() {
+      this.dictionarySettings = {
+        dictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/CheckWords',
+        customDictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/AddToDictionary'
+      };
+      this.contextMenu ={
+        enable: true
+      };
+      this.enableValidate= "true";
+    }
+}
+
+{% endhighlight %}
+
+The following screenshot displays the output for the above code
+
+![](ValidateOnType_Images/validateontype.png)
+
+You can also validate the content within the IFrame element or IFrame element target text, by passing the IFrame element id or class name value to the `controlsToValidate` property. 
+Detailed information is given [here](https://help.syncfusion.com/js/spellcheck/multiple-target)
+
+## Suggestion Words
+
+The `getSuggestionWords` option is used to retrieve the possible suggestion words for an error word which is provided to correct that spelling.
+
+The following code example describes the above behavior.
+
+{% highlight html %}
+
+<template>
+    <div id="SpellControl">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-enable-validate-on-type.bind="enableValidate">
+        </ej-spell-check>
+    </div>
+</template>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+export class SpellCheck {
+    constructor() {
+      this.dictionarySettings = {
+        dictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/CheckWords',
+        customDictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/AddToDictionary'
+      };
+    }
+    attached() {
+      setTimeout(()=>{
+		this.spellcheck.getSuggestionWords("textarea");
+        setTimeout(()=>{
+            alert(this.spellcheck._suggestedWords);
+        },800);
+      }, 50);
+    }
+}
+
+{% endhighlight %}
+
+N> You can get the suggestion words after some time interval once this method is called. Since, ajax request processing takes place in the background.
+
+## Synchronous request
+
+On setting `enableAsync` option to false, enables the synchronous request to the server to perform SpellCheck operations.
+
+The following code example describes the above behavior.
+
+{% highlight html %}
+
+<template>
+    <div id="SpellControl">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-ajax-data-type.bind="ajaxDataType" e-enable-async.bind="enableAsync">
+        </ej-spell-check>
+    </div>
+</template>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+export class SpellCheck {
+    constructor() {
+      this.dictionarySettings = {
+        dictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/CheckWords',
+        customDictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/AddToDictionary'
+      };
+      this.ajaxDataType = "json";
+      this.enableAsync= "false";
+    }
+}
+
+{% endhighlight %}
+
+N> You need to set the `ajaxDataType` value as `json` to retrieve the synchronous request result properly.
