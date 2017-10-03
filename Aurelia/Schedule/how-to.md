@@ -13,7 +13,7 @@ api: /api/js/ejschedule
 
 The client-side validation of the fields present within the custom appointment window can be handled before submitting it, by adding appropriate validation classes to each field.
 
-Refer the steps [here](/js/schedule/customization#appointment-window-customization) and create a sample for Custom Appointment window, before proceeding with the following validations.
+Refer the steps [here](/aurelia/schedule/customization#appointment-window-customization) and create a sample for Custom Appointment window, before proceeding with the following validations.
 
 In the custom appointment window sample, create an additional CSS class **validation** as mentioned below to add it to the appropriate fields, if the validation of such fields fails.
 
@@ -253,7 +253,7 @@ export class Schedule {
 
 ## Customize the Default Appointment Window
 
-Apart from the custom appointment window, it is possible to customize the default appointment window by adding/removing the required number of fields into it. This can be achieved through the **create** event of the scheduler.
+Apart from the custom appointment window, it is possible to customize the default appointment window by adding/removing the required number of fields into it. This can be achieved through the **appointmentWindowOpen** event of the scheduler.
 
 The following code example depicts the way to achieve the customization of default appointment window.
 
