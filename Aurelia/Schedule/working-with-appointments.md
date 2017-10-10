@@ -29,7 +29,7 @@ N> An all-day row is normally visible on the Scheduler, as the [showAllDayRow](/
 
 ### Recurrence
 
-Represents an appointment that is created for a certain time interval that occurs repeatedly in a daily, weekly, monthly, yearly or every weekday basis at the same time interval based on the recurrence rule. The other available options and validations that can be performed on recurrence appointments can be referred from [here](/js/schedule/working-with-appointments#recurrence-options).
+Represents an appointment that is created for a certain time interval that occurs repeatedly in a daily, weekly, monthly, yearly or every weekday basis at the same time interval based on the recurrence rule. The other available options and validations that can be performed on recurrence appointments can be referred from [here](/aurelia/schedule/working-with-appointments#recurrence-options).
 
 ## CRUD operation
 
@@ -335,7 +335,7 @@ The appointments can be deleted in either of the following ways,
 * Selecting an appointment and pressing <kbd>Delete</kbd> key.
 * Through Programmatically.
 
-A pop-up with a confirmation message will get displayed before deleting an appointment, which can be either switched on/off using the API `showDeleteConfirmationDialog`. Also, the confirmation text in that pop-up can be customized as mentioned [here](/js/schedule/globalization-and-localization#localization:localizing-specific-words).
+A pop-up with a confirmation message will get displayed before deleting an appointment, which can be either switched on/off using the API `showDeleteConfirmationDialog`. Also, the confirmation text in that pop-up can be customized as mentioned [here](/aurelia/schedule/globalization-and-localization#localization:localizing-specific-words).
 
 **For example**, to localize only the delete confirmation message in the delete window -
 
@@ -390,7 +390,7 @@ export class Schedule {
 
 {% endhighlight %}
 
-N> All these CRUD operations on appointments (add/edit/delete) can also be done through the default [context menu](/js/schedule/context-menu#default-menu-options) options **Add Appointment**, **Edit Appointment** and **Delete Appointment** which is available, when context menu settings is enabled within Scheduler.
+N> All these CRUD operations on appointments (add/edit/delete) can also be done through the default [context menu](/aurelia/schedule/context-menu#default-menu-options) options **Add Appointment**, **Edit Appointment** and **Delete Appointment** which is available, when context menu settings is enabled within Scheduler.
 
 #### Through Programmatically
 
@@ -919,7 +919,7 @@ The [categorizeSettings](/api/js/ejschedule#members:categorizesettings) holds th
 
 * [enable](/api/js/ejschedule#members:categorizesettings-enable) - It accepts true or false value, denoting whether to enable/disable the categorize option. Its default value is `false`.
 * [allowMultiple](/api/js/ejschedule#members:categorizesettings-allowmultiple) – It enables or disables the multiple selection of categories for each appointments in the appointment window as well as in the context menu. Its default value is `false`.
-* [dataSource](/api/js/ejschedule#members:categorizesettings-datasource) – Binds the categorize dataSource collection. This property should be assigned with the JSON data array collection or instance of [ej.DataManger](/js/datamanager/overview). 
+* [dataSource](/api/js/ejschedule#members:categorizesettings-datasource) – Binds the categorize dataSource collection. This property should be assigned with the JSON data array collection or instance of [ej.DataManger](/js/datamanager/overview).
 
 We have below 6 default values for Categorize dataSource collection.
 
@@ -1036,8 +1036,8 @@ This option prioritize the appointments based on its importance and it can be di
 The [prioritySettings](/api/js/ejschedule#members:prioritysettings) holds the below priority related properties such as,
 
 * [enable](/api/js/ejschedule#members:prioritysettings-enable) - It accepts true or false value, denoting whether to enable/disable the priority option. Its default value is **false**.
-* [template](/js/schedule/templates#priority-settings-template) – Customize the priority icon/images using template options.
-* [dataSource](/api/js/ejschedule#members:prioritysettings-datasource) – binds the priority dataSource collection. This property should be assigned with the JSON data array collection or instance of [ej.DataManger](/js/datamanager/overview). 
+* [template](/aurelia/schedule/templates#priority-settings-template) – Customize the priority icon/images using template options.
+* [dataSource](/api/js/ejschedule#members:prioritysettings-datasource) – binds the priority dataSource collection. This property should be assigned with the JSON data array collection or instance of [ej.DataManger](/js/datamanager/overview).
 
 We have below 4 default values for priority dataSource collection.
 

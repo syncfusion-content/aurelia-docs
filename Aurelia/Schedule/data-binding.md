@@ -1157,7 +1157,6 @@ public static void Crud(List<object> added, List<object> changed, List<object> d
 
 {% endhighlight %}
 
-
 ## MVC Controller Action Binding
 
 The Schedule appointment data can retrieve data from MVC controller. This can be achieved by using the [UrlAdaptor](/js/datamanager/data-adaptors#url-adaptor) of [ej.DataManager](/js/datamanager/overview).
