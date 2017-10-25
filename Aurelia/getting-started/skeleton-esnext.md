@@ -74,21 +74,28 @@ Install syncfusion-javascript Widgets and aurelia-syncfusion-bridge by executing
 
 In this section, we will discuss about the registration of Syncfusion bridge with Aurelia.
 
-Register the aurelia-syncfusion-bridge plugin with Aurelia in our `main.js` file which is in `src` folder.
+Register the `aurelia-syncfusion-bridge` plugin with Aurelia in our `main.js` file which is in `src` folder. For example, to register `ejGrid` component, we need to import `syncfusion-javascript/Scripts/ej/web/ej.grid.min` in `main.js` file.
 
 {% highlight javascript %}
 
 import 'bootstrap';
+import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
 export function configure(aurelia) {
     aurelia.use
         .standardConfiguration()
         .developmentLogging()
         //register aurelia-syncfusion-bridge plugin here
-        .plugin('aurelia-syncfusion-bridge', (syncfusion) => syncfusion.useAll());
+        .plugin('aurelia-syncfusion-bridge', (syncfusion) => syncfusion.ejGrid());
     aurelia.start().then(() => aurelia.setRoot());
 }
 
 {% endhighlight %}
+
+N> To use `ejTemplate`, we need to add `syncfusion.ejGrid().ejTemplate();` in our `main.js` file.
+
+N> To load button component with grid component additionally, we need to import `syncfusion-javascript/Scripts/ej/web/ej.button.min` and add `syncfusion.ejGrid().ejButton();` in our `main.js` file.
+
+N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` and add `syncfusion.useAll()` in our `main.js` file.
 
 ## Getting started
 
@@ -160,8 +167,6 @@ export class Grid {
     <require from="syncfusion-javascript/Content/ej/web/ej.widgets.core.bootstrap.min.css"></require>
     <require from="syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.theme.min.css"></require>
     <require from="syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css"></require>
-    <require from="syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.web.all.min.css!"></require>
-    <require from="syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css!"></require>
     <nav-bar router.bind="router"></nav-bar>
     <div class="page-host">
         <router-view></router-view>
@@ -204,9 +209,9 @@ To run the app, execute the following command and browse to [http://localhost:90
 
 To deploy the application in production, we need to configure `build/bundles.js` and `build/export.js`.
 
-In `build/bundles.js`, we need to include `aurelia-syncfusion-bridge and its resources` in `bundles`.
+In `build/bundles.js`, we need to include both `aurelia-syncfusion-bridge` and `syncfusion-javascript` in `bundles`.
 
-If we are using `ejGrid` component, then we need to include `grid resources` in `build/bundles.js` as like the below code section.
+To bundle `ejGrid` component, we need to include `grid resources` in `build/bundles.js` as like the below code section.
 
 {% highlight javascript %}
 
@@ -218,18 +223,49 @@ If we are using `ejGrid` component, then we need to include `grid resources` in 
       ],
       "options": {
         "inject": true,
-        "minify": false,
+        "minify": true,
         "depCache": false,
         "rev": false
       }
-    }
+},
+"dist/syncfusion-javascript": {
+      "includes": [
+        "syncfusion-javascript/Scripts/ej/web/ej.grid.min.js"
+      ],
+      "options": {
+        "inject": true,
+        "minify": true,
+        "depCache": false,
+        "rev": false
+      }
+}
 
 {% endhighlight %}
 
-N> To bundle `ejTemplate`, add `aurelia-syncfusion-bridge/common/template.js` to `dist/aurelia-syncfusion-bridge` and include the `ejTemplate()` in `main.js` file.
-To bundle `all components`, add `aurelia-syncfusion-bridge/**/*.js` to `dist/aurelia-syncfusion-bridge`.
+N> To bundle `all Syncfusion components`, add `aurelia-syncfusion-bridge/**/*.js` to `dist/aurelia-syncfusion-bridge` and `syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js` to `dist/syncfusion-javascript` as like the below code snippet.
 
-N> While running the application in production environment, we may encounter issues like `Failed loading required CSS file`. To overcome from this error, add `text` plugin to  `dist/aurelia-syncfusion-bridge` which will load all text resources.
+{% highlight javascript %}
+
+"dist/aurelia-syncfusion-bridge": {
+      "includes": [
+        "aurelia-syncfusion-bridge",
+        "aurelia-syncfusion-bridge/**/*.js",
+        "text"
+      ]
+      ......
+      ......
+},
+"dist/syncfusion-javascript": {
+      "includes": [
+        "syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"
+      ]
+      ......
+      ......
+}
+
+{% endhighlight %}
+
+N> While running the application in production environment, we may encounter issues like `Failed loading required CSS file`. To overcome this error, add `text` plugin to `dist/aurelia-syncfusion-bridge` which will load all text resources.
 
 In `build/export.js`, we need to include `Syncfusion themes` in `normalize` array.
 

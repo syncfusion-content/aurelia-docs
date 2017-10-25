@@ -58,32 +58,22 @@ Install syncfusion-javascript Widgets and aurelia-syncfusion-bridge by executing
 
 In this section, we will discuss about the configuration of webpack to seamlessly work with aurelia-syncfusion-bridge.
 
-*   In `webpack.config.js` file, we need to add the path for Syncfusion Aurelia components in `ModuleDependenciesPlugin` to load the aurelia-syncfusion-bridge component source into webpack. For example, to render `ejGrid` component, we need to add the following path.
+*   In `webpack.config.js` file, add `aurelia-syncfusion-bridge` to `entry.vendor` like the below code section.
 
 {% highlight javascript %}
 
-const { AureliaPlugin, ModuleDependenciesPlugin } = require('aurelia-webpack-plugin');
-
-plugins: [
-    new AureliaPlugin(),
-    new ModuleDependenciesPlugin({
-        "aurelia-syncfusion-bridge": ["./grid/grid", "./grid/column"],
-    }),
-    ....
-    ....
-]
+entry: {
+    app: ['aurelia-bootstrapper'],
+    vendor: ['bluebird', 'jquery', 'bootstrap', 'aurelia-syncfusion'],
+  }
 
 {% endhighlight %}
-
-N> To use any other Syncfusion components in Aurelia application, we need to add specific Syncfusion Aurelia component path to `ModuleDependenciesPlugin` in `webpack.config.js` file. For example, To use button component, add `"aurelia-syncfusion-bridge": [ "./button/button"]` to `ModuleDependenciesPlugin`.
-
-N> To use `templates`, add `"aurelia-syncfusion-bridge": [ "./common/template"]` to `ModuleDependenciesPlugin` and include `ejTemplate()` in `main.js` file
 
 ## Bridge registration
 
 In this section, we will discuss about the registration of Syncfusion bridge with Aurelia.
 
-Register the aurelia-syncfusion-bridge plugin with Aurelia in our `main.js` file which is in `src` folder.
+Register the `aurelia-syncfusion-bridge` plugin with Aurelia in our `main.js` file which is in `src` folder. For example, to register `ejGrid` component, we need to import `syncfusion-javascript/Scripts/ej/web/ej.grid.min` in `main.js` file.
 
 {% highlight javascript %}
 
@@ -92,6 +82,7 @@ import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'babel-polyfill';
 import * as Bluebird from 'bluebird';
+import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
 Bluebird.config({ warnings: { wForgottenReturn: false } });
 
 export async function configure(aurelia) {
@@ -106,7 +97,11 @@ export async function configure(aurelia) {
 
 {% endhighlight %}
 
-N> To render the button component additionally, we need to add `syncfusion.ejGrid().ejButton());` in `main.js` file.
+N> To use `ejTemplate`, we need to add `syncfusion.ejGrid().ejTemplate();` in our `main.js` file.
+
+N> To load button component with grid component additionally, we need to import `syncfusion-javascript/Scripts/ej/web/ej.button.min` and add `syncfusion.ejGrid().ejButton();` in our `main.js` file.
+
+N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` and add `syncfusion.useAll()` in our `main.js` file.
 
 ## Getting started
 
