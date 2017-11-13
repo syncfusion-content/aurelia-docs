@@ -98,15 +98,15 @@ entry: {
 
 {% endhighlight %}
 
-N> To use any other Syncfusion components in Aurelia application, we need to add specific Syncfusion Aurelia component path to `aurelia.build.resources` in `package.json` file. For example, To use button component, add `aurelia-syncfusion-bridge/button/button` to `aurelia.build.resources` in `package.json`.
+N> To use `ejTemplate`, add `aurelia-syncfusion-bridge/common/template` to `aurelia.build.resources` in `package.json` and include the ejTemplate() in `main.js` file.
 
-N> To use templates, add `aurelia-syncfusion-bridge/common/template` to `aurelia.build.resources` in `package.json` and include the ejTemplate() in `main.js` file.
+N> To use any other Syncfusion components in Aurelia application, we need to add specific Syncfusion Aurelia component path to `aurelia.build.resources` in `package.json` file. For example, To use button component, add `aurelia-syncfusion-bridge/button/button` to `aurelia.build.resources` in `package.json`.
 
 ## Bridge registration
 
 In this section, we will discuss about the registration of Syncfusion bridge with Aurelia.
 
-Register the aurelia-syncfusion-bridge plugin with Aurelia in our `main.js` file which is in `src` folder.
+Register the `aurelia-syncfusion-bridge` plugin with Aurelia in our `main.js` file which is in `src` folder. For example, to register `ejGrid` component, we need to import `syncfusion-javascript/Scripts/ej/web/ej.grid.min` in `main.js` file.
 
 {% highlight javascript %}
 
@@ -115,6 +115,7 @@ import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import * as Bluebird from 'bluebird';
+import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
 Bluebird.config({ warnings: false });
 export async function configure(aurelia) {
   aurelia.use
@@ -128,7 +129,11 @@ export async function configure(aurelia) {
 
 {% endhighlight %}
 
-N> To render the button component additionally, we need to add `syncfusion.ejGrid().ejButton());` in `main.js` file.
+N> To use `ejTemplate`, we need to add `syncfusion.ejGrid().ejTemplate();` in our `main.js` file.
+
+N> To load button component with grid component additionally, we need to import `syncfusion-javascript/Scripts/ej/web/ej.button.min` and add `syncfusion.ejGrid().ejButton();` in our `main.js` file.
+
+N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` and add `syncfusion.useAll()` in our `main.js` file.
 
 ## Getting started
 
