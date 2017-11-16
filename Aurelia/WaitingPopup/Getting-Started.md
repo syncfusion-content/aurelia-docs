@@ -21,7 +21,7 @@ You can give the Username and Password in the **login page**. When you click the
 
 ## Create Username and Password
 
- * To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+ * To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started).
 * Create `WaitingPopup` folder inside `src/samples` location.
 * Create `waitingpopup.html` file inside  `src/samples/waitingpopup` folder and use the below code for rendering RichTextEditor component 
 
@@ -92,7 +92,7 @@ The following screenshot displays a **User** **login**.
 
 ## Add WaitingPopup Widget
 
-To render the ejWaitingPopup using angular directive, we need to inject the ej angular directive with modules.
+To render the ejWaitingPopup using aurelia directive, we need to inject the ej aurelia directive with modules.
 
  In a real-time login page scenario, when you click the Login button, the WaitingPopup is displayed. 
 
