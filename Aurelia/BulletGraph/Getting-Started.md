@@ -19,8 +19,8 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 ![](Getting-Started_images/Getting-Started_img1.jpg)
 
 1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
-2.Create `bulletgraph` folder inside `src/samples` location.
-3.Create `bulletgraph.html` file inside  `src/samples/bulletgraph` folder and use the below code for rendering BulletGraph component 
+2.Create `bulletGraph` folder inside `src/samples` location.
+3.Create `bulletGraph.html` file inside  `src/samples/bulletGraph` folder and use the below code for rendering BulletGraph component 
 4.Create a <div> tag.
 	
    {% highlight html %}
@@ -38,7 +38,7 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 
 {% endhighlight %}
 
-5.Create `bulletgraph.js` file inside `src/samples/bulletgraph` folder with below code snippet.
+5.Create `bulletGraph.js` file inside `src/samples/bulletGraph` folder with below code snippet.
 
 {% highlight javascript %}
 
