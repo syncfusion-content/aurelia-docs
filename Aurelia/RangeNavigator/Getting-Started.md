@@ -205,7 +205,7 @@ You can create a chart with line series using the following code sample.
                         { "xDate": new Date(2011, 10, 1), "yValue": 5 },
                         { "xDate": new Date(2011, 12, 1), "yValue": 15 }];
 	    this.tooltip =  {
-            visible: true, labelFormat: "MMM/yyy", tooltipDisplayMode: "always",
+            visible: true, labelFormat: "MMM/yyyy", tooltipDisplayMode: "always",
           };
 		  this.title = {
 	         //Add chart title
