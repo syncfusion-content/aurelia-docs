@@ -66,7 +66,7 @@ Now, this section explains how to plot JSON data to the Sparkline. First, let us
 export class BasicUse {
 constructor() {
 
-this.sparklinedata = [
+this.sparkLineData = [
 { employeeId: 1, sales: 25 },
 { employeeId: 2, sales: 28 },
 { employeeId: 3, sales: 34 },
@@ -90,7 +90,7 @@ Now, add the dataSource to the Sparkline and provide the field name to get the v
 <body>
 <template>
 <div>
-     <ej-sparkline id="sparkline" e-data-source.bind="sparklinedata" e-x-name="employeeId" e-y-name="sales">
+     <ej-sparkline id="sparkline" e-data-source.bind="sparkLineData" e-x-name="employeeId" e-y-name="sales">
         </ej-sparkline>
         </div>
 </template>
