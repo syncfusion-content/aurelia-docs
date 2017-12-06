@@ -115,7 +115,7 @@ You can create data source for **RangeNavigator** as follows.
 
 
 
-Now, add the **dataSource** to the **RangeNavigator** and provide the field name to get the values from the **data-source** in **x-name** and **yname** options.
+Now, add the **dataSource** to the **RangeNavigator** and provide the field name to get the values from the **data-source** in **x-name** and **y-name** options.
 
 {% highlight html %}
 
@@ -146,7 +146,7 @@ The following code sample shows how to enable a Tooltip.
 {% highlight javascript %}
 
 this.tooltip =  {
-            visible: true, labelFormat: "MMM/yyy", tooltipDisplayMode: "always",
+            visible: true, labelFormat: "MMM/yyyy", tooltipDisplayMode: "always",
           };
 
 {% endhighlight %}
@@ -205,7 +205,7 @@ You can create a chart with line series using the following code sample.
                         { "xDate": new Date(2011, 10, 1), "yValue": 5 },
                         { "xDate": new Date(2011, 12, 1), "yValue": 15 }];
 	    this.tooltip =  {
-            visible: true, labelFormat: "MMM/yyy", tooltipDisplayMode: "always",
+            visible: true, labelFormat: "MMM/yyyy", tooltipDisplayMode: "always",
           };
 		  this.title = {
 	         //Add chart title
@@ -243,7 +243,7 @@ You can update the chart with the selected data using the **on-range-changed** e
  <template>
     <div>
         <ej-range-navigator id="navigator" e-size-settings.bind="sizeSettings" e-data-source.bind="dataSource" e-x-name="xDate"
-                            e-y-name="yValue" e-tooltip-settings.bind="tooltip" e-on-range-changed.trigger="onchartloaded($event)">
+                            e-y-name="yValue" e-tooltip-settings.bind="tooltip" e-on-range-changed.trigger="onChartLoaded($event)">
         </ej-range-navigator>
     </div>
 
@@ -252,11 +252,11 @@ You can update the chart with the selected data using the **on-range-changed** e
 
 {% highlight javascript %}
 
- onchartloaded(sender) {
-    let chartobj = $('#chartContent').data('ejChart');
-    if (chartobj) {
-      chartobj.model.primaryXAxis.zoomPosition = sender.detail.zoomPosition;
-      chartobj.model.primaryXAxis.zoomFactor = sender.detail.zoomFactor;
+ onChartLoaded(sender) {
+    let chartObj = $('#chartContent').data('ejChart');
+    if (chartObj) {
+      chartObj.model.primaryXAxis.zoomPosition = sender.detail.zoomPosition;
+      chartObj.model.primaryXAxis.zoomFactor = sender.detail.zoomFactor;
       $('#chartContent').ejChart('redraw');
     }
   }
