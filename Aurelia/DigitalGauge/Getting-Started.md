@@ -22,8 +22,8 @@ Digital Thermometer
 ## Create a Digital Gauge
 
 1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
-2.Create `digitalgauge` folder inside `src/samples` location.
-3.Create `digitalgauge.html` file inside  `src/samples/digitalgauge` folder and use the below code for rendering DigitalGauge component 
+2.Create `digitalGauge` folder inside `src/samples` location.
+3.Create `digitalGauge.html` file inside  `src/samples/digitalGauge` folder and use the below code for rendering DigitalGauge component 
 4.Create a <div> tag.
 	
    {% highlight html %}
@@ -41,7 +41,7 @@ Digital Thermometer
 
 {% endhighlight %}
 
-5.Create `digitalgauge.js` file inside `src/samples/digitalgauge` folder with below code snippet.
+5.Create `digitalGauge.js` file inside `src/samples/digitalGauge` folder with below code snippet.
 
 {% highlight javascript %}
 
@@ -68,7 +68,7 @@ Basic attributes of each canvas elements are height and width. You can set the h
 <body>
 <template>
 <div>
-     <ej-digital-gauge id="digitalgauge" e-height="145" e-width="260">
+     <ej-digital-gauge id="digitalGauge" e-height="145" e-width="260">
         </ej-digital-gauge>
         </div>
 </template>
@@ -114,7 +114,7 @@ export class BasicUse {
 constructor() {
  this.items= [{
                 segmentSettings: { width: 2, length: 20 },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "102",
             }];
 }
@@ -129,7 +129,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-digital-gauge id="digitalgauge" e-height="145" e-width="260" e-items.bind="items">
+     <ej-digital-gauge id="digitalGauge" e-height="145" e-width="260" e-items.bind="items">
         </ej-digital-gauge>
         </div>
 </template>
@@ -161,7 +161,7 @@ Digital Gauge Segment Properties
 
 <div id="frameDiv"  style= "align : center;position : relative;margin : 0px auto;display :table;background-image :url("script/frame.png");background-repeat :no-repeat;">
 <div>
-     <ej-digital-gauge id="digitalgauge" e-height="145" e-width="260">
+     <ej-digital-gauge id="digitalGauge" e-height="145" e-width="260">
         </ej-digital-gauge>
         </div>
 </div>
@@ -188,9 +188,9 @@ The Location property is used to position the digital letters inside the canvas 
 export class BasicUse {
 constructor() {
  this.items= [{
-               //For Displaying Farenheit value
+               //For Displaying Fahrenheit value
                 segmentSettings: { width: 2, length: 20 },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "102", position: { x: 15, y: 40 }
  }];
 }
@@ -205,7 +205,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-digital-gauge id="digitalgauge" e-height="145" e-width="260" e-items.bind="items">
+     <ej-digital-gauge id="digitalGauge" e-height="145" e-width="260" e-items.bind="items">
         </ej-digital-gauge>
         </div>
 </template>
@@ -231,42 +231,42 @@ constructor() {
  this.items= [{
                 //For Displaying Fahrenheit value
                 segmentSettings: { width: 2, length: 20, spacing: 0 },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "102",
                 position: { x: 15, y: 40 }
             },
             {
                 //For displaying degree symbol
                 segmentSettings: { width: 2, length: 5, spacing: 0 },
-                characterSettings: { type: "sevensegment", spacing: 5, },
+                characterSettings: { type: "SevenSegment", spacing: 5, },
                 value: "0",
                 position: { x: 70, y: 28 }
             },
             {
-                //For displaying fahrenheit symbol
+                //For displaying Fahrenheit symbol
                 segmentSettings: { width: 2, length: 20, spacing: 0 },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "F",
                 position: { x: 170, y: 40 }
             },
             {
                 //For displaying Celcius value
                 segmentSettings: { width: 1, length: 9, spacing: 0, color: "#F5b43f" },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "38",
                 position: { x: 70, y: 90 },
             },
             {
                 //For displaying degree symbol
                 segmentSettings: { width: 1, length: 3, spacing: 0, color: "#F5b43f" },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "0",
                 position: { x: 90, y: 80 }
             },
             {
                 //For displaying celcius symbol
                 segmentSettings: { width: 1, length: 9, spacing: 0, color: "#F5b43f" },
-                characterSettings: { type: "sevensegment", spacing: 12, },
+                characterSettings: { type: "SevenSegment", spacing: 12, },
                 value: "c",
                 position: { x: 120, y: 90 }
             }];
@@ -283,7 +283,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-digital-gauge id="digitalgauge" e-height="145" e-width="260" e-items.bind="items">
+     <ej-digital-gauge id="digitalGauge" e-height="145" e-width="260" e-items.bind="items">
         </ej-digital-gauge>
         </div>
 </template>

@@ -20,8 +20,8 @@ This section briefly explains on how to create a Linear Gauge control for your a
 ## Create a Linear Gauge
 
 1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
-2.Create `lineargauge` folder inside `src/samples` location.
-3.Create `lineargauge.html` file inside  `src/samples/lineargauge` folder and use the below code for rendering LinearGauge component 
+2.Create `linearGauge` folder inside `src/samples` location.
+3.Create `linearGauge.html` file inside  `src/samples/linearGauge` folder and use the below code for rendering LinearGauge component 
 4.Create a <div> tag.
 	
  {% highlight html %}
@@ -39,7 +39,7 @@ This section briefly explains on how to create a Linear Gauge control for your a
 
 {% endhighlight %}
 
-5.Create `lineargauge.js` file inside `src/samples/lineargauge` folder with below code snippet.
+5.Create `linearGauge.js` file inside `src/samples/linearGauge` folder with below code snippet.
 
 {% highlight javascript %}
 
@@ -77,7 +77,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500">
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500">
         </ej-linear-gauge>
         </div>
 </template>
@@ -114,7 +114,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -162,7 +162,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -213,7 +213,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -263,7 +263,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -290,26 +290,26 @@ export class BasicUse {
 constructor() {
   this.scales: [{
                 ticks: [{
-                    type: "majorinterval",
+                    type: "majorInterval",
                     height: 8,
                     width: 1,
                     color: "#8c8c8c",
                     distanceFromScale: { y: -4 }
                 }, {
-                    type: "minorinterval",
+                    type: "minorInterval",
                     height: 4,
                     width: 1,
                     color: "#8c8c8c",
                     distanceFromScale: { y: -4 }
                 }, {
-                    type: "majorinterval",
+                    type: "majorInterval",
                     placement: "far",
                     height: 8,
                     width: 1,
                     color: "#8c8c8c",
                     distanceFromScale: { y: -4 }
                 }, {
-                    type: "minorinterval",
+                    type: "minorInterval",
                     placement: "far",
                     height: 4,
                     width: 1,
@@ -329,7 +329,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -387,7 +387,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-scales.bind="scales" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -432,7 +432,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-on-draw-labels.trigger="drawLabels($event)" >
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-on-draw-labels.trigger="drawLabels($event)" >
         </ej-linear-gauge>
         </div>
 </template>
@@ -530,7 +530,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-linear-gauge id="lineargauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-on-draw-labels.trigger="drawLabels($event)" 
+     <ej-linear-gauge id="linearGauge" e-height="500" e-width="500" e-label-color="#8c8c8c" e-enable-animation= "false" e-on-draw-labels.trigger="drawLabels($event)" 
      e-on-draw-custom-labels.trigger="drawCustomLabels($event)">
         </ej-linear-gauge>
         </div>

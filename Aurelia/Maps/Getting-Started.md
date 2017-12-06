@@ -366,7 +366,7 @@ You can use `leftLabel` and `rightLabel` property to provide left and right labe
 
 {% highlight javascript %}
 
-this.legendSettings = { showLegend: true, position: 'bottomleft', positionX: 3, positionY: 80, height: 18, width: 190, type: 'layers', mode: 'interactive', title: 'Population', leftLabel: '0.5M', rightLabel: '40M'};
+this.legendSettings = { showLegend: true, position: 'bottomLeft', positionX: 3, positionY: 80, height: 18, width: 190, type: 'layers', mode: 'interactive', title: 'Population', leftLabel: '0.5M', rightLabel: '40M'};
 
 {% endhighlight %}
 
