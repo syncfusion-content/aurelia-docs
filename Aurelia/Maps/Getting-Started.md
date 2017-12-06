@@ -247,7 +247,7 @@ You can customize the shape’s color by using `fill`, `stroke` and `stroke-thic
 
 {% highlight javascript %}
 
-this.shapesettings = { fill: '#9CBF4E', strokeThickness: '0.5', stroke: 'White', highlightStroke: 'White', 
+this.shapeSettings = { fill: '#9CBF4E', strokeThickness: '0.5', stroke: 'White', highlightStroke: 'White', 
 autoFill: false, highlightColor: '#BC5353', selectionColor: '#BC5353', highlightBorderWidth: '1', valuePath: 'population', 
 enableGradient: true, colorMappings: { rangeColorMapping: [ { from: 10000001, to: 40000000, gradientColors: ['#F1ECD8', '#DEE2B9']},
 { from: 5000001, to: 10000000, gradientColors: ['#DEE2B9', '#CBD89A']}, { from: 1000001, to: 5000000, gradientColors: ['#CBD89A', '#B8CE7B']}, 
@@ -261,7 +261,7 @@ enableGradient: true, colorMappings: { rangeColorMapping: [ { from: 10000001, to
 <template>
   <div>
  	<ej-map id="map1">
-		 <ej-layer e-layer-type="geometry" e-enable-selection="false" e-enable-mouse-hover="true" e-show-map-items="false" e-shape-settings.bind="shapesettings" e-shape-data.bind="usMap" e-shape-data-path="name" e-shape-property-path="name" e-data-source.bind="USA_State_PopulationData"></ej-layer>
+		 <ej-layer e-layer-type="geometry" e-enable-selection="false" e-enable-mouse-hover="true" e-show-map-items="false" e-shape-settings.bind="shapeSettings" e-shape-data.bind="usMap" e-shape-data-path="name" e-shape-property-path="name" e-data-source.bind="USA_State_PopulationData"></ej-layer>
 	</ej-map>			
 	
   </div>
@@ -285,7 +285,7 @@ N> The `enableGradient` property value is set to true to apply gradient colors f
 
 this.shapesettings = { 
      //..
-     //range added to shapesettings
+     //range added to shapeSettings
      colorMappings: { rangeColorMapping: [ { from: 10000001, to: 40000000, gradientColors: ['#F1ECD8', '#DEE2B9']}, 
      { from: 5000001, to: 10000000, gradientColors: ['#DEE2B9', '#CBD89A']}, 
      { from: 1000001, to: 5000000, gradientColors: ['#CBD89A', '#B8CE7B']}, 
@@ -366,7 +366,7 @@ You can use `leftLabel` and `rightLabel` property to provide left and right labe
 
 {% highlight javascript %}
 
-this.legendsettings = { showLegend: true, position: 'bottomleft', positionX: 3, positionY: 80, height: 18, width: 190, type: 'layers', mode: 'interactive', title: 'Population', leftLabel: '0.5M', rightLabel: '40M'};
+this.legendSettings = { showLegend: true, position: 'bottomleft', positionX: 3, positionY: 80, height: 18, width: 190, type: 'layers', mode: 'interactive', title: 'Population', leftLabel: '0.5M', rightLabel: '40M'};
 
 {% endhighlight %}
 

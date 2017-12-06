@@ -177,7 +177,7 @@ The following code sample explains how to customize TreeMap appearance using Ran
 
 {% highlight javascript %}
 
-this.rangecolormapping = [
+this.rangeColorMapping = [
                     { color: "#DC562D", from: "0", to: "1" },
                     { color: "#FED124", from: "1", to: "1.5" },
                     { color: "#487FC1", from: "1.5", to: "2" },
@@ -192,7 +192,7 @@ this.rangecolormapping = [
   
 <template>
      <div>
-        <ej-tree-map id="container"  e-weight-value-path="Population" e-color-value-path="Growth" e-data-source.bind="population_data" e-range-color-mapping.bind="rangecolormapping">
+        <ej-tree-map id="container"  e-weight-value-path="Population" e-color-value-path="Growth" e-data-source.bind="population_data" e-range-color-mapping.bind="rangeColorMapping">
 	           <ej-level e-group-path="Continent" e-group-gap="5"></ej-level> 
         </ej-tree-map>		
      </div>      
@@ -217,7 +217,7 @@ You can customize the Leaf level TreeMap items using `leaf-item-settings`. The L
 
 {% highlight javascript %}
 
- this.leafitemsettings = {labelPath: 'Region'};
+ this.leafItemSettings = {labelPath: 'Region'};
 
 {% endhighlight %}
 
@@ -227,7 +227,7 @@ You can customize the Leaf level TreeMap items using `leaf-item-settings`. The L
    <template>
      <div>
         <ej-tree-map id="container"  e-weight-value-path="Population" e-color-value-path="Growth" e-data-source.bind="population_data" 
-                     e-show-tooltip="true" e-tooltip-template="template" e-range-color-mapping.bind="rangecolormapping" e-leaf-item-settings.bind="leafitemsettings" >
+                     e-show-tooltip="true" e-tooltip-template="template" e-range-color-mapping.bind="rangeColorMapping" e-leaf-item-settings.bind="leafItemSettings" >
 	        <ej-level e-group-path="Continent" e-group-gap="5"></ej-level> 
         </ej-tree-map>		
      </div>      
@@ -267,12 +267,12 @@ The following code sample illustrates how to add labels for legend in a TreeMap.
 
 {% highlight javascript %}
 
- this.leafitemsettings = {labelPath: 'Region'};
+ this.leafItemSettings = {labelPath: 'Region'};
 
 {% endhighlight %}
 
-    this.legendsettings = { width: 690, height: 38};
-    this.rangecolormapping = [
+    this.legendSettings = { width: 690, height: 38};
+    this.rangeColorMapping = [
                     { color: "#DC562D", from: "0", to: "1",  legendLabel: "0 - 1 %    Growth" },
                     { color: "#FED124", from: "1", to: "1.5", legendLabel: "1 - 1.5 % Growth" },
                     { color: "#487FC1", from: "1.5", to: "2", legendLabel: "1.5 - 2 % Growth" },
@@ -284,8 +284,8 @@ The following code sample illustrates how to add labels for legend in a TreeMap.
 <template>
      <div>
     <ej-tree-map id="container"  e-weight-value-path="Population" e-color-value-path="Growth" e-data-source.bind="population_data" 
-       e-show-tooltip="true" e-tooltip-template="template" e-range-color-mapping.bind="rangecolormapping" 
-       e-leaf-item-settings.bind="leafitemsettings"  e-show-legend="true" e-legend-settings.bind="legendsettings">
+       e-show-tooltip="true" e-tooltip-template="template" e-range-color-mapping.bind="rangeColorMapping" 
+       e-leaf-item-settings.bind="leafItemSettings"  e-show-legend="true" e-legend-settings.bind="legendSettings">
 	  <ej-level e-group-path="Continent" e-group-gap="5"></ej-level> 
    </ej-tree-map>
 
