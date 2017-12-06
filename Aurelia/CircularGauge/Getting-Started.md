@@ -21,7 +21,7 @@ Analog Speedometer
 
 ## Create your circularGauge
 
-In this tutorial, you will learn how to create a simple circulargauge.
+In this tutorial, you will learn how to create a simple circular gauge.
 
 1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
 2.Create `circularGauge` folder inside `src/samples` location.
