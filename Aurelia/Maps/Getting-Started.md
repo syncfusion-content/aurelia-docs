@@ -283,7 +283,7 @@ N> The `enableGradient` property value is set to true to apply gradient colors f
 
 {% highlight javascript %}
 
-this.shapesettings = { 
+this.shapeSettings = { 
      //..
      //range added to shapeSettings
      colorMappings: { rangeColorMapping: [ { from: 10000001, to: 40000000, gradientColors: ['#F1ECD8', '#DEE2B9']}, 
@@ -299,7 +299,7 @@ this.shapesettings = {
     <template>
   <div>
  	<ej-map id="map1">
-		 <ej-layer e-layer-type="geometry" e-shape-settings.bind="shapesettings" e-shape-data.bind="usMap" e-shape-data-path="name" e-shape-property-path="name" e-data-source.bind="USA_State_PopulationData"></ej-layer>
+		 <ej-layer e-layer-type="geometry" e-shape-settings.bind="shapeSettings" e-shape-data.bind="usMap" e-shape-data-path="name" e-shape-property-path="name" e-data-source.bind="USA_State_PopulationData"></ej-layer>
 	</ej-map>			
 	
   </div>
