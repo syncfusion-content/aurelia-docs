@@ -72,6 +72,39 @@ Install [syncfusion-javascript widgets](https://www.npmjs.com/package/syncfusion
 
 {% endhighlight %}
 
+* We are working with `typescript`, since, we need to install the typings dependencies `jquery` and `ej.web.all`. We may need of accessing the `ej` object for Syncfusion widget's properties in Aurelia application, which is defined in `ej.web.all` typings file.
+E.g.  `ej.TextAlign.right`
+
+{% highlight javascript %}
+
+npm install --save-dev @types/jquery
+npm install --save-dev @types/ej.web.all
+
+{% endhighlight %}
+
+* And also include the typings `jquery` and `ej.web.all` in `tsconfig.json` file. 
+
+{% highlight javascript %}
+
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "lib": [ "es2015", "dom" ],
+    "types": [ "webpack-env", "jquery", "ej.web.all" ]
+  },
+  "exclude": [ "bin", "node_modules" ],
+  "atom": { "rewriteTsconfig": false }
+}
+
+{% endhighlight %}
+
 ## Configuring our Environment
 
 Before running the application, we want to configure our environment so that the ASP.NET tooling runs in development mode.
@@ -126,7 +159,7 @@ declare const IS_DEV_BUILD: boolean; // The value is supplied by Webpack during 
 
 //Export jQuery to window object
 import * as $ from 'jquery';
-let winObj:any = <any>window
+let winObj:any = <any>window;
 winObj['jQuery'] = $;
 winObj['$'] = $;
 
