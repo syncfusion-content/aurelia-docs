@@ -90,6 +90,9 @@ export class DefaultSchedule {
 
 {% endhighlight %}
 
+
+![](Getting-Started_images/Getting-Started_img1.png)
+
 ## Configure the Router
 
 Now, Configure the sample navigation for the created Schedule sample in `src/app.js` file.
