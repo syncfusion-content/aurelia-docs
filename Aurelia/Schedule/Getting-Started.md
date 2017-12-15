@@ -9,9 +9,9 @@ keywords: ejschedule, schedule, schedule widget, js schedule
 
 # Getting Started
 
-A separate wrapper has been created for all the Syncfusion widgets in order to bridge the Aurelia framework and the Syncfusion components. To know more about the Aurelia interface with Syncfusion widgets, refer the general content from [here](/aurelia/overview). 
+A separate wrapper has been created for all the Syncfusion widgets in order to bridge the Aurelia Framework and the Syncfusion components. To know more about the Aurelia interface with Syncfusion widgets, refer the general content from [here](/aurelia/overview). 
 
-To start using Scheduler in Aurelia framework, we already configured a template project in GitHub repository [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository) to quick start with it. Run the below set of commands to clone the repository and install the required packages for Syncfusion Aurelia application.
+To start using Scheduler in Aurelia Framework, we already configured a template project in GitHub repository [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository) to quick start with it. Run the below set of commands to clone the repository and install the required packages for Syncfusion Aurelia application.
 
 {% highlight html %}
 
