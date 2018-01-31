@@ -64,7 +64,7 @@ In this section, we will discuss about the configuration of webpack to seamlessl
 
 entry: {
     app: ['aurelia-bootstrapper'],
-    vendor: ['bluebird', 'jquery', 'bootstrap', 'aurelia-syncfusion'],
+    vendor: ['bluebird', 'jquery', 'bootstrap', 'aurelia-syncfusion-bridge'],
   }
 
 {% endhighlight %}
