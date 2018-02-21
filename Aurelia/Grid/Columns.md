@@ -1,0 +1,51 @@
+---
+layout: post
+title: Columns with Grid widget for Syncfusion Essential Aurelia
+description: How to define the columns and its features
+platform: Aurelia
+control: Grid
+documentation: ug
+--- 
+# Columns
+
+Column definitions are used as the [`e-datasource`](http://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") schema in Grid and it plays vital role in rendering column values in required format. Grid operations such as sorting, filtering, editing would be performed based on the column definitions. The [`field`](http://help.syncfusion.com/api/js/ejgrid#members:columns-field "field") property of the [`e-columns`](http://help.syncfusion.com/api/js/ejgrid#members:columns "columns") is necessary to map the datasource values in Grid columns.
+
+N> 1. If the column with [`field`](http://help.syncfusion.com/api/js/ejgrid#members:columns-field "field") is not in the datasource, then the column values will be displayed as empty.
+N> 2. If the [`field`](http://help.syncfusion.com/api/js/ejgrid#members:columns-field "field") name contains "dot" operator then it is considered as complex binding.
+
+## Column Template
+
+HTML templates can be specified in the [`template`](http://help.syncfusion.com/api/js/ejgrid#members:columns-template "template") property of the particular column as a string (HTML element) or ID of the template's HTML element.
+
+N> If [`field`](http://help.syncfusion.com/api/js/ejgrid#members:columns-field "field") is not specified, you will not able to perform editing, grouping, filtering, sorting, search and summary functionalities in particular column.
+
+The following code example describes the above behavior.
+
+{% highlight html %}
+
+  <ej-grid e-data-source.bind="data" e-allow-paging=true e-columns.bind="cols" e-page-settings.bind="pageSettings">
+   </ej-grid>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
+  export class Grid {
+    
+            constructor() {
+			    this.data = window.employeeView;
+                this.pageSettings = {pageSize:4};
+                this.cols = [
+			        { headerText: "Photo", template: "<img style='width: 75px; height: 70px' src='images/Employees/${EmployeeID}.png' alt='${EmployeeID}' />" },				
+			        { field: "EmployeeID" },
+			        { field: "FirstName" },
+			        { field: "LastName" },
+			        { field: "Country" }
+		        ]
+			}
+    }
+{% endhighlight %}
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img1.png)
