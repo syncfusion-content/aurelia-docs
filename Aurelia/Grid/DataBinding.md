@@ -23,7 +23,12 @@ The following code example describes the above behavior.
 
     <template>
     <div>
-        <ej-grid e-data-source.bind="data" e-allow-paging=true e-columns.bind="cols">
+        <ej-grid e-data-source.bind="data" e-allow-paging=true>
+            <ej-column e-field="OrderID" ></ej-column>
+            <ej-column e-field="EmployeeID"></ej-column>
+            <ej-column e-field="ShipCity"></ej-column>
+            <ej-column e-field="ShipCountry"></ej-column>
+            <ej-column e-field="Freight"></ej-column
         </ej-grid>
     </div>
     </template>
@@ -36,7 +41,6 @@ import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     
             constructor() {
 			    this.data = window.gridData;
-                this.cols = ["OrderID", "EmployeeID", "ShipCity", "ShipCountry", "Freight"];
 			}
 
     }
@@ -62,7 +66,12 @@ OData is a standardized protocol for creating and consuming data. You can provid
 The following code example describes the above behavior.
 
 {% highlight html %}
-   <ej-grid e-data-source.bind="data" e-allow-paging=true e-columns.bind="cols">
+   <ej-grid e-data-source.bind="data" e-allow-paging=true>
+            <ej-column e-field="OrderID" ></ej-column>
+            <ej-column e-field="EmployeeID"></ej-column>
+            <ej-column e-field="ShipCity"></ej-column>
+            <ej-column e-field="ShipCountry"></ej-column>
+            <ej-column e-field="Freight"></ej-column
    </ej-grid>
 
 {% endhighlight %}
@@ -74,7 +83,6 @@ The following code example describes the above behavior.
 			    this.data = ej.DataManager({
                         url: "http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders"
 	                    });
-                this.cols = ["OrderID", "EmployeeID", "ShipCity", "ShipCountry", "Freight"];
 			}
 
     }
