@@ -125,6 +125,7 @@ The following code example describes the above behavior.
 </ej-grid>  
 {% endhighlight %}
 
+{% highlight javascript %}
 import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
 export class Grid {
     
@@ -572,7 +573,7 @@ List of Column type and Filter operators
 
 ## FilterBar Template
 
-Usually enabling `e-allow-filtering`, will create default textbox in Grid FilterBar. So, Using [`e-filterbar-template`] property of `e-columns` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
+Usually enabling `e-allow-filtering`, will create default textbox in Grid FilterBar. So, Using [`e-filter-bar-template`] property of `ej-column` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
 It has three functions. They are    
 
 1. `create` - It is used to create the control at time of initialize.
@@ -588,7 +589,7 @@ The following code example describes the above behavior.
     <ej-column e-field="CustomerID" e-header-text="CustomerID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filtercustomer"></ej-column>
     <ej-column e-field="EmployeeID" e-header-text="EmployeeID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filteremployee"></ej-column>
     <ej-column e-field="Freight" e-header-text="Freight" e-text-align="left" e-format="{0:C2}" e-width="90" e-filter-bar-template.bind="filterFreight"></ej-column>
-    <ej-column e-field="Freight" e-header-text="ShipCountry" e-header-text="Ship Country" e-text-align="left" e-width="90"></ej-column>
+    <ej-column e-field="ShipCountry" e-header-text="Ship Country" e-text-align="left" e-width="90"></ej-column>
     <ej-column e-field="Verified" e-headertext="Verified" e-width="90"></ej-column>
 </ej-grid>
 {% endhighlight  %}
@@ -598,7 +599,6 @@ export class Grid {
     
     constructor() {
         this.data = window.gridData;
-        this.filterType = { filterType: "menu" };
         this.filterFreight = {
             write: function (args) {
                 args.element.ejNumericTextbox({ width: "100%", decimalPlaces: 2, focusOut: ej.proxy(args.column.filterBarTemplate.read, this, args) });

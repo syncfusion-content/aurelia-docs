@@ -146,7 +146,7 @@ The following output is displayed as a result of the above code example.
 
 ## Cell Edit Template
 
-On editing the column values, custom editor can be created by using [`edittemplate`](http://help.syncfusion.com/api/js/ejgrid#members:columns-edittemplate "editTemplate") property of [`e-columns`](http://help.syncfusion.com/api/js/ejgrid#members:columns "columns"). It has three functions, they are
+On editing the column values, custom editor can be created by using [`editTemplate`](http://help.syncfusion.com/api/js/ejgrid#members:columns-edittemplate "editTemplate") property of [`e-columns`](http://help.syncfusion.com/api/js/ejgrid#members:columns "columns"). It has three functions, they are
 
 1. `create` - It is used to create the control at time of initialize.
 2. `read` - It is used to read the input value at time of save.
@@ -827,10 +827,11 @@ The following code example describes the above behavior.
     <ej-column e-field="OrderID" e-is-primary-key=true e-validation-rules.bind="orderValidate"></ej-column>
     <ej-column e-field="CustomerID" e-validation-rules.bind="customerValidate"></ej-column>
     <ej-column e-field="ShipCity"></ej-column>
-    <ej-column e-field="Freight" e-edit-type="numericedit" e-validation-rules="rangeValidate"></ej-column>
+    <ej-column e-field="Freight" e-edit-type="numericedit" e-validation-rules.bind="rangeValidate"></ej-column>
     <ej-column e-field="ShipCountry"></ej-column>
 </ej-grid>
 {% endhighlight %}
+{% highlight javascript %}
 import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
 export class Grid {
     
