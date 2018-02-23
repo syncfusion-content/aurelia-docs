@@ -23,7 +23,7 @@ Single selection is an interactive support to select a specific row, cell or col
 
 ### Multiple Selections
 
-Multiple selections is an interactive support to select a group of rows, cells or columns in grid by mouse or keyboard interactions. To enable multiple selections, set [`e-selection-type`](http://help.syncfusion.com/api/js/ejgrid#members:selectiontype "selectionType") property as `multiple` and also set [`e-allowselection`](http://help.syncfusion.com/api/js/ejgrid#members:allowselection "allowSelection") property as `true`.
+Multiple selections is an interactive support to select a group of rows, cells or columns in grid by mouse or keyboard interactions. To enable multiple selections, set [`e-selection-type`](http://help.syncfusion.com/api/js/ejgrid#members:selectiontype "selectionType") property as `multiple` and also set [`e-allow-selection`](http://help.syncfusion.com/api/js/ejgrid#members:allowselection "allowSelection") property as `true`.
 
 ## Row Selection
 
@@ -181,7 +181,7 @@ export class Grid {
     
     constructor() {
         this.data = window.gridData;
-        this.Settings = {enableToggle: true };
+        this.settings = {enableToggle: true };
     }
     
 }

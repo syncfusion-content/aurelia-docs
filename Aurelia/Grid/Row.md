@@ -16,8 +16,6 @@ It provides a detailed view /additional information about each row of the grid. 
 
 On enabling details template, new column will be added in grid with an expander button in it and that can be expanded or collapsed to show or hide the underlying details row respectively.
 
-N> It's a standard way to enclose the template within the `script` tag with `type` as "text/template".
-
 The following code example describes the above behavior.
 
 {% highlight html %}
@@ -49,13 +47,13 @@ The following code example describes the above behavior.
                 this.detailTemp= "#tabGridContents";
 			}
             detailgrid(e){
-                var filteredData = e.detail.data["EmployeeID"];
+                var filteredData = e.data["EmployeeID"];
                 var data = ej.DataManager(window.ordersView).executeLocal(ej.Query().where("EmployeeID", "equal", parseInt(filteredData), true).take(5));
-                e.detail.detailsElement.find("#detailGrid").ejGrid({
+                e.detailsElement.find("#detailGrid").ejGrid({
                     dataSource: data,
                     columns: ["OrderID", "EmployeeID", "ShipCity", "ShipCountry", "Freight"]
                 });
-                e.detail.detailsElement.find(".tabcontrol").ejTab();
+                e.detailsElement.find(".tabcontrol").ejTab();
             }
     }
 

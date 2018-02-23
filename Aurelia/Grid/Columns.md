@@ -32,6 +32,7 @@ The following code example describes the above behavior.
         <ej-column e-field="EmployeeID"></ej-column>
         <ej-column e-field="FirstName"></ej-column>
         <ej-column e-field="LastName"></ej-column>
+        <ej-column e-field="Country"></ej-column>
  </ej-grid>
 
 {% endhighlight %}
