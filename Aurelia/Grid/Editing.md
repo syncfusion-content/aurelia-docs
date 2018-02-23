@@ -831,6 +831,7 @@ The following code example describes the above behavior.
     <ej-column e-field="ShipCountry"></ej-column>
 </ej-grid>
 {% endhighlight %}
+{% highlight javascript %}
 import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
 export class Grid {
     
