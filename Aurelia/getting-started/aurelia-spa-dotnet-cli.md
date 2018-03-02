@@ -72,6 +72,39 @@ Install [syncfusion-javascript widgets](https://www.npmjs.com/package/syncfusion
 
 {% endhighlight %}
 
+* We are working with `typescript`, since, we need to install the typings dependencies `jquery` and `ej.web.all`. We may need of accessing the `ej` object for Syncfusion widget's properties in Aurelia application, which is defined in `ej.web.all` typings file.
+E.g.  `ej.TextAlign.right`
+
+{% highlight javascript %}
+
+npm install --save-dev @types/jquery
+npm install --save-dev @types/ej.web.all
+
+{% endhighlight %}
+
+* And also include the typings `jquery` and `ej.web.all` in `tsconfig.json` file. 
+
+{% highlight javascript %}
+
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "lib": [ "es2015", "dom" ],
+    "types": [ "webpack-env", "jquery", "ej.web.all" ]
+  },
+  "exclude": [ "bin", "node_modules" ],
+  "atom": { "rewriteTsconfig": false }
+}
+
+{% endhighlight %}
+
 ## Configuring our Environment
 
 Before running the application, we want to configure our environment so that the ASP.NET tooling runs in development mode.
@@ -90,28 +123,7 @@ N> After executing the above command, restart the command prompt to make the cha
 
 In this section, we will discuss about the configuration of webpack to seamlessly work with aurelia-syncfusion-bridge.
 
-* In `webpack.config.js` file, we need to add the path for Syncfusion Aurelia components in `ModuleDependenciesPlugin` to load the aurelia-syncfusion-bridge component source into webpack. For example, to render `ejGrid` component, we need to add the following path.
-
-{% highlight javascript %}
-
-const { AureliaPlugin, ModuleDependenciesPlugin } = require('aurelia-webpack-plugin');
-
-plugins: [
-    new AureliaPlugin({ aureliaApp: 'boot' }),
-    new ModuleDependenciesPlugin({
-        "aurelia-syncfusion-bridge": ["./grid/grid", "./grid/column"],
-    }),
-    ....
-    ....
-]
-
-{% endhighlight %}
-
-N> To use any other Syncfusion components in Aurelia application, we need to add specific Syncfusion Aurelia component path to `ModuleDependenciesPlugin` in `webpack.config.js` file. For example, To use button component, add `"aurelia-syncfusion-bridge": [ "./button/button"]` to `ModuleDependenciesPlugin`.
-
-N> To use `templates`, add `"aurelia-syncfusion-bridge": [ "./common/template"]` to `ModuleDependenciesPlugin` and include `ejTemplate()` in `boot.ts` file
-
-* Also, add the following loader configuration in `module.rules` to support various Syncfusion file formats.
+* In `webpack.config.js` file, add the following loader configuration in `module.rules` to support various Syncfusion file formats.
 
 {% highlight javascript %}
 
@@ -134,37 +146,101 @@ module: {
 
 In this section, we will discuss about the registration of Syncfusion bridge with Aurelia.
 
-* Export `jquery` to `window` object and register the `aurelia-syncfusion-bridge` plugin with Aurelia in our `boot.ts` file which is in `ClientApp` folder.
+* In `boot.ts` file, Export `jquery` to `window` object and register the `aurelia-syncfusion-bridge` plugin with Aurelia which is in `ClientApp` folder.
 
 {% highlight javascript %}
 
 import 'isomorphic-fetch';
 import { Aurelia, PLATFORM } from 'aurelia-framework';
+import { HttpClient } from 'aurelia-fetch-client';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
+declare const IS_DEV_BUILD: boolean; // The value is supplied by Webpack during the build
 
 //Export jQuery to window object
 import * as $ from 'jquery';
-window['jQuery'] = $;
-window['$'] = $;
-
-declare const IS_DEV_BUILD: boolean; // The value is supplied by Webpack during the build
+let winObj:any = <any>window;
+winObj['jQuery'] = $;
+winObj['$'] = $;
 
 export function configure(aurelia: Aurelia) {
     aurelia.use.standardConfiguration()
         //register aurelia-syncfusion-bridge plugin here
-        .plugin(PLATFORM.moduleName('aurelia-syncfusion-bridge'), (syncfusion) => syncfusion.ejGrid());
+    .plugin(PLATFORM.moduleName('aurelia-syncfusion-bridge'), (syncfusion: any) => syncfusion.ejGrid());
 
     if (IS_DEV_BUILD) {
         aurelia.use.developmentLogging();
     }
+
+    new HttpClient().configure(config => {
+        const baseUrl = document.getElementsByTagName('base')[0].href;
+        config.withBaseUrl(baseUrl);
+    });
 
     aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app/components/app/app')));
 }
 
 {% endhighlight %}
 
-N> To render the button component additionally, we need to add `syncfusion.ejGrid().ejButton());` in `boot.ts` file.
+N> To use `ejTemplate`, we need to add `syncfusion.ejGrid().ejTemplate();` in our `boot.ts` file.
+
+N> To load button component with grid component additionally, we need to add `syncfusion.ejGrid().ejButton();` in our `boot.ts` file.
+
+N> To load all Syncfusion components, we need to add `syncfusion.useAll()` in our `boot.ts` file.
+
+* To load `ejGrid` component, we need to import `syncfusion-javascript/Scripts/ej/web/ej.grid.min` in `app.ts` file which is in `ClientApp/app/components/app` folder.
+
+
+{% highlight javascript %}
+
+import { Aurelia, PLATFORM } from 'aurelia-framework';
+import { Router, RouterConfiguration } from 'aurelia-router';
+import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
+
+export class App {
+    router: Router;
+
+    configureRouter(config: RouterConfiguration, router: Router) {
+        config.title = 'Aurelia';
+        config.map([{
+            route: [ '', 'home' ],
+            name: 'home',
+            settings: { icon: 'home' },
+            moduleId: PLATFORM.moduleName('../home/home'),
+            nav: true,
+            title: 'Home'
+        }, {
+            route: 'counter',
+            name: 'counter',
+            settings: { icon: 'education' },
+            moduleId: PLATFORM.moduleName('../counter/counter'),
+            nav: true,
+            title: 'Counter'
+        }, {
+            route: 'fetch-data',
+            name: 'fetchdata',
+            settings: { icon: 'th-list' },
+            moduleId: PLATFORM.moduleName('../fetchdata/fetchdata'),
+            nav: true,
+            title: 'Fetch data'
+        },{
+            route: 'grid',
+            name: 'grid',
+            settings: { icon: 'th' },
+            moduleId: PLATFORM.moduleName('../samples/grid/grid'),
+            nav: true,
+            title: 'Grid'
+        }]);
+
+        this.router = router;
+    }
+}
+
+{% endhighlight %}
+
+N> To load button component, we need to import `syncfusion-javascript/Scripts/ej/web/ej.button.min` in our `app.ts` file.
+
+N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` in our `app.ts` file.
 
 ## Getting started
 

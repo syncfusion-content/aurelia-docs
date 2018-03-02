@@ -21,11 +21,11 @@ Analog Speedometer
 
 ## Create your circularGauge
 
-In this tutorial, you will learn how to create a simple circulargauge.
+In this tutorial, you will learn how to create a simple circular gauge.
 
 1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
-2.Create `circulargauge` folder inside `src/samples` location.
-3.Create `circulargauge.html` file inside  `src/samples/circulargauge` folder and use the below code for rendering CircularGauge component 
+2.Create `circularGauge` folder inside `src/samples` location.
+3.Create `circularGauge.html` file inside  `src/samples/circularGauge` folder and use the below code for rendering CircularGauge component 
 4.Create a <div> tag.
 	
  {% highlight html %}
@@ -34,7 +34,7 @@ In this tutorial, you will learn how to create a simple circulargauge.
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge">
+     <ej-circular-gauge id="circularGauge">
         </ej-circular-gauge>
         </div>
 </template>
@@ -43,7 +43,7 @@ In this tutorial, you will learn how to create a simple circulargauge.
 
 {% endhighlight %}
 
-5.Create `circulargauge.js` file inside `src/samples/circulargauge` folder with below code snippet.
+5.Create `circularGauge.js` file inside `src/samples/circularGauge` folder with below code snippet.
 
 {% highlight javascript %}
 
@@ -68,7 +68,7 @@ Pointers have different height and width so you can set the height and width of 
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500">
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500">
         </ej-circular-gauge>
         </div>
 </template>
@@ -102,7 +102,7 @@ The speedometer must have some dark color as background so that its value is cle
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -159,7 +159,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -197,7 +197,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -275,7 +275,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -327,7 +327,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -389,7 +389,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -492,7 +492,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>
@@ -557,7 +557,7 @@ constructor() {
 <body>
 <template>
 <div>
-     <ej-circular-gauge id="circulargauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
+     <ej-circular-gauge id="circularGauge" e-height="500" e-width="500" e-background-color="#3D3F3D" e-read-only="false" e-scales.bind="scales" >
         </ej-circular-gauge>
         </div>
 </template>

@@ -170,7 +170,7 @@ In this section, we will discuss about the configuration of Aurelia to seamlessl
             "path": "../node_modules/aurelia-syncfusion-bridge/dist/amd",
             "main": "index",
             "resources": [
-              "**/*.js"
+              "grid/*.js"
             ]
           },
           {
@@ -180,7 +180,8 @@ In this section, we will discuss about the configuration of Aurelia to seamlessl
             "resources": [
               "Content/ej/web/ej.widgets.core.bootstrap.min.css",
               "Content/ej/web/bootstrap-theme/ej.theme.min.css",
-              "Content/ej/web/responsive-css/ej.responsive.css"
+              "Content/ej/web/responsive-css/ej.responsive.css",
+              "Scripts/ej/web/ej.grid.min.js"
             ]
           },
           {
@@ -191,6 +192,12 @@ In this section, we will discuss about the configuration of Aurelia to seamlessl
         ]
 
 {% endhighlight %}
+
+N> To use `ejTemplate`, we need to add `common/template.js` to the `resources` of `aurelia-syncfusion-bridge`.
+
+N> To use any other Syncfusion components in Aurelia application, we need to add specific Syncfusion Aurelia component path to the `resources` of `aurelia-syncfusion-bridge` and `syncfusion-javascript` in `build.bundles.dependencies` file. For example, To use button component, add `button/*.js` to the `resources` of `aurelia-syncfusion-bridge` and `Scripts/ej/web/ej.grid.min.js` to the `resources` of `syncfusion-javascript`.
+
+N> To use all Syncfusion component, we need to add `**/*.js` to the `resources` of `aurelia-syncfusion-bridge` and `Scripts/ej/web/ej.web.all.min.js` to the `resources` of `syncfusion-javascript`.
 
 * We need to copy the `fonts/images` to the location where Syncfusion themes expects them. This can be done by using `copyFiles` in `aurelia.json`
 
@@ -237,11 +244,12 @@ N> If the `stub` property is said to `true`, then the external files will not be
 
 In this section, we will discuss about the registration of Syncfusion bridge with Aurelia.
 
-Register the aurelia-syncfusion-bridge plugin with Aurelia in our `main.js` file which is in `src` folder.
+Register the `aurelia-syncfusion-bridge` plugin with Aurelia in our `main.js` file which is in `src` folder. For example, to register `ejGrid` component, we need to import `syncfusion-javascript/Scripts/ej/web/ej.grid.min` in `main.js` file.
 
 {% highlight javascript %}
 
 import environment from './environment';
+import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
 Promise.config({
   warnings: {
     wForgottenReturn: false
@@ -267,6 +275,12 @@ export function configure(aurelia) {
 }
 
 {% endhighlight %}
+
+N> To use `ejTemplate`, we need to add `syncfusion.ejGrid().ejTemplate();` in our `main.js` file.
+
+N> To load button component with grid component additionally, we need to import `syncfusion-javascript/Scripts/ej/web/ej.button.min` and add `syncfusion.ejGrid().ejButton();` in our `main.js` file.
+
+N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` and add `syncfusion.useAll()` in our `main.js` file.
 
 ## Getting started
 
