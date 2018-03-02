@@ -9,7 +9,7 @@ keywords: ejschedule, schedule, schedule widget, js schedule
 
 # Getting Started
 
-A separate wrapper has been created for all the Syncfusion widgets in order to bridge the Aurelia Framework and the Syncfusion components. To know more about the Aurelia interface with Syncfusion widgets, refer the general content from [here](/aurelia/overview). 
+A separate wrapper has been created for all the Syncfusion widgets in order to bridge the Aurelia framework and the Syncfusion components. To know more about the Aurelia interface with Syncfusion widgets, refer the general content from [here](/aurelia/overview).
 
 To start using Scheduler in Aurelia Framework, we already configured a template project in GitHub repository [syncfusion-template-repository](https://github.com/aurelia-ui-toolkits/syncfusion-template-repository) to quick start with it. Run the below set of commands to clone the repository and install the required packages for Syncfusion Aurelia application.
 
@@ -48,7 +48,6 @@ Create `schedule.js` file with the below code snippet inside `src/samples/schedu
 export class DefaultSchedule {
     constructor() {
       this.AppointmentList = {
-          
         // Schedule appointment dataSource
         dataSource: [
           {
@@ -74,7 +73,6 @@ export class DefaultSchedule {
             Recurrence: true,
             RecurrenceRule: 'FREQ=WEEKLY;BYDAY=MO,TH;INTERVAL=1;COUNT=5'
           }],
-          
         // Schedule dataSource field mapping
         id: 'Id',
         subject: 'Subject',
@@ -103,13 +101,13 @@ export class App {
  configureRouter(config, router) {
   config.title = 'Aurelia Syncfusion';
   config.map([
-   { route: ['', 'welcome'], name: 'welcome', moduleId: 'welcome',                              
+   { route: ['', 'welcome'], name: 'welcome', moduleId: 'welcome',
                 nav: true, title: 'Welcome' },
-   { route: 'child-router',  name: 'child-router', moduleId: 'child-router',                         
+   { route: 'child-router',  name: 'child-router', moduleId: 'child-router',
                 nav: true, title: 'Child Router' },
-   { route: 'button', name: 'button', moduleId: 'samples/button/button',                
+   { route: 'button', name: 'button', moduleId: 'samples/button/button',
                 nav: true, title: 'Button' },
-   { route: 'schedule', name: 'schedule', moduleId: 'samples/schedule/schedule',                
+   { route: 'schedule', name: 'schedule', moduleId: 'samples/schedule/schedule',
                 nav: true, title: 'Schedule' }
  ]);
  this.router = router;
