@@ -410,8 +410,8 @@ The server-side action **ExportAsExcel** contains the following code example to 
 public ActionResult ExportAsXSL()
 {
     List<AppointmentData> scheduleAppointments = (List<AppointmentData>)JsonConvert.DeserializeObject(Request.Form["ScheduleAppointment"], typeof(List<AppointmentData>));
-    ExcelExport xlExport = new ExcelExport();
-    return xlExport.Export(scheduleAppointments, ExcelVersion.Excel2013);
+    ExcelExport excelExport = new ExcelExport();
+    return excelExport.Export(scheduleAppointments, ExcelVersion.Excel2013);
 }
 
 public class AppointmentData

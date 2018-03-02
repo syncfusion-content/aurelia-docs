@@ -768,7 +768,7 @@ onDropped(event) {
         let result = scheduleObj.getSlotByElement($(e.target));
         // set value to custom appointment window fields
         $("#subject").val(e.droppedElementData.text);
-        $("#customdescription").val(e.droppedElementData.text);
+        $("#customDescription").val(e.droppedElementData.text);
         $("#StartTime").ejDateTimePicker({ value: new Date(result.startTime) });
         $("#EndTime").ejDateTimePicker({ value: new Date(result.endTime) });
         $("#resource").val(result.resources.text);

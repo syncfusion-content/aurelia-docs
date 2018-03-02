@@ -303,7 +303,7 @@ The following code example lets you create the custom appointment window (using 
                             </tr>
                             <tr id="customAlldayrecurcheck">
                                 <td colspan="4">
-                                    <div id="alldayCheck" class="customAlign">
+                                    <div id="allDayCheck" class="customAlign">
                                         <div class='e-textlabel customAlign'>AllDay:</div>
                                         <div class="customAlign">
                                             <input ej-check-box="e-checked.two-way:allDay" e-on-change.trigger="onCheckboxChange($event)" id="AllDay" />
@@ -441,12 +441,12 @@ export class CustomAppointmentWindow {
             if ($(args.target).hasClass('e-appOk')) {
                 if (proxy._customAppointmentWindow.find('#Subject').val().trim() == '') return false;
                 let appObj = {};
-                let formelement = proxy._customAppointmentWindow.find('#customAppointmentWindow').get(0);
-                for (let index = 0; index < formelement.length; index++) {
-                    let columnName = formelement[index].name;
-                    let $element = $(formelement[index]);
+                let formElement = proxy._customAppointmentWindow.find('#customAppointmentWindow').get(0);
+                for (let index = 0; index < formElement.length; index++) {
+                    let columnName = formElement[index].name;
+                    let $element = $(formElement[index]);
                     if (!ej.isNullOrUndefined(columnName) && columnName != '' && ej.isNullOrUndefined(appObj[columnName])) {
-                        let value = formelement[index].value;
+                        let value = formElement[index].value;
                         if (columnName == 'Id' && value != '') {
                             value = parseInt(string, value);
                         }
@@ -454,7 +454,7 @@ export class CustomAppointmentWindow {
                             value = new Date(value);
                         }
                         if ($element.hasClass('e-checkbox')) {
-                            value = formelement[index].checked;
+                            value = formElement[index].checked;
                         }
                         if (columnName.indexOf('_hidden') == -1) {
                             appObj[columnName] = value;
@@ -486,9 +486,9 @@ export class CustomAppointmentWindow {
         let args = event.detail;
         if (args.model.id == 'AllDay') {
             if (args.isChecked) {
-                let strDate = new Date(proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker('model.value').setHours(0, 0, 0));
+                let startDate = new Date(proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker('model.value').setHours(0, 0, 0));
                 let endDate = new Date(proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker('model.value').setHours(23, 59, 59));
-                proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ value: new Date(strDate), enabled: false });
+                proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ value: new Date(startDate), enabled: false });
                 proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker({ value: new Date(endDate), enabled: false });
             } else {
                 proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ enabled: true });
@@ -511,7 +511,7 @@ export class CustomAppointmentWindow {
 
     constructor() {
         this.recurrenceCheck = false;
-        this.alldayCheck = false;
+        this.allDayCheck = false;
         this.Frequencies = ['daily', 'weekly', 'monthly', 'yearly'];
         this.AppointmentList = {
             dataSource: [{
