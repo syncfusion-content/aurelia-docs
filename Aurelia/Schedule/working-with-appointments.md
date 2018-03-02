@@ -766,7 +766,7 @@ onDropped(event) {
     if ($(e.target).parents(".e-schedule").length != 0) {
         let scheduleObj = $("#Schedule1").data("ejSchedule");
         let result = scheduleObj.getSlotByElement($(e.target));
-        // set value to custom appointmnt window fields
+        // set value to custom appointment window fields
         $("#subject").val(e.droppedElementData.text);
         $("#customdescription").val(e.droppedElementData.text);
         $("#StartTime").ejDateTimePicker({ value: new Date(result.startTime) });
