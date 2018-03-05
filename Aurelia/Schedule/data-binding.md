@@ -303,7 +303,7 @@ export class Schedule {
                 Categorize: '5,2,1'
             }, {
                 Id: 113,
-                Subject: 'HighWay Thru Hell',
+                Subject: 'How It's Made',
                 StartTime: '2017/6/1 03:00:00',
                 EndTime: '2017/6/1 07:00:00',
                 StartTimeZone: 'UTC +05:30',
@@ -352,8 +352,8 @@ export class Schedule {
     }
     attached() {
         $.validator.addMethod('customRule', function(value, element, options) {
-            let ptn = /^[a-zA-Z0-9- ]*$/;
-            return ptn.test(value);
+            let rule = /^[a-zA-Z0-9- ]*$/;
+            return rule.test(value);
         }, 'Special character(s) not allowed in Location field');
     }
 }
@@ -416,7 +416,7 @@ The appointment data can be bound to the Scheduler through the [Odata](http://ww
 
 export class Schedule {
     constructor() {
-        let dataManager = ej.DataManager({ //eslint-disable-line new-cap
+        let dataManager = ej.DataManager({
             url: 'http://js.syncfusion.com/ejservices/api/Schedule/LoadData',
             crossDomain: true
         });
@@ -580,10 +580,10 @@ public class ScheduleData
 public JsonResult GetData()
 {
     // Mention your own dataSource to be used here.
-    string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
+    string accessConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
     DataSet myDataSet = new DataSet();
     OleDbConnection myAccessConn = null;
-    myAccessConn = new OleDbConnection(strAccessConn);
+    myAccessConn = new OleDbConnection(accessConnectionString);
     OleDbCommand myAccessCommand = new OleDbCommand("SELECT * FROM DefaultSchedule", myAccessConn);
     OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
     myAccessConn.Open();
@@ -603,11 +603,11 @@ The control code to handle the CRUD operation are as follows.
 public JsonResult Batch(EditParams param)
 {
     // Mention your own dataSource to be used here.
-    string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
+    string accessConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
     if (param.action == "insert" || (param.action == "batch" && param.added != null))  // this block of code will execute while inserting the appointments
     {
         var value = param.action == "insert" ? param.value : param.added[0];
-        using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+        using (OleDbConnection myCon = new OleDbConnection(accessConnectionString))
         {
             OleDbCommand cmd = new OleDbCommand();
             cmd.CommandType = CommandType.Text;
@@ -646,7 +646,7 @@ public JsonResult Batch(EditParams param)
     {
         if (param.action == "remove")
         {
-            using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+            using (OleDbConnection myCon = new OleDbConnection(accessConnectionString))
             {
                 myCon.Open();
                 OleDbCommand cmd = new OleDbCommand("DELETE FROM DefaultSchedule WHERE Id = @Key", myCon);
@@ -659,7 +659,7 @@ public JsonResult Batch(EditParams param)
         {
             foreach (var apps in param.deleted)
             {
-                using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                using (OleDbConnection myCon = new OleDbConnection(accessConnectionString))
                 {
                     myCon.Open();
                     OleDbCommand cmd = new OleDbCommand("DELETE FROM DefaultSchedule WHERE Id = @Key", myCon);
@@ -673,7 +673,7 @@ public JsonResult Batch(EditParams param)
     if ((param.action == "batch" && param.changed != null) || param.action == "update")   // this block of code will execute while updating the appointment
     {
         var value = param.action == "update" ? param.value : param.changed[0];
-        using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+        using (OleDbConnection myCon = new OleDbConnection(accessConnectionString))
         {
             myCon.Open();
             OleDbCommand cmd = new OleDbCommand("UPDATE DefaultSchedule SET Subject=@Subject,StartTime=@StartTime,EndTime=@EndTime,AllDay=@AllDay,Recurrence=@Recurrence,RecurrenceRule=@RecurrenceRule,Description=@Description,StartTimeZone=@StartTimeZone,EndTimeZone=@EndTimeZone  WHERE Id = @Key", myCon);
@@ -706,7 +706,7 @@ public JsonResult Batch(EditParams param)
             myCon.Close();
         }
     }
-    OleDbConnection myAccessConn = new OleDbConnection(strAccessConn);
+    OleDbConnection myAccessConn = new OleDbConnection(accessConnectionString);
     OleDbCommand myAccessCommand = new OleDbCommand("SELECT * FROM DefaultSchedule", myAccessConn);
     OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
     DataSet myDataSet = new DataSet();
@@ -786,22 +786,22 @@ public class ScheduleAppointmentsObjDatum
     public List<ScheduleAppointmentsObjData> GetRecords()
     {
         List<ScheduleAppointmentsObjData> list = new List<ScheduleAppointmentsObjData>();
-        list.Add(new ScheduleAppointmentsObjData(100, "Bering Sea Gold", "chennai", "05/02/2014 09:00:00 AM", "05/02/2014 10:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=2;COUNT=10"));
-        list.Add(new ScheduleAppointmentsObjData(101, "Bering Sea Gold", "mum", "05/02/2014 04:00:00 AM", "05/02/2014 05:00:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(102, "Bering Sea Gold", "trcy", "05/02/2014 04:00:00 PM", "05/02/2014 05:30:00 PM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(103, "What Happened Next?", "chennai", "05/04/2014 03:00:00 AM", "05/04/2014 04:30:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(104, "Bering Sea Gold", "trcy", "05/04/2014 05:00:00 AM", "05/04/2014 05:40:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(105, "Daily Planet", "chennai", "05/03/2014 01:00:00 AM", "05/03/2014 02:00:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(106, "Alaska: The Last Frontier", "chennai", "05/03/2014 08:00:00 AM", "05/03/2014 09:00:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(107, "How It's Made", "chennai", "05/01/2014 06:00:00 AM", "05/01/2014 06:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=WEEKLY;BYDAY=MO,TU;INTERVAL=1;COUNT=15"));
-        list.Add(new ScheduleAppointmentsObjData(108, "Deadest Catch", "chennai", "05/03/2014 04:00:00 PM", "05/03/2014 05:00:00 PM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(109, "MayDay", "chennai", "04/30/2014 06:30:00 AM", "04/30/2014 07:30:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(110, "MoonShiners", "chennai", "05/02/2014 02:00:00 AM", "05/02/2014 02:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=1;COUNT=5"));
-        list.Add(new ScheduleAppointmentsObjData(111, "Close Encounters", "chennai", "04/30/2014 02:00:00 PM", "04/30/2014 03:00:00 PM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=WEEKLY;BYDAY=MO,TH;INTERVAL=1;COUNT=5"));
-        list.Add(new ScheduleAppointmentsObjData(112, "Close Encounters", "mum", "04/30/2014 03:00:00 AM", "04/30/2014 03:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1;COUNT=3"));
-        list.Add(new ScheduleAppointmentsObjData(113, "Highway Through Hell", "chennai", "05/01/2014 03:00:00 AM", "05/01/2014 07:00:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=2;COUNT=10"));
-        list.Add(new ScheduleAppointmentsObjData(114, "Moon Shiners", "chennai", "05/02/2014 04:20:00 AM", "05/02/2014 05:50:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
-        list.Add(new ScheduleAppointmentsObjData(115, "Cash Cab", "chennai", "04/30/2014 03:00:00 PM", "04/30/2014 04:30:00 PM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=1;COUNT=5"));
+        list.Add(new ScheduleAppointmentsObjData(100, "Bering Sea Gold", "Chennai", "05/02/2014 09:00:00 AM", "05/02/2014 10:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=2;COUNT=10"));
+        list.Add(new ScheduleAppointmentsObjData(101, "Bering Sea Gold", "Mumbai", "05/02/2014 04:00:00 AM", "05/02/2014 05:00:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(102, "Bering Sea Gold", "Trichy", "05/02/2014 04:00:00 PM", "05/02/2014 05:30:00 PM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(103, "What Happened Next?", "Chennai", "05/04/2014 03:00:00 AM", "05/04/2014 04:30:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(104, "Bering Sea Gold", "Trichy", "05/04/2014 05:00:00 AM", "05/04/2014 05:40:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(105, "Daily Planet", "Chennai", "05/03/2014 01:00:00 AM", "05/03/2014 02:00:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(106, "Alaska: The Last Frontier", "Chennai", "05/03/2014 08:00:00 AM", "05/03/2014 09:00:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(107, "How It's Made", "Chennai", "05/01/2014 06:00:00 AM", "05/01/2014 06:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=WEEKLY;BYDAY=MO,TU;INTERVAL=1;COUNT=15"));
+        list.Add(new ScheduleAppointmentsObjData(108, "Deadest Catch", "Chennai", "05/03/2014 04:00:00 PM", "05/03/2014 05:00:00 PM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(109, "MayDay", "Chennai", "04/30/2014 06:30:00 AM", "04/30/2014 07:30:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(110, "MoonShiners", "Chennai", "05/02/2014 02:00:00 AM", "05/02/2014 02:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=1;COUNT=5"));
+        list.Add(new ScheduleAppointmentsObjData(111, "Close Encounters", "Chennai", "04/30/2014 02:00:00 PM", "04/30/2014 03:00:00 PM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=WEEKLY;BYDAY=MO,TH;INTERVAL=1;COUNT=5"));
+        list.Add(new ScheduleAppointmentsObjData(112, "Close Encounters", "Mumbai", "04/30/2014 03:00:00 AM", "04/30/2014 03:30:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1;COUNT=3"));
+        list.Add(new ScheduleAppointmentsObjData(113, "Highway Through Hell", "Chennai", "05/01/2014 03:00:00 AM", "05/01/2014 07:00:00 AM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=2;COUNT=10"));
+        list.Add(new ScheduleAppointmentsObjData(114, "Moon Shiners", "Chennai", "05/02/2014 04:20:00 AM", "05/02/2014 05:50:00 AM", "", "1", "", false, "", "", "", "", false, "", "", ""));
+        list.Add(new ScheduleAppointmentsObjData(115, "Cash Cab", "Chennai", "04/30/2014 03:00:00 PM", "04/30/2014 04:30:00 PM", "", "1", "", true, "", "", "", "", false, "", "", "FREQ=DAILY;INTERVAL=1;COUNT=5"));
         return list;
     }
 }
