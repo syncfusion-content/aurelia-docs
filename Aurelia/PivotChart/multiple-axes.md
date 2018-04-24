@@ -2,7 +2,7 @@
 layout: post
 title: Multiple Axes
 description: multiple axes
-platform: js
+platform: aurelia
 control: PivotChart
 documentation: ug
 api: /api/js/ejpivotchart
