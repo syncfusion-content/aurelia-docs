@@ -34,7 +34,7 @@ The below steps describes to create Syncfusion Aurelia PercentageTextbox compone
 {% highlight html %}
 
 <template>
-     <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:cwidth" />
+     <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:percentWidth" />
 </template>
 
 {% endhighlight %}
@@ -46,7 +46,7 @@ The below steps describes to create Syncfusion Aurelia PercentageTextbox compone
 export class Default {
     constructor() {
       this.percentValue = 5;
-      this.cwidth = '100%';
+      this.percentWidth = '100%';
     }
 }
 
@@ -95,7 +95,7 @@ You can set the “minValue” and “maxValue” in Percentage text boxes for m
 
 {% highlight html %}
 <template>
-           <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-min-value.bind:minvalue;e-max-value-bind:maxvalue" />
+           <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-min-value.bind:minimumValue;e-max-value-bind:maximumValue" />
 </template>
 {% endhighlight %}
 
@@ -105,8 +105,8 @@ You can set the “minValue” and “maxValue” in Percentage text boxes for m
 export class Default {
     constructor() {
       this.percentValue = 5;
-      this.minvalue = 30;
-      this.maxvalue = 100;
+      this.minimumValue = 30;
+      this.maximumValue = 100;
     }
 }
 {% endhighlight %}
