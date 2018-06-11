@@ -124,7 +124,7 @@ export class Spreadsheet {
 
 ## Apply Conditional Formatting
 
-Conditional formatting helps you to apply formats to a cell or range with certain colour based on the cells values. You can use `e-allow-conditional-formats` property to enable/disable Conditional formats.
+Conditional formatting helps you to apply formats to a cell or range with certain color based on the cells values. You can use `e-allow-conditional-formats` property to enable/disable Conditional formats.
 
 To apply conditional formats for a range, the `e-c-format-rule.bind` property is assigned with an instance `this.format` which is specified in constructor. The following code example illustrates this,
 
