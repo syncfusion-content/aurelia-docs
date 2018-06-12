@@ -64,7 +64,7 @@ Define the Application Tab with `type` as `menu` to render simple Ribbon control
     <require from="syncfusion-javascript/Content/ej/web/ribbon-css/ej.icons.css!"></require>
     <div>
       <ej-ribbon id="Ribbon" e-width="500px" e-application-tab.bind="ApplicationTab">      </ej-ribbon>      
-      <ul id="ribbonmenu">
+      <ul id="ribbonMenu">
          <li>
             <a>FILE</a>
             <ul>
@@ -89,7 +89,7 @@ Configure the `e-application-tab` bind value `this.ApplicationTab` in Aurelia vi
 
     export class Ribbon {
         constructor() {
-            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonmenu" };        
+            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonMenu" };        
         } 
     } 
 
@@ -109,7 +109,7 @@ Tab is a set of related groups which are combined into single item. For creating
     <require from="syncfusion-javascript/Content/ej/web/ribbon-css/ej.icons.css!"></require>
     <div>
       <ej-ribbon id="Ribbon" e-width="500px" e-application-tab.bind="ApplicationTab" e-tabs.bind="Tabs">      </ej-ribbon>      
-      <ul id="ribbonmenu">
+      <ul id="ribbonMenu">
          <li>
             <a>FILE</a>
             <ul>
@@ -134,7 +134,7 @@ Configure the `e-tabs` bind value `this.Tabs` in Aurelia view-model as shown in 
 
     export class Ribbon {
         constructor() {
-            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonmenu" };
+            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonMenu" };
             this.Tabs = [{ id: 'home', text: 'HOME'}]; 
         } 
     } 
@@ -155,7 +155,7 @@ Configure the `e-tabs` bind value `this.Tabs` with group and button named as `Ne
 
     export class Ribbon {
         constructor() {
-            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonmenu" };
+            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonMenu" };
             this.Tabs = [{ id: 'home', text: 'HOME',groups: [{
                 text: "New",
                 content: [{
@@ -188,7 +188,7 @@ Configure the `e-tabs` bind value `this.Tabs` with groups, button , split button
     export class Ribbon {
         constructor() {
             let fontFamily = [{ value: 1, text: "Segoe UI" }, { value: 2, text: "Arial" }];
-            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonmenu" };
+            this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonMenu" };
             this.Tabs = [{ id: 'home', text: 'HOME',groups: [{
                 text: "New",
                 content: [{
