@@ -181,13 +181,13 @@ Configure the `e-tabs` bind value `this.Tabs` with group and button named as `Ne
 
 Syncfusion JavaScript Controls can be added to group’s content with corresponding `type` specified like button, split button, toggle button, dropdown list, gallery, custom, etc. Default type is `button`.
 
-Configure the `e-tabs` bind value `this.Tabs` with groups, button , split button and dropdown controls.Also the datasource to dropdown control is configured with bind name `fontfamily`.Please refer to the following code snippets.
+Configure the `e-tabs` bind value `this.Tabs` with groups, button , split button and dropdown controls.Also the datasource to dropdown control is configured with bind name `fontFamily`.Please refer to the following code snippets.
 
 {% highlight html %}
 
     export class Ribbon {
         constructor() {
-            let fontfamily = [{ value: 1, text: "Segoe UI" }, { value: 2, text: "Arial" }];
+            let fontFamily = [{ value: 1, text: "Segoe UI" }, { value: 2, text: "Arial" }];
             this.ApplicationTab = {  type: ej.Ribbon.ApplicationTabType.Menu , menuItemID:"ribbonmenu" };
             this.Tabs = [{ id: 'home', text: 'HOME',groups: [{
                 text: "New",
@@ -224,11 +224,11 @@ Configure the `e-tabs` bind value `this.Tabs` with groups, button , split button
                     }
                 }, {
                     groups: [{
-                        id: "fontfamily",
+                        id: "fontFamily",
                         // dropdown list settings
                         type: ej.Ribbon.type.dropDownList,
                         dropdownSettings: {
-                            dataSource: fontfamily,
+                            dataSource: fontFamily,
                             value: "1",
                             width: 100
                         }
