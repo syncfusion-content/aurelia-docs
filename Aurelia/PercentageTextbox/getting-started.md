@@ -11,7 +11,7 @@ documentation: ug
 
 This section helps to understand the getting started of the Aurelia PercentageTextbox with the step-by-step instructions.
 
-## Create an PercenatgeTextbox
+## Create an PercentageTextbox
 
 You can create an Aurelia application and add necessary scripts and styles with the help of the given [Aurelia Getting Started Documentation](https://help.syncfusion.com/aurelia/overview).
 
@@ -28,25 +28,25 @@ We already configured a template project in GitHub repository [syncfusion-templa
 
 The below steps describes to create Syncfusion Aurelia PercentageTextbox component.
 
-* Create `percentageextbox` folder inside `src/samples/` location.
-* Create `percentageextbox.html` file inside `src/samples/percentageextbox` folder and use the below code example to render the Percentageextbox component.
+* Create `percentagetextbox` folder inside `src/samples/` location.
+* Create `percentagetextbox.html` file inside `src/samples/percentagetextbox` folder and use the below code example to render the PercentageTextbox component.
 
 {% highlight html %}
 
 <template>
-     <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:cwidth" />
+     <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:percentWidth" />
 </template>
 
 {% endhighlight %}
 
-* Create `percentageextbox.js` file with the below code snippet inside `src/samples/percentageextbox` folder.
+* Create `percentagetextbox.js` file with the below code snippet inside `src/samples/percentagetextbox` folder.
 
 {% highlight javascript %}
 
 export class Default {
     constructor() {
       this.percentValue = 5;
-      this.cwidth = '100%';
+      this.percentWidth = '100%';
     }
 }
 
@@ -95,7 +95,7 @@ You can set the “minValue” and “maxValue” in Percentage text boxes for m
 
 {% highlight html %}
 <template>
-           <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-min-value.bind:minvalue;e-max-value-bind:maxvalue" />
+           <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-min-value.bind:minimumValue;e-max-value-bind:maximumValue" />
 </template>
 {% endhighlight %}
 
@@ -105,8 +105,8 @@ You can set the “minValue” and “maxValue” in Percentage text boxes for m
 export class Default {
     constructor() {
       this.percentValue = 5;
-      this.minvalue = 30;
-      this.maxvalue = 100;
+      this.minimumValue = 30;
+      this.maximumValue = 100;
     }
 }
 {% endhighlight %}
