@@ -12,7 +12,7 @@ This section helps to understand the getting started of the Aurelia TreeGrid wit
 
 ## Create your first TreeGrid in Aurelia
 
-To get started Syncfusion Aurelia application refer [`this`](https://help.syncfusion.com/aurelia/overview) page for basic control integaration and script references.
+To get started Syncfusion Aurelia application refer [this](https://help.syncfusion.com/aurelia/overview) page for basic control integaration and script references.
 
 The **Essential Aurelia TreeGrid** has been designed to represent and edit the hierarchical data. 
 
@@ -52,13 +52,14 @@ This section explains how to create a TreeGrid widget in your application with h
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
-        //...
-        >
+        <ej-tree-grid id="Treegrid"               
+            e-child-mapping="subtasks"
+            e-tree-column-index="1"
+            e-columns.bind="columns" e-size-settings.bind="sizeSettings">
         </ej-tree-grid>
     </div>
-   
 </template>
+
 
 {% endhighlight %}
 
@@ -67,9 +68,15 @@ To render the Aurelia TreeGrid using below code.
 {% highlight javascript %}
 
 export class DefaultSample {
-  constructor() {
-      //...
-       }
+    constructor() {
+        this.sizeSettings = {width:"700px", height:"100px"};
+        this.columns =  [
+            { field: 'taskID', headerText: 'Id', width: 70},
+            { field: 'taskName', headerText: 'Task Name' },
+            { field: 'startDate', headerText: 'Start Date' },
+            { field: 'duration', headerText: 'Duration' }
+        ];
+    }
 }
 
 {% endhighlight %}
@@ -84,89 +91,39 @@ TreeGrid with empty datasource
 {% highlight javascript %}
 
 export class DefaultSample {
-  constructor() {
-  this.ProjectData = [{
-    taskID: 2,
-    taskName: "Planning",
-    startDate: "02/03/2014",
-    endDate: "02/07/2014",
-    duration: 10,
-    progress: 56,
-    subtasks: [{
-        taskID: 3,
-        taskName: "Plan timeline",
-        startDate: "02/03/2014",
-        endDate: "02/07/2014",
-        duration: 5,
-        progress: "100"
-    }, {
-        taskID: 4,
-        taskName: "Plan budget",
-        startDate: "02/03/2014",
-        endDate: "02/07/2014",
-        duration: 5,
-        progress: "100"
-    }, {
-        taskID: 5,
-        taskName: "Allocate resources",
-        startDate: "02/03/2014",
-        endDate: "02/07/2014",
-        duration: 5,
-        progress: "100"
-    }, {
-        taskID: 6,
-        taskName: "Planning complete",
-        startDate: "02/07/2014",
-        endDate: "02/07/2014",
-        duration: 0,
-        progress: 40
-    }]
-}, {
-    taskID: 7,
-    taskName: "Design",
-    startDate: "02/10/2014",
-    endDate: "02/14/2014",
-    duration: 10,
-    progress: 76,
-    subtasks: [{
-        taskID: 8,
-        taskName: "Software Specification",
-        startDate: "02/10/2014",
-        endDate: "02/12/2014",
-        duration: 3,
-        progress: "60"
-    }, {
-        taskID: 9,
-        taskName: "Develop prototype",
-        startDate: "02/10/2014",
-        endDate: "02/12/2014",
-        duration: 3,
-        progress: "100"
-    }, {
-        taskID: 10,
-        taskName: "Get approval from customer",
-        startDate: "02/13/2014",
-        endDate: "02/14/2014",
-        duration: 2,
-        progress: "100"
-    }, {
-        taskID: 11,
-        taskName: "Design complete",
-        startDate: "02/14/2014",
-        endDate: "02/14/2014",
-        duration: 0,
-        predecessor: "10FF",
-        progress: 65
-    }]
-}]
-this.columns = [{ field: 'taskID', headerText: 'Task Id', width: '45'}, 
-                { field: 'taskName', headerText: 'Task Name'},
-                { field: 'startDate', headerText: 'Start Date'},
-                { field: 'endDate', headerText: 'End Date'},
-                { field: 'duration', headerText: 'Duration'},
-                { field: 'progress', headerText: 'Progress'}
-               ];
-       }
+    constructor() {
+        this.sizeSettings = {width:"700px", height:"350px"};
+        this.columns =  [
+                        { field: 'taskID', headerText: 'Id', width: 70},
+                        { field: 'taskName', headerText: 'Task Name' },
+                        { field: 'startDate', headerText: 'Start Date' },
+                        { field: 'duration', headerText: 'Duration' }
+        ];
+        this.ProjectData = [
+          {
+              taskID: 1,
+              taskName: 'Planning',
+              startDate: '02/03/2017',
+              subtasks: [
+                    { taskID: 2, taskName: 'Plan timeline', startDate: '02/03/2017', duration: 5, },
+                    { taskID: 3, taskName: 'Plan budget', startDate: '02/03/2017', duration: 5, },
+                    { taskID: 4, taskName: 'Allocate resources', startDate: '02/03/2017',  duration: 5},
+                    { taskID: 5, taskName: 'Planning complete', startDate: '02/07/2017', duration: 0}
+              ]
+          },
+          {
+              taskID: 6,
+              taskName: 'Design',
+              startDate: '02/10/2017',
+              subtasks: [
+                     { taskID: 7, taskName: 'Software Specification', startDate: '02/10/2017',  duration: 3, },
+                     { taskID: 8, taskName: 'Develop prototype', startDate: '02/10/2017',  duration: 3 },
+                     { taskID: 9, taskName: 'Get approval from customer', startDate: '02/13/2017', duration: 2 },
+                     { taskID: 10, taskName: 'Design complete', startDate: '02/14/2017', duration: 0}
+              ]
+          }
+        ];
+    }
 }
 
 {% endhighlight %}
@@ -178,60 +135,31 @@ this.columns = [{ field: 'taskID', headerText: 'Task Id', width: '45'},
 <template>
     <div>
         <ej-tree-grid id="Treegrid"
-                  e-data-source.bind="ProjectData"                 
-                  e-child-mapping="subtasks"
-                  e-tree-column-index="1"
-                  e-columns.bind="columns">
+            e-data-source.bind="ProjectData"                 
+            e-child-mapping="subtasks"
+            e-tree-column-index="1"
+            e-columns.bind="columns" e-size-settings.bind="sizeSettings">
         </ej-tree-grid>
-    </div>   
+    </div>
 </template>
 
 {% endhighlight %}
 
 TreeGrid widget is displayed as the output in the following screenshot.
-
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-### Enable Sorting
+## Enable Toolbar
 
-The TreeGrid control has sorting functionality, to arrange the data in ascending or descending order based on a particular column.
-
-#### Multicolumn Sorting
-
-Enable the multicolumn sorting in TreeGrid by setting [`e-allow-multi-sorting`](http://help.syncfusion.com/js/api/ejtreegrid#allowmultisorting "allowMultiSorting") as `true`. You can sort multiple columns in TreeGrid, by selecting the desired column header while holding the `Ctrl` key.
+TreeGrid control contains the toolbar options to Add, Edit, Delete, Cancel, Update, Search, ExpandAll and CollapseAll operations, you can enable the toolbar by using [`e-toolbar-settings`](https://help.syncfusion.com/api/js/ejtreegrid#members:toolbarsettings "toolbarSettings") property.
 
 {% highlight html %}
 
 <template>
     <div>
         <ej-tree-grid id="Treegrid"
-        //...
-         e-allow-sorting="true"
-         e-allow-multi-sorting="true"
-        >
-        </ej-tree-grid>
-    </div>   
-</template>
-
-{% endhighlight %}
-
-![](Getting-Started_images/Getting-Started_img4.png)
-
-### Enable Editing
-
-You can enable Editing in TreeGrid by using the [`e-edit-settings`](http://help.syncfusion.com/js/api/ejtreegrid#editsettings "editSettings") property as follows.
-
-{% highlight html %}
-
-<template>
-    <div>
-        <ej-tree-grid id="Treegrid"
-        //...
-         e-edit-settings.bind="editsettings"
-        >
+            e-toolbar-settings.bind="toolbarSettings">
         </ej-tree-grid>
     </div>
-   
 </template>
 
 {% endhighlight %}
@@ -240,60 +168,171 @@ You can enable Editing in TreeGrid by using the [`e-edit-settings`](http://help.
 
 export class DefaultSample {
     constructor() {
-        this.editsettings = {
-            allowAdding: true,
-            allowEditing: true,
-            allowDeleting: true,
-            editMode: 'cellEditing',
-            rowPosition: 'belowSelectedRow'
+        this.toolbarSettings = {
+            showToolbar: true,
+            toolbarItems: [
+                ej.TreeGrid.ToolbarItems.Add,
+                ej.TreeGrid.ToolbarItems.Edit,
+                ej.TreeGrid.ToolbarItems.Delete,
+                ej.TreeGrid.ToolbarItems.Update,
+                ej.TreeGrid.ToolbarItems.Cancel,
+                ej.TreeGrid.ToolbarItems.ExpandAll,
+                ej.TreeGrid.ToolbarItems.CollapseAll,
+                ej.TreeGrid.ToolbarItems.Search
+            ]
         };
     }
-}
+}    
 
 {% endhighlight %}
 
-And also, the following editors are provided for editing support in TreeGrid control.
+The following screen shot displays a Toolbar in TreeGrid.
+![](Getting-Started_images/Getting-Started_toolbar.png)
 
-* string
-* boolean
-* numeric
-* dropdown
-* datepicker
-* datetimepicker
+N> Add, Edit, Delete options are enabled by `allowEditing`, `allowAdding`, `allowDeleting` in the `editSettings` property.
 
-You can set the editor type for a particular column as follows.
+## Enable Sorting
+
+The TreeGrid control contains sorting functionality to arrange the data in ascending or descending order based on a particular column. Sorting can be enabled by using ['e-allow-sorting'](https://help.syncfusion.com/api/js/ejtreegrid#members:allowsorting "allowSorting") property.
+
+### Multicolumn Sorting
+
+You can enable the multicolumn sorting in TreeGrid by setting ['e-allow-multi-sorting'](https://help.syncfusion.com/api/js/ejtreegrid#members:allowmultisorting "allowMultiSorting") as `true` .You can sort multiple columns in TreeGrid by selecting the desired column header when holding the <kbd>Ctrl</kbd> key.
 
 {% highlight html %}
 
 <template>
     <div>
         <ej-tree-grid id="Treegrid"
-        //...
-          e-columns.bind="columns">
+            e-allow-sorting="true"
+            e-allow-multi-sorting="true">
         </ej-tree-grid>
-    </div>   
+    </div>
 </template>
 
 {% endhighlight %}
 
-{% highlight javascript %}
+The following screen shot displays a multiplecolumn sorting in TreeGrid.
+![](Getting-Started_images/Getting-Started_multisorting.png)
 
-export class DefaultSample {
-    constructor() {
-        this.columns =  [
-                    { field: 'taskID', headerText: 'Task Id', width: '45', editType: 'numericedit' },
-                    { field: 'taskName', headerText: 'Task Name', editType: 'stringedit' },
-                    { field: 'startDate', headerText: 'Start Date', editType: 'datepicker' },
-                    { field: 'endDate', headerText: 'End Date', editType: 'datepicker'},
-                    { field: 'duration', headerText: 'Duration', editType: 'numericedit' },
-                    { field: 'progress', headerText: 'Progress', editType: 'numericedit' }
-        ];
-    }
-}
+## Enable Editing
+
+You can enable editing in TreeGrid by using [`e-edit-settings`](http://help.syncfusion.com/js/api/ejtreegrid#editsettings "editSettings") property and it is illustrated in the following code example.
+
+{% highlight html %}
+
+<template>
+    <div>
+        <ej-tree-grid id="Treegrid"
+            e-edit-settings.bind="editSettings">
+        </ej-tree-grid>
+    </div>
+</template>
 
 {% endhighlight %}
 
-The output of the DateTimePicker editor in TreeGrid control is as follows.
+{% highlight js %}
 
-![](Getting-Started_images/Getting-Started_img5.png)
+export class DefaultSample {
+    constructor() {
+        this.editSettings= {
+            allowEditing: true,
+            allowAdding: true,
+            rowPosition: ej.TreeGrid.RowPosition.Below,
+            allowDeleting: true,
+            editMode: "cellEditing"
+        };
+    }
+}    
 
+{% endhighlight %}
+
+![](Getting-Started_images/Getting-Started_editing.png)
+
+[Click](editing) here to refer more details for TreeGrid Editing.
+
+## Enable Context Menu
+The context menu in TreeGrid control is used to manipulate (add, edit and delete) the TreeGrid rows. 
+In TreeGrid, context menu can be enabled by [`e-context-menu-settings`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings "contextMenuSettings") property. The [`e-context-menu-settings`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings "contextMenuSettings") property contains two inner properties [`showContextMenu`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings-showcontextmenu "showContextMenu") and [`contextMenuItems`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings-contextmenuitems contextMenuItems).
+
+{% highlight html %}
+
+<template>
+    <div>
+        <ej-tree-grid id="Treegrid"
+            e-context-menu-settings.bind="contextMenuSettings">
+        </ej-tree-grid>
+    </div>
+</template>
+
+{% endhighlight %}
+
+{% highlight js %}
+
+export class DefaultSample {
+    constructor() {
+        this.contextMenuSettings = {
+            showContextMenu: true,
+            contextMenuItems: [
+                ej.TreeGrid.ContextMenuItems.Add,
+                ej.TreeGrid.ContextMenuItems.Edit,
+                ej.TreeGrid.ContextMenuItems.Delete
+            ]
+        };
+    }
+}    
+
+{% endhighlight %}
+
+The following screenshot displays the context menu in TreeGrid control.
+![](Getting-Started_images/Getting-Started_contextmenu.png)
+
+[Click](context-menu) here to refer more details for TreeGrid context menu.
+
+## Enable Column Chooser
+
+You can enable the column menu in TreeGrid, by setting the [`ShowColumnChooser`](https://help.syncfusion.com/api/js/ejtreegrid#members:showcolumnchooser "showColumnChooser") as `true`.
+
+{% highlight html %}
+
+<template>
+    <div>
+        <ej-tree-grid id="Treegrid"
+            e-show-column-chooser="true">
+        </ej-tree-grid>
+    </div>
+</template>
+
+{% endhighlight %}
+
+The following screenshot displays the column chooser in TreeGrid control.
+![](Getting-Started_images/Getting-Started_columnchooser.png)
+
+## Define dimension of TreeGrid
+
+By default TreeGrid control was rendered with `100%` width and `450px` height, we can define the dimension of TreeGrid control by using [`e-size-settings`](https://help.syncfusion.com/api/js/ejtreegrid#members:sizesettings "sizeSettings") property. TreeGrid control width and height can be defined by either [`height`](https://help.syncfusion.com/api/js/ejtreegrid#members:sizesettings-height "height") and [`width`](https://help.syncfusion.com/api/js/ejtreegrid#members:sizesettings-width "width") properties or by defining inline style in TreeGrid container element. The below code example shows how to define width and height for TreeGrid control.
+
+{% highlight html %}
+
+<template>
+    <div>
+        <ej-tree-grid id="Treegrid"
+            e-size-settings.bind="sizeSettings">
+        </ej-tree-grid>
+    </div>
+</template>
+
+{% endhighlight %}
+
+{% highlight js %}
+
+export class DefaultSample {
+    constructor() {
+        this.sizeSettings = {width:"700px", height:"350px"};
+    }
+}    
+
+{% endhighlight %}
+
+N> 1.TreeGrid control will automatically update the width and height value based on container element on window resize action, this can be enabled by setting [`isResponsive`](https://help.syncfusion.com/api/js/ejtreegrid#members:isresponsive "isResponsive") property as `true` for this `height` and `width` value will be defined in percentage.
+N> 2.We can also render TreeGrid with auto height by setting [`sizeSettings.height`](https://help.syncfusion.com/api/js/ejtreegrid#members:sizesettings-height "height") as `auto`.
