@@ -12,7 +12,7 @@ This section helps to understand the getting started of the Aurelia TreeGrid wit
 
 ## Create your first TreeGrid in Aurelia
 
-To get started Syncfusion Aurelia application refer [this](https://help.syncfusion.com/aurelia/overview) page for basic control integaration and script references.
+To get started Syncfusion Aurelia application refer [this](https://help.syncfusion.com/aurelia/overview) page for basic control integration and script references.
 
 The **Essential Aurelia TreeGrid** has been designed to represent and edit the hierarchical data. 
 
@@ -21,9 +21,9 @@ This section explains how to create a TreeGrid widget in your application with h
 ![](Getting-Started_images/Getting-Started_img1.png)
 
 * Create TreeGrid folder inside src/samples/ location.
-* Create treegrid.html file inside src/samples/TreeGrid folder and use the below code example to render the TreeGrid component.
+* Create TreeGrid.html file inside src/samples/TreeGrid folder and use the below code example to render the TreeGrid component.
 
-1.Create HTML file and add the following necessery script and css files to the HTML file.
+1.Create HTML file and add the following necessary script and css files to the HTML file.
 
 {% highlight html %}
 
@@ -52,7 +52,7 @@ This section explains how to create a TreeGrid widget in your application with h
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"               
+        <ej-tree-grid id="TreeGrid"               
             e-child-mapping="subtasks"
             e-tree-column-index="1"
             e-columns.bind="columns" e-size-settings.bind="sizeSettings">
@@ -134,7 +134,7 @@ export class DefaultSample {
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-data-source.bind="ProjectData"                 
             e-child-mapping="subtasks"
             e-tree-column-index="1"
@@ -156,7 +156,7 @@ TreeGrid control contains the toolbar options to Add, Edit, Delete, Cancel, Upda
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-toolbar-settings.bind="toolbarSettings">
         </ej-tree-grid>
     </div>
@@ -203,7 +203,7 @@ You can enable the multicolumn sorting in TreeGrid by setting ['e-allow-multi-so
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-allow-sorting="true"
             e-allow-multi-sorting="true">
         </ej-tree-grid>
@@ -212,7 +212,7 @@ You can enable the multicolumn sorting in TreeGrid by setting ['e-allow-multi-so
 
 {% endhighlight %}
 
-The following screen shot displays a multiplecolumn sorting in TreeGrid.
+The following screen shot displays a multiple column sorting in TreeGrid.
 ![](Getting-Started_images/Getting-Started_multisorting.png)
 
 ## Enable Editing
@@ -223,7 +223,7 @@ You can enable editing in TreeGrid by using [`e-edit-settings`](http://help.sync
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-edit-settings.bind="editSettings">
         </ej-tree-grid>
     </div>
@@ -259,7 +259,7 @@ In TreeGrid, context menu can be enabled by [`e-context-menu-settings`](https://
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-context-menu-settings.bind="contextMenuSettings">
         </ej-tree-grid>
     </div>
@@ -297,7 +297,7 @@ You can enable the column menu in TreeGrid, by setting the [`ShowColumnChooser`]
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-show-column-chooser="true">
         </ej-tree-grid>
     </div>
@@ -316,7 +316,7 @@ By default TreeGrid control was rendered with `100%` width and `450px` height, w
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-size-settings.bind="sizeSettings">
         </ej-tree-grid>
     </div>

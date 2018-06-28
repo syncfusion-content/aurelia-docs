@@ -30,7 +30,7 @@ The following code example shows you how to bind the hierarchical local data int
 
 <template>
     <div>
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-data-source.bind="ProjectData"
             //...
             >
@@ -87,7 +87,7 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 
 <template>
     <div style="padding:10px;">
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-data-source.bind="ProjectData"
             e-id-mapping="taskID"
             e-parent-id-mapping="parentId">
@@ -135,7 +135,7 @@ The below code example shows how to use this property.
 
 <template>
     <div style="padding:10px;">
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-data-source.bind="ProjectData"
             e-enable-virtualization="true">
         </ej-tree-grid>

@@ -20,7 +20,7 @@ The following example shows how to define the `editType` in a column,
 {% highlight html %}
 <template>
     <div style="padding:10px;">
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-columns.bind="columns"
 			//...
             >
@@ -117,7 +117,7 @@ The below code snippets shows how to define common width for all columns.
 {% highlight html %}
 <template>
     <div style="padding:10px;">
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
             e-columns.bind="columns"
 
 			//...
@@ -176,7 +176,7 @@ The below code snippet demonstrates this.
 
 <template>
     <div style="padding:10px;">
-        <ej-tree-grid id="Treegrid"
+        <ej-tree-grid id="TreeGrid"
 			//..
             e-header-text-overflow="wrap"
             >
@@ -234,7 +234,7 @@ The following code snippet shows how to set the header template for TreeGrid col
             </div>
         </script>
     	<div style="padding:10px;">
-        	<ej-tree-grid id="Treegrid"
+        	<ej-tree-grid id="TreeGrid"
             	e-columns.bind="columns"
 				//...
                 >
@@ -413,7 +413,7 @@ The following code example show how to define template for the column.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-data-source.bind="ProjectData"
             e-child-mapping="subtasks"
             e-row-height="50">
@@ -453,7 +453,7 @@ The following are the items displayed in the column menu,
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-columns.bind="columns"
             e-allow-sorting="true"
             e-allow-multi-sorting="true" 
@@ -518,7 +518,7 @@ The following code example shows how to customize the insert column option in Tr
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-columns.bind="columns"
             e-allow-sorting="true"
             e-allow-multi-sorting="true" 
@@ -573,7 +573,7 @@ It is possible to toggle the visibility of the columns using the [`hideColumn`](
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
 			//...
             >
         </ej-tree-grid>
@@ -647,7 +647,7 @@ export class DefaultSample {
             		text: 'Details', width: 50, 
 					click: function(args) {
                 		let $tr = $(args.e.target).closest('tr');
-                  		let treeObj = $('#Treegrid').data('ejTreeGrid');
+                  		let treeObj = $('#TreeGrid').data('ejTreeGrid');
                   		let rowIndex = treeObj.getIndexByRow($tr);
                   		let record = treeObj.model.currentViewData[rowIndex];
                   		alert('Task Name: ' + record.item.taskName);
@@ -673,7 +673,7 @@ The following code example shows how to change the position of the expander colu
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-tree-column-index="1"
             >
         </ej-tree-grid>
@@ -777,7 +777,7 @@ import 'jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min';
 export class DefaultSample {
 	constructor() {
 		$.validator.addMethod('validateStartDate', function (value, element, params) {
-      		var obj = $('#Treegrid').ejTreeGrid('instance');
+      		var obj = $('#TreeGrid').ejTreeGrid('instance');
       		if (new Date(value) <= new Date(2018, 11, 30) && new Date(value) >= new Date(2017, 0, 1)) {
         		return true;
       		}
@@ -807,7 +807,7 @@ The following code example explains how to enable column reorder in TreeGrid,
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-allow-column-reordering="true"
             >
         </ej-tree-grid>

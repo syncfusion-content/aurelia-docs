@@ -17,7 +17,7 @@ documentation: ug
 
 * **Sorting** - Supports _n_ levels of sorting.
 
-* **Filtering** - Supports filtering records with filterbar,menu and excel filtering modes.
+* **Filtering** - Supports filtering records with filter bar,menu and excel filtering modes.
 
 * **Virtualization** - Supports rendering large number of hierarchical data at once. 
 

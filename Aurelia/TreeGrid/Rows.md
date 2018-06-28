@@ -113,8 +113,8 @@ export class DefaultSample {
       'DOB': '2/15/1963',
       'DOJ': '5/1/1983',
       'Children': [{
-        'Name': 'David william',
-        'FullName': 'David william',
+        'Name': 'David William',
+        'FullName': 'David William',
         'Designation': 'Vice President',
         'EmployeeID': 'EMP004',
         'Address': '722 Moss Bay Blvd., Kirkland',
@@ -174,7 +174,7 @@ export class DefaultSample {
               'FullName': 'Janet Leverling',
               'Designation': 'Sales Coordinator',
               'EmployeeID': 'EMP131',
-              'Address': 'Edgeham Hollow Winchester Way, London',
+              'Address': 'Hollow Winchester Way, London',
               'Country': 'UK',
               'Contact': '(71) 555-3636',
               'DOB': '11/06/1990',
@@ -188,7 +188,7 @@ export class DefaultSample {
           'FullName': 'Romey Wilson',
           'Designation': 'Sales Executive',
           'EmployeeID': 'EMP039',
-          'Address': '7 Houndstooth Rd., London',
+          'Address': '7 Hounds tooth Rd., London',
           'Country': 'UK',
           'Contact': '(71) 555-3690',
           'DOB': '02/02/1980',
@@ -265,7 +265,7 @@ The following code example explains how to change the row height in TreeGrid
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-row-height="40"
             >
         </ej-tree-grid>
@@ -287,7 +287,7 @@ The following code explains about enabling the alternate row style in TreeGrid
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-row-height="40"
             e-enable-alt-row="false"
             >
@@ -312,7 +312,7 @@ The following code explains about enabling the row drag and drop with the defaul
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-allow-drag-and-drop="true"
             e-drag-tooltip.bind="dragTooltip"
             >
@@ -357,7 +357,7 @@ The following code shows how to render row drag tooltip with JsRender template.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-allow-drag-and-drop="true"
             e-drag-tooltip.bind="dragTooltip"
             >
@@ -390,7 +390,7 @@ Please find the code example below to enable multiple drag and drop in TreeGrid.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-allow-drag-and-drop="true"
             e-drag-tooltip.bind="dragTooltip"
             e-selection-settings.bind="selectionSettings"
@@ -444,7 +444,7 @@ The following code example shows how to enable details tow in TreeGrid.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-show-details-row="true"
             e-details-template="descriptionTemplate"
             >
@@ -472,7 +472,7 @@ The following code example shows how to hide detail info column in TreeGrid.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-show-details-row="true"
             e-details-template="descriptionTemplate"
             e-show-details-row-info-column="true"
@@ -498,7 +498,7 @@ The following code example shows how to set details row height in TreeGrid.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-show-details-row="true"
             e-details-template="descriptionTemplate"
             e-show-details-row-info-column="true"
@@ -524,7 +524,7 @@ The below code example shows how to customize details row for specific row.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-show-details-row="true"
             e-details-template="descriptionTemplate"
             e-show-details-row-info-column="true"
@@ -561,7 +561,7 @@ The below code example shows how to prevent details row show action for specific
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-show-details-row="true"
             e-details-template="descriptionTemplate"
             e-show-details-row-info-column="true"
@@ -604,7 +604,7 @@ The following code example shows how to use this property.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-enable-collapse-all="true"
             >
         </ej-tree-grid>
@@ -628,7 +628,7 @@ The following code example shows how to use this property.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             >
         </ej-tree-grid>
     </div>
@@ -644,7 +644,7 @@ export class DefaultSample {
             'Name': 'Robert King',
             //...
             'Children': [{
-                'Name': 'David william',
+                'Name': 'David William',
                 //...
                 'Children': [{
                     'Name': 'Nancy Davolio',
@@ -674,7 +674,7 @@ The below code example shows how to use this methods.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             >
         </ej-tree-grid>
     </div>
@@ -710,7 +710,7 @@ The below code example shows how to use this methods.
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             >
         </ej-tree-grid>
     </div>
@@ -744,7 +744,7 @@ The following code example shows how to prevent the particular row from expand/c
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-on-collapsing.delegate="collapsing($event.detail)"
             e-on-expanding.delegate="expanding($event.detail)"
             >
@@ -788,7 +788,7 @@ The below code snippet explains defining a summary row in TreeGrid,
     <div style="padding:10px;">
         <ej-tree-grid 
             e-widget.bind="TreeGrid"
-            id="Treegrid"
+            id="TreeGrid"
             e-data-source.bind="ProjectData"
             e-child-mapping="children"
             e-columns.bind="columns"
@@ -827,10 +827,10 @@ export class DefaultSample {
       }
     ];
     this.columns = [
-        { field: 'FreightID', headerText: 'Freight ID', editType: 'stringedit'},
-      { field: 'TotalUnits', headerText: 'Total Units', editType: 'numericedit'},
-      { field: 'TotalCosts', headerText: 'Total Costs', editType: 'numericedit'},
-      { field: 'UnitWeight', headerText: 'Unit Weight', editType: 'numericedit'}
+        { field: 'FreightID', headerText: 'Freight ID'},
+      { field: 'TotalUnits', headerText: 'Total Units'},
+      { field: 'TotalCosts', headerText: 'Total Costs'},
+      { field: 'UnitWeight', headerText: 'Unit Weight'}
     ];
 
     this.ProjectData = [{
