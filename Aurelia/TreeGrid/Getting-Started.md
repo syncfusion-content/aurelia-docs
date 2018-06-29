@@ -148,7 +148,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 TreeGrid widget is displayed as the output in the following screenshot.
-![](Getting-Started_images/Getting-Started_img3.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 ## Enable Toolbar
 
@@ -195,11 +195,11 @@ N> Add, Edit, Delete options are enabled by `allowEditing`, `allowAdding`, `allo
 
 ## Enable Sorting
 
-The TreeGrid control contains sorting functionality to arrange the data in ascending or descending order based on a particular column. Sorting can be enabled by using ['e-allow-sorting'](https://help.syncfusion.com/api/js/ejtreegrid#members:allowsorting "allowSorting") property.
+The TreeGrid control contains sorting functionality to arrange the data in ascending or descending order based on a particular column. Sorting can be enabled by using [`e-allow-sorting`](https://help.syncfusion.com/api/js/ejtreegrid#members:allowsorting "allowSorting") property.
 
 ### Multicolumn Sorting
 
-You can enable the multicolumn sorting in TreeGrid by setting ['e-allow-multi-sorting'](https://help.syncfusion.com/api/js/ejtreegrid#members:allowmultisorting "allowMultiSorting") as `true` .You can sort multiple columns in TreeGrid by selecting the desired column header when holding the <kbd>Ctrl</kbd> key.
+You can enable the multicolumn sorting in TreeGrid by setting [`e-allow-multi-sorting`](https://help.syncfusion.com/api/js/ejtreegrid#members:allowmultisorting "allowMultiSorting") as `true` .You can sort multiple columns in TreeGrid by selecting the desired column header when holding the <kbd>Ctrl</kbd> key.
 
 {% highlight html %}
 
@@ -293,7 +293,7 @@ The following screenshot displays the context menu in TreeGrid control.
 
 ## Enable Column Chooser
 
-You can enable the column menu in TreeGrid, by setting the [`ShowColumnChooser`](https://help.syncfusion.com/api/js/ejtreegrid#members:showcolumnchooser "showColumnChooser") as `true`.
+You can enable the column menu in TreeGrid, by setting the [`e-show-column-chooser`](https://help.syncfusion.com/api/js/ejtreegrid#members:showcolumnchooser "showColumnChooser") as `true`.
 
 {% highlight html %}
 
