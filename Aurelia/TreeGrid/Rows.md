@@ -13,7 +13,7 @@ The TreeGrid rows displays the information of each row from the bounded data sou
 
 ## Row Template
 
-Row template is used to customize the TreeGrid rows based on requirements. In TreeGrid, [`rowTemplateId`](https://help.syncfusion.com/api/js/ejtreegrid#members:rowtemplateid) and [`altRowTemplateId`](https://help.syncfusion.com/api/js/ejtreegrid#members:altrowtemplateid) properties are used for customizing the row.
+Row template is used to customize the TreeGrid rows based on requirements. In TreeGrid, [`e-row-template-id`](https://help.syncfusion.com/api/js/ejtreegrid#members:rowtemplateid) and [`e-alt-row-template-id`](https://help.syncfusion.com/api/js/ejtreegrid#members:altrowtemplateid) properties are used for customizing the row.
 
 * **rowTemplateId** is used to customize all the rows in TreeGrid. For this property, ID of the row template is to be provided.
 
@@ -26,7 +26,7 @@ Row template is used to customize the TreeGrid rows based on requirements. In Tr
     <script id="rowTemplateScript" type="text/x-jsrender">
         <tr>
             <td class="border" style='height:99px;'>
-                <div>{`{`:#data['EmployeeID']}`}`</div>
+                <div>{{:#data['EmployeeID']}}</div>
             </td>
             <td class="border" style='height:99px;'>
                 <div style="font-size:14px;">
