@@ -55,7 +55,8 @@ This section explains how to create a TreeGrid widget in your application with h
         <ej-tree-grid id="TreeGrid"               
             e-child-mapping="subtasks"
             e-tree-column-index="1"
-            e-columns.bind="columns" e-size-settings.bind="sizeSettings">
+            e-columns.bind="columns"
+            e-size-settings.bind="sizeSettings">
         </ej-tree-grid>
     </div>
 </template>
@@ -138,7 +139,8 @@ export class DefaultSample {
             e-data-source.bind="ProjectData"                 
             e-child-mapping="subtasks"
             e-tree-column-index="1"
-            e-columns.bind="columns" e-size-settings.bind="sizeSettings">
+            e-columns.bind="columns"
+            e-size-settings.bind="sizeSettings">
         </ej-tree-grid>
     </div>
 </template>
