@@ -56,7 +56,7 @@ export class SpellCheck {
 
 <style>
         .highlight {
-            background-color: lightblue;
+            background-color: blue;
             color: red;
         }
 </style>

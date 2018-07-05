@@ -27,8 +27,8 @@ We already configured a template project in GitHub repository [syncfusion-templa
 
 The below steps describes to create Syncfusion Aurelia SplitButton component.
 
-* Create `spellcheck` folder inside `src/samples/` location.
-* Create `spellcheck.html` file inside `src/samples/spellcheck` folder and use the below code example to render the SpellCheck component.
+* Create `SpellCheck` folder inside `src/samples/` location.
+* Create `SpellCheck.html` file inside `src/samples/SpellCheck` folder and use the below code example to render the SpellCheck component.
 
 {% highlight html %}
 
@@ -41,7 +41,7 @@ The below steps describes to create Syncfusion Aurelia SplitButton component.
 
 {% endhighlight %}
 
-* Create `spellcheck.js` file with the below code snippet inside `src/samples/spellcheck` folder.
+* Create `SpellCheck.js` file with the below code snippet inside `src/samples/SpellCheck` folder.
 
 {% highlight javascript %}
 

@@ -10,7 +10,7 @@ keywords: ejrte, rte, js rte
 
 # Getting Started 
 
-This section helps to understand the getting started od RTE control with the step-by-step instruction.
+This section helps to understand the getting started of RTE control with the step-by-step instruction.
 
 ## Initialize RTE Control
 
