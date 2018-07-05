@@ -28,7 +28,7 @@ The following code example describes the above method implementation.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
         </ej-spell-check>
     </div>
 </template>
@@ -47,7 +47,7 @@ export class SpellCheck {
 	attached() {
       setTimeout(()=>{
 	    var targetSentence = 'The <span class="errorspan e-errorword">textarea</span> sample uses a dialog to display the spell errors.';
-		var result = this.spellcheck.ignore("textarea",targetSentence, null);
+		var result = this.SpellCheck.ignore("textarea",targetSentence, null);
 		alert(result.resultHTML); // This will display the corrected text after the ignore operation performed
       }, 50);
     }
@@ -65,7 +65,7 @@ The following code example describes the way of using ignore all method.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
         </ej-spell-check>
     </div>
 </template>
@@ -84,7 +84,7 @@ export class SpellCheck {
 	attached() {
       setTimeout(()=>{
 	    var targetSentence = 'This <span class="errorspan e-errorword">textarea</span> sample uses a dialog to display all the <span class="errorspan e-errorword">textarea</span> spell errors.';
-		var result = this.spellcheck.ignoreAll("textarea",targetSentence, null);
+		var result = this.SpellCheck.ignoreAll("textarea",targetSentence, null);
 		alert(result.resultHTML); // This will display the corrected text after the ignoreAll operation performed
       }, 50);
     }
@@ -100,7 +100,7 @@ The `ignore words` option is used to ignore the collection of words from an erro
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-ignore-words.bind="IgnoreWords">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-ignore-words.bind="IgnoreWords">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -123,7 +123,7 @@ export class SpellCheck {
       this.IgnoreWords = ["Facebook","Zuckerberg"];
     }
     showErrors() {
-      this.spellcheck.showInDialog();
+      this.SpellCheck.showInDialog();
     }
 }
 
@@ -146,7 +146,7 @@ The following code example uses to enable the checking of all the words formed w
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-ignore-settings.bind="IgnoreSettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-ignore-settings.bind="IgnoreSettings">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -176,7 +176,7 @@ export class SpellCheck {
                 };
     }
     showErrors() {
-      this.spellcheck.showInDialog();
+      this.SpellCheck.showInDialog();
     }
 }
 
@@ -196,7 +196,7 @@ The following code example describes the behavior of change method.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
         </ej-spell-check>
     </div>
 </template>
@@ -215,7 +215,7 @@ export class SpellCheck {
 	attached() {
       setTimeout(()=>{
 	    var targetSentence = 'The <span class="errorspan e-errorword">textarea</span> sample uses a dialog to display the spell errors.';
-		var result = this.spellcheck.change("textarea",targetSentence,"text area", null);
+		var result = this.SpellCheck.change("textarea",targetSentence,"text area", null);
 		alert(result.resultHTML); // This will display the corrected text after the change operation performed
       }, 50);
     }
@@ -233,7 +233,7 @@ The following code example uses to change all the error word occurrences.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
         </ej-spell-check>
     </div>
 </template>
@@ -252,7 +252,7 @@ export class SpellCheck {
 	attached() {
       setTimeout(()=>{
         var targetSentence = 'This <span class="errorspan e-errorword">textarea</span> sample uses a dialog to display all the <span class="errorspan e-errorword">textarea</span> spell errors.';
-		var result = this.spellcheck.changeAll("textarea",targetSentence,"text area", null);
+		var result = this.SpellCheck.changeAll("textarea",targetSentence,"text area", null);
 		alert(result.resultHTML); // This will display the corrected text after the changeAll operation performed
       }, 50);
     }
@@ -272,7 +272,7 @@ The following code example uses to add the custom word into the custom dictionar
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
         </ej-spell-check>
     </div>
 </template>
@@ -290,7 +290,7 @@ export class SpellCheck {
     }
 	attached() {
       setTimeout(()=>{
-		this.spellcheck.addToDictionary("textarea")	// This will add the custom word into the custom dictionary file
+		this.SpellCheck.addToDictionary("textarea")	// This will add the custom word into the custom dictionary file
       }, 50);
     }
 }
@@ -312,7 +312,7 @@ The following code example describes the above behavior.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-enable-validate-on-type.bind="enableValidate">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-enable-validate-on-type.bind="enableValidate">
         </ej-spell-check>
     </div>
 </template>
@@ -353,7 +353,7 @@ The following code example describes the above behavior.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-enable-validate-on-type.bind="enableValidate">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-enable-validate-on-type.bind="enableValidate">
         </ej-spell-check>
     </div>
 </template>
@@ -371,9 +371,9 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-		this.spellcheck.getSuggestionWords("textarea");
+		this.SpellCheck.getSuggestionWords("textarea");
         setTimeout(()=>{
-            alert(this.spellcheck._suggestedWords);
+            alert(this.SpellCheck._suggestedWords);
         },800);
       }, 50);
     }
@@ -393,7 +393,7 @@ The following code example describes the above behavior.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-ajax-data-type.bind="ajaxDataType" e-enable-async.bind="enableAsync">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-ajax-data-type.bind="ajaxDataType" e-enable-async.bind="enableAsync">
         </ej-spell-check>
     </div>
 </template>

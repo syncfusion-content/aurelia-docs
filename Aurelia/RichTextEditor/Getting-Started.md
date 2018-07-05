@@ -48,7 +48,7 @@ You can configure a toolbar with the tools as your application requires.
  
  <template> 
     <div>
-        <textarea id="rteSample" rows="10" cols="30" style="width: 740px; height: 440px" ej-rte="e-toolslist.bind:toolslist;e-tools.bind:tools"></textarea>
+        <textarea id="rteSample" rows="10" cols="30" style="width: 740px; height: 440px" ej-rte="e-list.bind:list;e-tools.bind:tools"></textarea>
     </div>
 </template>
 
@@ -58,9 +58,9 @@ You can configure a toolbar with the tools as your application requires.
 
 export class AllToolsRTE {
     tool= {style: ["bold", "italic"], lists: ["unorderedList", "orderedList"],doAction: ["undo", "redo"],links: ["createLink"],images: ["image"] };
-    toolslist = ["style", "lists", "doAction", "links", "images"];
+    list = ["style", "lists", "doAction", "links", "images"];
     constructor() { 
-    this.toolslist = this.toolslist;
+    this.list = this.list;
     this.tools = this.tool;
   }
 }
@@ -79,7 +79,7 @@ You can set the content of the editor as follows.
 
  <template> 
     <div>
-        <textarea id="rteSample" rows="10" cols="30" style="width: 740px; height: 440px" ej-rte="e-toolslist.bind:toolslist;e-tools.bind:tools">
+        <textarea id="rteSample" rows="10" cols="30" style="width: 740px; height: 440px" ej-rte="e-list.bind:list;e-tools.bind:tools">
                   &lt;p&gt;&lt;b&gt;Description:&lt;/b&gt;&lt;/p&gt;
     &lt;p&gt;The Rich Text Editor (RTE) control is an easy to render in
     client side. Customer easy to edit the contents and get the HTML content for
@@ -106,9 +106,9 @@ You can set the content of the editor as follows.
 
 export class AllToolsRTE {
     tool= {style: ["bold", "italic"], lists: ["unorderedList", "orderedList"],doAction: ["undo", "redo"],links: ["createLink"],images: ["image"] };
-    toolslist = ["style", "lists", "doAction", "links", "images"];
+    list = ["style", "lists", "doAction", "links", "images"];
     constructor() { 
-    this.toolslist = this.toolslist;
+    this.list = this.list;
     this.tools = this.tool;
   }
 }

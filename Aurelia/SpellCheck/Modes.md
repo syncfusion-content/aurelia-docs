@@ -316,7 +316,7 @@ The following code example depicts how **to add the custom menu items** into the
  
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu">
             It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood, 4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp)
             and 400  (295.02 lbf ft), diesel particulate filter and Bluetec emission control system, quattro permanent four-wheel drve system,
             Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
@@ -357,7 +357,7 @@ The client-side event `contextClick` can be used to define specific actions when
  
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-context-click.trigger="onCustomMenuClick($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-context-click.trigger="onCustomMenuClick($event.detail)">
             It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood, 4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp)
             and 400  (295.02 lbf ft), diesel particulate filter and Bluetec emission control system, quattro permanent four-wheel drve system,
             Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
@@ -386,7 +386,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.validate();
+	    this.SpellCheck.validate();
       }, 50);      
     }
     onCustomMenuClick(args) {
@@ -405,7 +405,7 @@ It is possible to predict the target (error word) on which the right click is ma
  
 <template>    
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-context-open.trigger="onBeforeOpen($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu" e-context-open.trigger="onBeforeOpen($event.detail)">
             It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood, 4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp)
             and 400  (295.02 lbf ft), diesel particulate filter and Bluetec emission control system, quattro permanent four-wheel drve system,
             Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
@@ -433,7 +433,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.validate();
+	    this.SpellCheck.validate();
       }, 50);      
     }
     onBeforeOpen(args) {
@@ -451,7 +451,7 @@ You can get the current spell check operation arguments details with the client-
  
 <template>    
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-validating.trigger="onSpellChecking($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-validating.trigger="onSpellChecking($event.detail)">
             It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood, 4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp)
             and 400  (295.02 lbf ft), diesel particulate filter and Bluetec emission control system, quattro permanent four-wheel drve system,
             Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
@@ -472,7 +472,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.validate();
+	    this.SpellCheck.validate();
       }, 50);      
     }
     onSpellChecking(args) {
