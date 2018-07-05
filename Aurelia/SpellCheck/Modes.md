@@ -33,7 +33,7 @@ The following code snippet shows how to open the dialog to spell check the conte
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -53,7 +53,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.showInDialog();
+	    this.SpellCheck.showInDialog();
       }, 50);      
     }
 }
@@ -68,7 +68,7 @@ To define the specific actions before the dialog window open, the client-side ev
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-dialog-before-open.trigger="onDialogBeforeOpen($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-dialog-before-open.trigger="onDialogBeforeOpen($event.detail)">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -88,7 +88,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.showInDialog();
+	    this.SpellCheck.showInDialog();
       }, 50);      
     }
     onDialogBeforeOpen(args) {
@@ -106,7 +106,7 @@ The client-side event `dialogOpen` can be used to define the specific actions af
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-dialog-open.trigger="onDialogOpen($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-dialog-open.trigger="onDialogOpen($event.detail)">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -126,7 +126,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.showInDialog();
+	    this.SpellCheck.showInDialog();
       }, 50);      
     }
     onDialogOpen(args) {
@@ -144,7 +144,7 @@ The following code example used to define some actions after the dialog closing 
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-dialog-close.trigger="onDialogClose($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-dialog-close.trigger="onDialogClose($event.detail)">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -164,7 +164,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.showInDialog();
+	    this.SpellCheck.showInDialog();
       }, 50);      
     }
     onDialogClose(args) {
@@ -182,7 +182,7 @@ It is possible to predict the error word details before starting the SpellCheck 
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-start.trigger="onSpellCheckStart($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-start.trigger="onSpellCheckStart($event.detail)">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -202,7 +202,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.showInDialog();
+	    this.SpellCheck.showInDialog();
       }, 50);      
     }
     onSpellCheckStart(args) {
@@ -220,7 +220,7 @@ You can get the corrected text content details before updating it into target el
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-complete.trigger="onSpellCheckComplete($event.detail)">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-complete.trigger="onSpellCheckComplete($event.detail)">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -240,7 +240,7 @@ export class SpellCheck {
     }
     attached() {
       setTimeout(()=>{
-	    this.spellcheck.showInDialog();
+	    this.SpellCheck.showInDialog();
       }, 50);      
     }
     onSpellCheckComplete(args) {
@@ -274,7 +274,7 @@ The following code snippet shows how to enable the context menu settings in Spel
  
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="contextMenu">
             It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood, 4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp)
             and 400  (295.02 lbf ft), diesel particulate filter and Bluetec emission control system, quattro permanent four-wheel drve system,
             Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
