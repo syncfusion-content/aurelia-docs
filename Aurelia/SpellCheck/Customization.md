@@ -17,13 +17,13 @@ The SpellCheck provides option to customize for the following scenarios.
 
 The SpellCheck control provide the support(`misspellWordCss`) to display the error word in user defined style. By default displaying the error words with the red underline. 
 
-The following code example depicts the way to customize the error word highlight (displaying error word with red color font and lightblue background).
+The following code example depicts the way to customize the error word highlight (displaying error word with red color font and blue background).
 
 {% highlight html %}
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-misspell-word-css.bind="highlight">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-misspell-word-css.bind="highlight">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -46,7 +46,7 @@ export class SpellCheck {
       this.highlight = "highlight";
     }
     showErrors() {
-      this.spellcheck.showInDialog();
+      this.SpellCheck.showInDialog();
     }
 }
 
@@ -56,7 +56,7 @@ export class SpellCheck {
 
 <style>
         .highlight {
-            background-color: lightblue;
+            background-color: blue;
             color: red;
         }
 </style>
@@ -73,7 +73,7 @@ The following code example describes the way to control the suggestion count.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-max-suggestion-count.bind="3">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-max-suggestion-count.bind="3">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -95,7 +95,7 @@ export class SpellCheck {
       };
     }
     showErrors() {
-      this.spellcheck.showInDialog();
+      this.SpellCheck.showInDialog();
     }
 }
 

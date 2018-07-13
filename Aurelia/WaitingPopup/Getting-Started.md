@@ -23,7 +23,7 @@ You can give the Username and Password in the **login page**. When you click the
 
  * To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started).
 * Create `WaitingPopup` folder inside `src/samples` location.
-* Create `waitingpopup.html` file inside  `src/samples/waitingpopup` folder and use the below code for rendering RichTextEditor component 
+* Create `WaitingPopup.html` file inside  `src/samples/WaitingPopup` folder and use the below code for rendering RichTextEditor component 
 
 
 {% highlight html %}
@@ -55,7 +55,7 @@ You can give the Username and Password in the **login page**. When you click the
 
 Initialize the WaitingPopup in script
 
-* Create `waitingpopup.js` file inside `src/samples/waitingpopup` folder with below code snippet.
+* Create `WaitingPopup.js` file inside `src/samples/WaitingPopup` folder with below code snippet.
 
 {% highlight js %}
 

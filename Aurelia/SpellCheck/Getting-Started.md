@@ -27,13 +27,13 @@ We already configured a template project in GitHub repository [syncfusion-templa
 
 The below steps describes to create Syncfusion Aurelia SplitButton component.
 
-* Create `spellcheck` folder inside `src/samples/` location.
-* Create `spellcheck.html` file inside `src/samples/spellcheck` folder and use the below code example to render the SpellCheck component.
+* Create `SpellCheck` folder inside `src/samples/` location.
+* Create `SpellCheck.html` file inside `src/samples/SpellCheck` folder and use the below code example to render the SpellCheck component.
 
 {% highlight html %}
 
 <template>
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="ContextMenu">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-context-menu-settings.bind="ContextMenu">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -41,7 +41,7 @@ The below steps describes to create Syncfusion Aurelia SplitButton component.
 
 {% endhighlight %}
 
-* Create `spellcheck.js` file with the below code snippet inside `src/samples/spellcheck` folder.
+* Create `SpellCheck.js` file with the below code snippet inside `src/samples/SpellCheck` folder.
 
 {% highlight javascript %}
 
@@ -70,7 +70,7 @@ export class App {
                 nav: true, title: 'Child Router' },
    { route: 'button',        name: 'button', moduleId: 'samples/button/button',                
                 nav: true, title: 'Button' },
-   { route: 'spellcheck',        name: 'spellcheck',       moduleId: 'samples/spellcheck/spellcheck',                
+   { route: 'SpellCheck',        name: 'SpellCheck',       moduleId: 'samples/SpellCheck/SpellCheck',                
                 nav: true, title: 'SpellCheck' }
  ]);
  this.router = router;
@@ -97,7 +97,7 @@ The following code example depicts that checking the spelling of the target elem
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -119,7 +119,7 @@ export class SpellCheck {
       };
     }
     showErrors() {
-      this.spellcheck.validate(); // highlighting the error word in the target area itself
+      this.SpellCheck.validate(); // highlighting the error word in the target area itself
     }
 }
 
