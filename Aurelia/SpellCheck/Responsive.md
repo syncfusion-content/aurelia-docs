@@ -16,7 +16,7 @@ The following code example describes the above behavior.
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-is-responsive.bind="Responsive">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-is-responsive.bind="Responsive">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -39,13 +39,13 @@ export class SpellCheck {
 
 {% endhighlight %}
 
-The dialog of spell check control is rendering based on the client browser’s width and height. Refer to the following code to render the spellcheck dialog control with responsive.
+The dialog of spell check control is rendering based on the client browser’s width and height. Refer to the following code to render the SpellCheck dialog control with responsive.
 
 {% highlight html %}
 
 <template>
     <div id="SpellControl">
-        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-is-responsive.bind="Responsive">
+        <ej-spell-check id="SpellCheck" contenteditable="true" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-is-responsive.bind="Responsive">
             Facebook is a social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes.
             The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
         </ej-spell-check>
@@ -68,7 +68,7 @@ export class SpellCheck {
       this.Responsive = "true";
     }
     showErrors() {
-      this.spellcheck.showInDialog();
+      this.SpellCheck.showInDialog();
     }
 }
 

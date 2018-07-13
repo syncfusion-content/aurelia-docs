@@ -35,7 +35,7 @@ The following code example describes the above behavior.
         But reember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span>
     <br />
-    <ej-spell-check id="SpellCheck" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-controls-to-validate="#control1,#control2,#control3">
+    <ej-spell-check id="SpellCheck" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-controls-to-validate="#control1,#control2,#control3">
     </ej-spell-check>
 </template>
 
@@ -76,7 +76,7 @@ The following code example describes the spell checking of HTML element’s.
         But reember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span>
     <br />
-    <ej-spell-check id="SpellCheck" e-widget.bind="spellcheck" e-dictionary-settings.bind="dictionarySettings" e-controls-to-validate="#control1,#control2,#control3">
+    <ej-spell-check id="SpellCheck" e-widget.bind="SpellCheck" e-dictionary-settings.bind="dictionarySettings" e-controls-to-validate="#control1,#control2,#control3">
     </ej-spell-check>
     <div class="spellbutton">
         <input ej-button="e-text:Spell check" e-on-click.trigger="showDialog($event)" id="CheckSpell" />
@@ -95,10 +95,10 @@ export class SpellCheck {
       };
     }
     showDialog() {
-      this.spellcheck.showInDialog();
+      this.SpellCheck.showInDialog();
     }
 }
 
 {% endhighlight %}
 
-The spellcheck component iterates through the target elements which specified in the “controlsToValidate” property, and process the element’s content one by one in the order of CSS elements, and id specified elements.
+The SpellCheck component iterates through the target elements which specified in the “controlsToValidate” property, and process the element’s content one by one in the order of CSS elements, and id specified elements.
