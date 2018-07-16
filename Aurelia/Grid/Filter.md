@@ -26,7 +26,7 @@ And also four types of filter menu is available in all filter types, they are
 The corresponding filter menu is opened based on the column type.
 
 N> 1. Need to specify the [`e-type`](http://help.syncfusion.com/api/js/ejgrid#members:columns-type "type") of column, when first record data value is empty or null otherwise the filter menu is not opened. 
-N> 2. The default filter type is Filter bar, when `e-allow-filtering` is enabled and [`filtertype`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") is not set.
+N> 2. The default filter type is Filter bar, when `e-allow-filtering` is enabled and [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") is not set.
 
 The following code example describes the above behavior.
 
@@ -222,7 +222,7 @@ The following output is displayed as a result of the above code example.
 
 ## Filter bar
 
-[`Filterbar`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "Filter bar") row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`.
+[`Filter bar`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "Filter bar") row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`.
 
 List of Filter bar Expressions:
 
@@ -403,7 +403,7 @@ N> For [`filterBarMode`](http://help.syncfusion.com/api/js/ejgrid#members:filter
 
 Filter bar message:
 
-The filter bar message is supported only for the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as filterbar. The filtered data with column name is displayed in the grid pager itself. By default [`showFilterBarStatus`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showfilterbarmessage "showFilterBarMessage") is true.
+The filter bar message is supported only for the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`. The filtered data with column name is displayed in the grid pager itself. By default [`showFilterBarStatus`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showfilterbarmessage "showFilterBarMessage") is true.
 
 The following code example describes the above behavior.
 
@@ -573,7 +573,7 @@ List of Column type and Filter operators
 
 ## FilterBar Template
 
-Usually enabling `e-allow-filtering`, will create default textbox in Grid FilterBar. So, Using [`e-filter-bar-template`] property of `ej-column` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
+Usually enabling `e-allow-filtering`, will create default textbox in Grid FilterBar. So, Using [`e-filter-bar-template`] property of `ej-column` we can render any other controls like AutoComplete, DropDownList etc in filter bar to filter the grid data for the particular column.  
 It has three functions. They are    
 
 1. `create` - It is used to create the control at time of initialize.
