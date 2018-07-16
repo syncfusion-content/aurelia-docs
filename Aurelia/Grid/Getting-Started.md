@@ -77,7 +77,7 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 
 {% endhighlight %}	
 
-Configure the `e-data-source` bind value `this.datamanager` in Aurelia view-model as shown in the following code.
+Configure the `e-data-source` bind value `this.gridData` in Aurelia view-model as shown in the following code.
 
 {% highlight js %}
     import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
