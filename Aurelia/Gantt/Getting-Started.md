@@ -13,7 +13,7 @@ This section explains briefly about how to create a Gantt chart in your applicat
 
 ## Create your first Gantt in JavaScript
 
-To get started Syncfusion Aurelia application refer [`this`](https://help.syncfusion.com/aurelia/overview) page for basic control integaration and script references.
+To get started Syncfusion Aurelia application refer [`this`](https://help.syncfusion.com/aurelia/overview) page for basic control integration and script references.
 
 In this tutorial, you can learn how to create a simple Gantt chart, add tasks or subtasks, and set relationship between tasks during the design phase of a software project. The following screenshot displays the desired output after completing this tutorial,
 
