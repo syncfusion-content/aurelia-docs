@@ -120,8 +120,8 @@ Gantt control contains toolbar options to edit, search, expand or collapse all r
 <template>
     <div>
         <ej-gantt id="Gantt"
-            e-toolbar-settings.bind="toolbarsettings"
-            e-edit-settings.bind="editsettings"
+            e-toolbar-settings.bind="toolbarSettings"
+            e-edit-settings.bind="editSettings"
             //...        >
         </ej-gantt>
     </div>
@@ -134,7 +134,7 @@ Gantt control contains toolbar options to edit, search, expand or collapse all r
 
 export class DefaultFuntionalities {
     constructor() {
-        this.toolbarsettings = {
+        this.toolbarSettings = {
             showToolbar: true,
             toolbarItems: [
                 ej.Gantt.ToolbarItems.Add,
@@ -148,7 +148,7 @@ export class DefaultFuntionalities {
                 ej.Gantt.ToolbarItems.CollapseAll
             ]
         };
-        this.editsettings = {
+        this.editSettings = {
             allowEditing: true,
             allowAdding: true,
             allowDeleting: true,
@@ -215,7 +215,7 @@ Modify the predecessor details of a task using mouse interactions by setting [`e
         <ej-gantt id="Gantt"
             e-allow-gantt-chart-editing="true"
             e-predecessor-mapping="predecessor"
-            e-edit-settings.bind="editsettings"
+            e-edit-settings.bind="editSettings"
             //...        >
         </ej-gantt>
     </div>   
@@ -227,7 +227,7 @@ Modify the predecessor details of a task using mouse interactions by setting [`e
 
 export class DefaultFuntionalities {
     constructor() {
-        this.editsettings = {
+        this.editSettings = {
             allowEditing: true,
             allowAdding: true,
             allowDeleting: true,
