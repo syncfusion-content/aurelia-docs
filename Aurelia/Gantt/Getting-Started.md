@@ -13,7 +13,7 @@ This section explains briefly about how to create a Gantt chart in your applicat
 
 ## Create your first Gantt in JavaScript
 
-To get started Syncfusion Aurelia application refer [`this`](https://help.syncfusion.com/aurelia/overview) page for basic control integaration and script references.
+To get started Syncfusion Aurelia application refer [`this`](https://help.syncfusion.com/aurelia/overview) page for basic control integration and script references.
 
 In this tutorial, you can learn how to create a simple Gantt chart, add tasks or subtasks, and set relationship between tasks during the design phase of a software project. The following screenshot displays the desired output after completing this tutorial,
 
@@ -120,8 +120,8 @@ Gantt control contains toolbar options to edit, search, expand or collapse all r
 <template>
     <div>
         <ej-gantt id="Gantt"
-            e-toolbar-settings.bind="toolbarsettings"
-            e-edit-settings.bind="editsettings"
+            e-toolbar-settings.bind="toolbarSettings"
+            e-edit-settings.bind="editSettings"
             //...        >
         </ej-gantt>
     </div>
@@ -134,7 +134,7 @@ Gantt control contains toolbar options to edit, search, expand or collapse all r
 
 export class DefaultFuntionalities {
     constructor() {
-        this.toolbarsettings = {
+        this.toolbarSettings = {
             showToolbar: true,
             toolbarItems: [
                 ej.Gantt.ToolbarItems.Add,
@@ -148,7 +148,7 @@ export class DefaultFuntionalities {
                 ej.Gantt.ToolbarItems.CollapseAll
             ]
         };
-        this.editsettings = {
+        this.editSettings = {
             allowEditing: true,
             allowAdding: true,
             allowDeleting: true,
@@ -215,7 +215,7 @@ Modify the predecessor details of a task using mouse interactions by setting [`e
         <ej-gantt id="Gantt"
             e-allow-gantt-chart-editing="true"
             e-predecessor-mapping="predecessor"
-            e-edit-settings.bind="editsettings"
+            e-edit-settings.bind="editSettings"
             //...        >
         </ej-gantt>
     </div>   
@@ -227,7 +227,7 @@ Modify the predecessor details of a task using mouse interactions by setting [`e
 
 export class DefaultFuntionalities {
     constructor() {
-        this.editsettings = {
+        this.editSettings = {
             allowEditing: true,
             allowAdding: true,
             allowDeleting: true,
