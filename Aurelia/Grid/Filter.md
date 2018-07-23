@@ -586,8 +586,8 @@ The following code example describes the above behavior.
 {% highlight html %}
 <ej-grid e-data-source.bind="data" e-allow-paging=true e-allow-filtering=true>
     <ej-column e-field="OrderID" e-header-text="Order ID" e-text-align="right" e-width="90"></ej-column>
-    <ej-column e-field="CustomerID" e-header-text="CustomerID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filtercustomer"></ej-column>
-    <ej-column e-field="EmployeeID" e-header-text="EmployeeID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filteremployee"></ej-column>
+    <ej-column e-field="CustomerID" e-header-text="CustomerID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filterCustomer"></ej-column>
+    <ej-column e-field="EmployeeID" e-header-text="EmployeeID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filterEmployee"></ej-column>
     <ej-column e-field="Freight" e-header-text="Freight" e-text-align="left" e-format="{0:C2}" e-width="90" e-filter-bar-template.bind="filterFreight"></ej-column>
     <ej-column e-field="ShipCountry" e-header-text="Ship Country" e-text-align="left" e-width="90"></ej-column>
     <ej-column e-field="Verified" e-headertext="Verified" e-width="90"></ej-column>
@@ -607,7 +607,7 @@ export class Grid {
                 this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
             },
         }
-        this.filtercustomer = {
+        this.filterCustomer = {
             create: function (args) {
                 return "<input>"
             },
@@ -619,7 +619,7 @@ export class Grid {
                 this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
             },
         }
-        this.filteremployee = {
+        this.filterEmployee = {
             write: function (args) {
                 var data = [{ text: "clear", value: "clear" }, { text: "1", value: 1 }, { text: "2", value: 2 }, { text: "3", value: 3 }, { text: "4", value: 4 },
                     { text: "5", value: 5 }, { text: "6", value: 6 }, { text: "7", value: 7 }, { text: "8", value: 8 }, { text: "9", value: 9 }
