@@ -132,7 +132,7 @@ export class Grid {
         this.data = window.gridData;
         this.freightParams = {decimalPlaces:3};
         this.cityParams = {enableAnimation: true};
-        this.boolParams = {showroundedcorner: true};
+        this.boolParams = {showRoundedCorner: true};
         this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
         this.toolbarItems = { showToolbar: true, toolbarItems: ["add", "edit", "delete", "update", "cancel"] }
     }
@@ -903,17 +903,17 @@ Also when you use `UrlAdaptor`, you need to return the data as `JSON` and the JS
 The following code example describes the above behavior.
 
 {% highlight cs %}
-public ActionResult DataSource(DataManager dm)
+public ActionResult DataSource(DataManager value)
 {
 	IEnumerable DataSource = OrderRepository.GetAllRecords();
 	DataResult result = new DataResult();
 	DataOperations operation = new DataOperations();
 	result.result = DataSource;
 	result.count = result.result.AsQueryable().Count();
-	if (dm.Skip > 0)
-		result.result = operation.PerformSkip(result.result, dm.Skip);
-	if (dm.Take > 0)
-		result.result = operation.PerformTake(result.result, dm.Take);
+	if (value.Skip > 0)
+		result.result = operation.PerformSkip(result.result, value.Skip);
+	if (value.Take > 0)
+		result.result = operation.PerformTake(result.result, value.Take);
 	return Json(result, JsonRequestBehavior.AllowGet);
 }
 public class DataResult
