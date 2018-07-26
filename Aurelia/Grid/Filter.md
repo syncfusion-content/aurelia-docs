@@ -26,7 +26,7 @@ And also four types of filter menu is available in all filter types, they are
 The corresponding filter menu is opened based on the column type.
 
 N> 1. Need to specify the [`e-type`](http://help.syncfusion.com/api/js/ejgrid#members:columns-type "type") of column, when first record data value is empty or null otherwise the filter menu is not opened. 
-N> 2. The default filter type is Filter bar, when `e-allow-filtering` is enabled and [`filtertype`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") is not set.
+N> 2. The default filter type is Filter bar, when `e-allow-filtering` is enabled and [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") is not set.
 
 The following code example describes the above behavior.
 
@@ -222,7 +222,7 @@ The following output is displayed as a result of the above code example.
 
 ## Filter bar
 
-[`Filterbar`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "Filter bar") row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`.
+[`Filter bar`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "Filter bar") row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`.
 
 List of Filter bar Expressions:
 
@@ -251,7 +251,7 @@ You can enter the below filter expressions manually in the filter bar.
                 = value
             </td>
             <td>
-                equal
+                Equal
             </td>
             <td rowspan="5">
                 Numeric
@@ -265,7 +265,7 @@ You can enter the below filter expressions manually in the filter bar.
                 != value
             </td>
             <td>
-                notequal
+                Not equal
             </td>
            
         </tr>
@@ -277,7 +277,7 @@ You can enter the below filter expressions manually in the filter bar.
                 > value
             </td>
             <td>
-                greaterthan
+                Greater than
             </td>
           
         </tr>
@@ -289,7 +289,7 @@ You can enter the below filter expressions manually in the filter bar.
                 < value
             </td>
             <td>
-                lessthan
+                Less than
             </td>
           
         </tr>
@@ -301,7 +301,7 @@ You can enter the below filter expressions manually in the filter bar.
                 >= value
             </td>
             <td>
-                greaterthanorequal
+                Greater than or equal
             </td>
            >
         </tr>
@@ -313,7 +313,7 @@ You can enter the below filter expressions manually in the filter bar.
                 <= value
             </td>
             <td>
-                lessthanorequal
+                Less than or equal
             </td>
            
         </tr>
@@ -403,7 +403,7 @@ N> For [`filterBarMode`](http://help.syncfusion.com/api/js/ejgrid#members:filter
 
 Filter bar message:
 
-The filter bar message is supported only for the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as filterbar. The filtered data with column name is displayed in the grid pager itself. By default [`showFilterBarStatus`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showfilterbarmessage "showFilterBarMessage") is true.
+The filter bar message is supported only for the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`. The filtered data with column name is displayed in the grid pager itself. By default [`showFilterBarStatus`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showfilterbarmessage "showFilterBarMessage") is true.
 
 The following code example describes the above behavior.
 
@@ -573,7 +573,7 @@ List of Column type and Filter operators
 
 ## FilterBar Template
 
-Usually enabling `e-allow-filtering`, will create default textbox in Grid FilterBar. So, Using [`e-filter-bar-template`] property of `ej-column` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
+Usually enabling `e-allow-filtering`, will create default textbox in Grid FilterBar. So, Using [`e-filter-bar-template`] property of `ej-column` we can render any other controls like AutoComplete, DropDownList etc in filter bar to filter the grid data for the particular column.  
 It has three functions. They are    
 
 1. `create` - It is used to create the control at time of initialize.
@@ -586,8 +586,8 @@ The following code example describes the above behavior.
 {% highlight html %}
 <ej-grid e-data-source.bind="data" e-allow-paging=true e-allow-filtering=true>
     <ej-column e-field="OrderID" e-header-text="Order ID" e-text-align="right" e-width="90"></ej-column>
-    <ej-column e-field="CustomerID" e-header-text="CustomerID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filtercustomer"></ej-column>
-    <ej-column e-field="EmployeeID" e-header-text="EmployeeID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filteremployee"></ej-column>
+    <ej-column e-field="CustomerID" e-header-text="CustomerID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filterCustomer"></ej-column>
+    <ej-column e-field="EmployeeID" e-header-text="EmployeeID" e-text-align="left" e-width="90" e-filter-bar-template.bind="filterEmployee"></ej-column>
     <ej-column e-field="Freight" e-header-text="Freight" e-text-align="left" e-format="{0:C2}" e-width="90" e-filter-bar-template.bind="filterFreight"></ej-column>
     <ej-column e-field="ShipCountry" e-header-text="Ship Country" e-text-align="left" e-width="90"></ej-column>
     <ej-column e-field="Verified" e-headertext="Verified" e-width="90"></ej-column>
@@ -607,7 +607,7 @@ export class Grid {
                 this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
             },
         }
-        this.filtercustomer = {
+        this.filterCustomer = {
             create: function (args) {
                 return "<input>"
             },
@@ -619,7 +619,7 @@ export class Grid {
                 this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
             },
         }
-        this.filteremployee = {
+        this.filterEmployee = {
             write: function (args) {
                 var data = [{ text: "clear", value: "clear" }, { text: "1", value: 1 }, { text: "2", value: 2 }, { text: "3", value: 3 }, { text: "4", value: 4 },
                     { text: "5", value: 5 }, { text: "6", value: 6 }, { text: "7", value: 7 }, { text: "8", value: 8 }, { text: "9", value: 9 }
