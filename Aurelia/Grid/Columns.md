@@ -51,3 +51,5 @@ import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
 The following output is displayed as a result of the above code example.
 
 ![](columns_images/columns_img1.png)
+
+N> To render the template columns using js-render templates you can refer the [`How To`](https://help.syncfusion.com/angular/grid/how-to "Column Template using js-render templates").
