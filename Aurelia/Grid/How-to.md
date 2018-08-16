@@ -10,7 +10,7 @@ documentation: ug
 
 ## Column Template using js-render templates
 
-If the columns are defined in the code behind then the template columns can be rendered using js-render templates by defining the templateId in the columns API.
+If the columns of the grid are defined in the code behind then the template columns can be rendered using js-render templates by defining the templateId in the columns API.
 
 The following code example explains how to use the js-render templates for rendering template column.
 
