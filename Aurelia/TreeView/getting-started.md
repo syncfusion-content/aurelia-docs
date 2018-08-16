@@ -141,7 +141,11 @@ Execution of above code will render the following output.
 
 ## TreeView using Data Binding
 
-Another way of creating TreeView is binding with the data source, you can bind local data or remote data source to create a TreeView as shown below code example.
+Another way of creating TreeView is binding with the data source, you can bind local data or remote data source to create a TreeView.
+
+The [beforeLoad](https://help.syncfusion.com/api/js/ejtreeview#events:beforeload) event will be triggered before loading nodes into TreeView.
+
+Refer to the below example,
 
 {% highlight html %}
 <template>
