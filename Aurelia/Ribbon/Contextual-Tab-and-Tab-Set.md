@@ -24,7 +24,7 @@ keywords: contextual tab and tab set
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -36,15 +36,15 @@ keywords: contextual tab and tab set
                 <div id="Contents">Custom Control</div>
                 <div id="headings" class="e-headings">
                     <div>
-                        <p>AaBbCcDd</p>
+                        <p>ABCD</p>
                         <p>No Spacing</p>
                     </div>
                     <div>
-                        <p class="e-strong">AaBbCcDd</p>
+                        <p class="e-strong">ABCD</p>
                         <p>Strong</p>
                     </div>
                     <div>
-                        <p class="e-emphasis">AaBbCcDd</p>
+                        <p class="e-emphasis">ABCD</p>
                         <p>Emphasis</p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ keywords: contextual tab and tab set
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
 					
             id: "home",
