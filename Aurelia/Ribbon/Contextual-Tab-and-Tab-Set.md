@@ -98,7 +98,7 @@ keywords: contextual tab and tab set
              // tab set with background & border color
              {
                  backgroundColor: "blue",
-                 borderColor: "lightblue",
+                 borderColor: "red",
                  tabs: [{
                      id: "tabset1",
                      text: "Tabset1",
