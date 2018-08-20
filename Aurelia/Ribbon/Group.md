@@ -49,7 +49,7 @@ Custom controls or items (such as table, div etc.) can be added when the `type` 
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -79,14 +79,14 @@ Custom controls or items (such as table, div etc.) can be added when the `type` 
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{ id: 'home', text: 'HOME', groups: [{ text: 'Clipboard', alignType: ej.Ribbon.AlignType.Columns, content: [{ groups: [{ id: 'paste', text: 'paste', toolTip: 'Paste', quickAccessMode: ej.Ribbon.QuickAccessMode.ToolBar, splitButtonSettings: { contentType: ej.ContentType.ImageOnly, prefixIcon: 'e-icon e-ribbon e-ribbonpaste', targetID: 'pasteSplit', buttonMode: 'dropdown', click: 'executeAction'}}], defaults: { type: ej.Ribbon.Type.SplitButton, width: 50, height: 70}}]},{
             text: "Font",
-            //group aligntype as columns
+            //group alignType as columns
             alignType: ej.Ribbon.alignType.columns,
             content: [{
                 groups: [{
-                    // contentgroup with toggle button settings
+                    // contentGroup with toggle button settings
                     id: "cut",
                     toggleButtonSettings: {
                         defaultText: "Cut",
@@ -131,7 +131,7 @@ Separates the control from the next control in the group when group `alignType` 
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -150,7 +150,7 @@ Separates the control from the next control in the group when group `alignType` 
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
@@ -212,7 +212,7 @@ Set group `type` as `custom` to add custom items such as div, table and custom c
                     <div id="defaultRibbon"></div>
                 </div>
                 <button id="btn">Using Content ID</button>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -231,7 +231,7 @@ Set group `type` as `custom` to add custom items such as div, table and custom c
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
@@ -271,7 +271,7 @@ Set `enableGroupExpander` as true to show Group Expander for each group in Tab. 
                     <div id="defaultRibbon"></div>
                 </div>
                 <button id="btn">Home button</button>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -290,7 +290,7 @@ Set `enableGroupExpander` as true to show Group Expander for each group in Tab. 
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
