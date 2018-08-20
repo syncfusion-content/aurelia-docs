@@ -35,7 +35,7 @@ Set the UL element `id` to `menuItemID` property to create Application Menu and 
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -57,7 +57,7 @@ Set the UL element `id` to `menuItemID` property to create Application Menu and 
 
      export class Default {
      constructor() {
-         this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+         this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
          this.Tabs = [{ id: 'home', text: 'HOME'}];
      }
     }
