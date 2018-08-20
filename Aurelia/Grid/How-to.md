@@ -8,7 +8,7 @@ documentation: ug
 ---
 # How to
 
-## Column Template using JSRender
+## Column Template using JsRender
 
 If the columns of the grid are defined in the code behind then the template columns can be rendered using js-render templates by defining the templateId in the columns API.
 
