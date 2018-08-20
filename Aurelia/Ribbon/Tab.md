@@ -28,7 +28,7 @@ Tab is a collection of control `groups` which enables you to organize related co
                 <div id="sendReceive">
                     Send/Receive All Folders
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -46,7 +46,7 @@ Tab is a collection of control `groups` which enables you to organize related co
 
     export class Default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
@@ -81,7 +81,7 @@ Tab is a collection of control `groups` which enables you to organize related co
             }]
         },
            {
-               id: "sendrec",
+               id: "sendRec",
                text: "Send/Receive",
                groups: [{
                    text: "Send/Receive",
