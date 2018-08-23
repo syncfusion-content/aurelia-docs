@@ -60,7 +60,7 @@ import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
                    field:"EmployeeID",  
                    headerText: 'EmployeeID',  
                    isTemplateColumn:true,  
-                   templateID:'#Template',  
+                   template:'#Template',  
                    width: 40  
                   }];  
 			}
