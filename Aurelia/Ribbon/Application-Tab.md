@@ -35,7 +35,7 @@ Set the UL element `id` to `menuItemID` property to create Application Menu and 
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -57,7 +57,7 @@ Set the UL element `id` to `menuItemID` property to create Application Menu and 
 
      export class Default {
      constructor() {
-         this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+         this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
          this.Tabs = [{ id: 'home', text: 'HOME'}];
      }
     }
@@ -106,7 +106,7 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
                             <div class="e-accuser e-newpageicon" style="display:table-cell"></div>
                             <div style="display:table-cell;vertical-align:middle">
                                 <div>user</div>
-                                <div>xyz@syncfusion.com</div>
+                                <div>xy@syncfusion.com</div>
                             </div>
                         </div>
                     </div>
@@ -163,3 +163,5 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
 ![](Application-Tab_images/Application-Tab_img2.png)
 
 N> Height & width of backstage can be set using `height` and `width`, if these are not set, Ribbon’s height & width will be considered.
+
+You can add/remove/update backStage item to the ribbon control by using [`addBackStageItem`](https://help.syncfusion.com/api/js/ejribbon#methods:addbackstageitem), [`removeBackStageItem`](https://help.syncfusion.com/api/js/ejribbon#methods:removebackstageitem) and [`updateBackStageItem`](https://help.syncfusion.com/api/js/ejribbon#methods:updatebackstageitem) methods. Also you can show/hide the backstage page in ribbon control by using [`showBackstage`](https://help.syncfusion.com/api/js/ejribbon#methods:showbackstage) and [`hideBackstage`](https://help.syncfusion.com/api/js/ejribbon#methods:hidebackstage methods.

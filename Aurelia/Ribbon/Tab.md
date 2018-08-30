@@ -9,7 +9,8 @@ keywords: ribbon tab
 
 # Tab
 
-Tab is a collection of control `groups` which enables you to organize related commands into single view.  Tabs can be added to Ribbon using `tabs` property. `id` & `text` properties are used to set unique ID and header text to Tab. 
+Tab is a collection of control `groups` which enables you to organize related commands into single view.  Tabs can be added to Ribbon using `tabs` property. `id` & `text` properties are used to set unique ID and header text to Tab. The manipulation of given text tab in the ribbon control can be done by using  [`addTab`](https://help.syncfusion.com/api/js/ejribbon#methods:addtab), [`removeTab`](https://help.syncfusion.com/api/js/ejribbon#methods:removetab), [`hideTab`](https://help.syncfusion.com/api/js/ejribbon#methods:hidetab),
+[`showTab`](https://help.syncfusion.com/api/js/ejribbon#methods:showtab) methods and [`tabAdd`](https://help.syncfusion.com/api/js/ejribbon#events:tabadd), [`tabCreate`](https://help.syncfusion.com/api/js/ejribbon#events:tabcreate), [`tabRemove`](https://help.syncfusion.com/api/js/ejribbon#events:tabremove), [`tabClick`](https://help.syncfusion.com/api/js/ejribbon#events:tabclick) and [`tabSelect`](https://help.syncfusion.com/api/js/ejribbon#events:tabselect) events.
 
 {% highlight html %}
 
@@ -27,7 +28,7 @@ Tab is a collection of control `groups` which enables you to organize related co
                 <div id="sendReceive">
                     Send/Receive All Folders
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -45,7 +46,7 @@ Tab is a collection of control `groups` which enables you to organize related co
 
     export class Default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
@@ -80,7 +81,7 @@ Tab is a collection of control `groups` which enables you to organize related co
             }]
         },
            {
-               id: "sendrec",
+               id: "sendRec",
                text: "Send/Receive",
                groups: [{
                    text: "Send/Receive",

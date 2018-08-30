@@ -13,17 +13,19 @@ keywords: group,ribbon group
 
 ## Adding Tab Groups
 
-Group items can be added to Tabs by specifying `text` and corresponding `content` to be displayed. The content of group can be specified as either with `content` collection, `contentID` or `customContent`.
+Group items can be added to Tabs by specifying `text` and corresponding `content` to be displayed. The content of group can be specified as either with `content` collection, `contentID` or `customContent`. You can add tab group dynamically in the ribbon control with given tab index, tab group object and group index position by using [`addTabGroup`](https://help.syncfusion.com/api/js/ejribbon#methods:addtabgroup) method.
 
 ### Adding Content
 
 Add content to Group item which is based on `type` of content specified. The available types are `button`, `splitButton`, `toggleButton`,`gallery`, and `dropDownList`.
 
-Groups and defaults settings can be added with the `content`.
+Groups and defaults settings can be added with the `content`. You can add group content dynamically in the ribbon control with given tab index, group index, content, content index and sub group index position by using [`addTabGroupContent`](https://help.syncfusion.com/api/js/ejribbon#methods:addtabgroupcontent).
 
 #### _Defaults_
 
-The `height`, `width`, `type`, `isBig` property to the controls in the `group` can be specified commonly.
+The [`tabs.groups.content.defaults.height`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-content-defaults-height), [`tabs.groups.content.defaults.width`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-content-defaults-width), 
+[`tabs.groups.content.defaults.type`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-content-defaults-type), [`tabs.groups.content.defaults.isBig`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-content-defaults-isbig) property to the controls in the [`group`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-content-groups) can be specified commonly.
+
 The `height` & `width` applicable to button, split button, dropdown list ,Toggle button controls and `isBig` applicable to only button controls ( button, split , toggle)
 
 #### _Adding Content Groups_
@@ -47,7 +49,7 @@ Custom controls or items (such as table, div etc.) can be added when the `type` 
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -77,14 +79,14 @@ Custom controls or items (such as table, div etc.) can be added when the `type` 
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{ id: 'home', text: 'HOME', groups: [{ text: 'Clipboard', alignType: ej.Ribbon.AlignType.Columns, content: [{ groups: [{ id: 'paste', text: 'paste', toolTip: 'Paste', quickAccessMode: ej.Ribbon.QuickAccessMode.ToolBar, splitButtonSettings: { contentType: ej.ContentType.ImageOnly, prefixIcon: 'e-icon e-ribbon e-ribbonpaste', targetID: 'pasteSplit', buttonMode: 'dropdown', click: 'executeAction'}}], defaults: { type: ej.Ribbon.Type.SplitButton, width: 50, height: 70}}]},{
             text: "Font",
-            //group aligntype as columns
+            //group alignType as columns
             alignType: ej.Ribbon.alignType.columns,
             content: [{
                 groups: [{
-                    // contentgroup with toggle button settings
+                    // contentGroup with toggle button settings
                     id: "cut",
                     toggleButtonSettings: {
                         defaultText: "Cut",
@@ -129,7 +131,7 @@ Separates the control from the next control in the group when group `alignType` 
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -148,7 +150,7 @@ Separates the control from the next control in the group when group `alignType` 
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
@@ -210,7 +212,7 @@ Set group `type` as `custom` to add custom items such as div, table and custom c
                     <div id="defaultRibbon"></div>
                 </div>
                 <button id="btn">Using Content ID</button>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -229,7 +231,7 @@ Set group `type` as `custom` to add custom items such as div, table and custom c
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",
@@ -252,7 +254,8 @@ Set group `type` as `custom` to add custom items such as div, table and custom c
 
 ## Group Expander
 
-Set `enableGroupExpander` as true to show Group Expander for each group in Tab. These expanders can be customized using `groupExpand` event, such as to show popup dialog.
+Set `enableGroupExpander` as true to show Group Expander for each group in Tab. These expanders can be customized using `groupExpand` event, such as to show popup dialog. To specify tooltip for the group expander of the group [`tabs.groups.groupExpanderSettings`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-groupexpandersettings) and 
+[`tabs.groups.groupExpanderSettings.toolTip`](https://help.syncfusion.com/api/js/ejribbon#members:tabs-groups-groupexpandersettings-tooltip) can be used.
 
 {% highlight html %}
 
@@ -268,7 +271,7 @@ Set `enableGroupExpander` as true to show Group Expander for each group in Tab. 
                     <div id="defaultRibbon"></div>
                 </div>
                 <button id="btn">Home button</button>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -287,7 +290,7 @@ Set `enableGroupExpander` as true to show Group Expander for each group in Tab. 
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
             id: "home",
             text: "HOME",

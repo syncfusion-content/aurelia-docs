@@ -9,7 +9,7 @@ keywords: contextual tab and tab set
 
 # Contextual Tabs
 
-`Contextual Tabs` are collection of Tabs that extended styling and can be shown based on some criteria. Contextual Tabs can be added like `tabs` including groups and content section. You can set `backgroundColor` and `borderColor` to highlight them as Tab set
+`Contextual Tabs` are collection of Tabs that extended styling and can be shown based on some criteria. Contextual Tabs can be added like `tabs` including groups and content section. You can set `backgroundColor` and `borderColor` to highlight them as Tab set. Contextual tabs can be added or set dynamically in ribbon control using [`addContextualTabs`](https://help.syncfusion.com/api/js/ejribbon#methods:addcontextualtabs) with it's object and index position.
 
 {% highlight html %}
 
@@ -24,7 +24,7 @@ keywords: contextual tab and tab set
                 <div>
                     <div id="defaultRibbon"></div>
                 </div>
-                <ul id="ribbonmenu">
+                <ul id="RibbonMenu">
                     <li>
                         <a>FILE</a>
                         <ul>
@@ -36,15 +36,15 @@ keywords: contextual tab and tab set
                 <div id="Contents">Custom Control</div>
                 <div id="headings" class="e-headings">
                     <div>
-                        <p>AaBbCcDd</p>
+                        <p>ABCD</p>
                         <p>No Spacing</p>
                     </div>
                     <div>
-                        <p class="e-strong">AaBbCcDd</p>
+                        <p class="e-strong">ABCD</p>
                         <p>Strong</p>
                     </div>
                     <div>
-                        <p class="e-emphasis">AaBbCcDd</p>
+                        <p class="e-emphasis">ABCD</p>
                         <p>Emphasis</p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ keywords: contextual tab and tab set
 
     export class default {
     constructor() {
-        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'ribbonmenu', menuSettings: {  openOnClick: false } };
+        this.ApplicationTab = { type: ej.Ribbon.ApplicationTabType.Menu, menuItemID: 'RibbonMenu', menuSettings: {  openOnClick: false } };
         this.Tabs = [{
 					
             id: "home",
@@ -98,7 +98,7 @@ keywords: contextual tab and tab set
              // tab set with background & border color
              {
                  backgroundColor: "blue",
-                 borderColor: "lightblue",
+                 borderColor: "red",
                  tabs: [{
                      id: "tabset1",
                      text: "Tabset1",
