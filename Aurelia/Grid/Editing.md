@@ -1149,7 +1149,7 @@ export class Grid {
 {% endhighlight %}
 
 {% highlight cs %}
-public ActionResult CrudUpdate(EditableOrder value, string action)
+public ActionResult CrudUpdate(EditableOrder value, string action, int key)
 {
     if (action == "update")
         OrderRepository.Update(value);
