@@ -52,4 +52,4 @@ The following output is displayed as a result of the above code example.
 
 ![](columns_images/columns_img1.png)
 
-N> When the columns are generated dynamically, JsRender templates can be used to render the template columns. Please refer the [`How To`](https://help.syncfusion.com/angular/grid/how-to "Column Template using JsRender") to render the template columns using JsRender templates.
+N> When the columns are generated dynamically, JsRender templates can be used to render the template columns. Please refer the [`How To`](https://help.syncfusion.com/aurelia/grid/how-to "Column Template using JsRender") to render the template columns using JsRender templates.
