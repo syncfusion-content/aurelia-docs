@@ -252,6 +252,6 @@ gulp watch
 
 ![](/js/Aurelia_images/skeleton_navigation.png)
 
-# Catalog application
+## Catalog application
 
 We have developed Catalog application for Aurelia-Syncfusion-Bridge [demo](http://aurelia-ui-toolkits.github.io/demo-syncfusion/) which is fully built on Aurelia framework.
