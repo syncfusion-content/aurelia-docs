@@ -120,7 +120,7 @@ export class App {
 
 The below screenshot shows the grid sample with Globalization support.
 
-![](getting-started-images/globalization.png)
+![Aurelia Globalization](getting-started-images/globalization.png)
 
 ## Localization
 
@@ -158,7 +158,7 @@ export class ejGrid {
 
 The below screenshot shows the grid sample with Localization support.
 
-![](getting-started-images/localization.png)
+![Aurelia Localization](getting-started-images/localization.png)
 
 ## FAQ
 

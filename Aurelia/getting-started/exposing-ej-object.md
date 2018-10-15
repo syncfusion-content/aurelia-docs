@@ -60,4 +60,4 @@ export class Chart {
 
 Now we can use ej object anywhere in our typescript application like the below screenshot.
 
-![](getting-started-images/chart.png)
+![Aurelia exposing ej Object](getting-started-images/chart.png)
