@@ -13,7 +13,7 @@ We have already configured Syncfusion Typings for all our typescript skeletons.
 
 So, to use ej object globally, Clone [syncfusion-templates-repository](https://github.com/aurelia-ui-toolkits/syncfusion-templates-repository) and use any of the typescript skeleton.
 
-The below code snippet will demonstrate the usage of `ej object` for `chart component` properties. `commonseriesoption's` type and `tickLinesPosition` are declared with ej object.
+The below code snippet will demonstrate the usage of `ej object` for `chart component` properties. `commonSeriesOption's` type and `tickLinesPosition` are declared with ej object.
 
 [view]
 
@@ -37,12 +37,12 @@ The below code snippet will demonstrate the usage of `ej object` for `chart comp
 
 {% highlight javascript %}
 
-export class Chart { 
+export class Chart {
   commonSeriesOptions: ej.datavisualization.Chart.CommonSeriesOptions; 
-  CountriesList: any; 
-  size: ej.datavisualization.Chart.Size; 
-  title: ej.datavisualization.Chart.Title; 
-  legend: ej.datavisualization.Chart.Legend; 
+  CountriesList: any;
+  size: ej.datavisualization.Chart.Size;
+  title: ej.datavisualization.Chart.Title;
+  legend: ej.datavisualization.Chart.Legend;
   primaryXAxis: ej.datavisualization.Chart.PrimaryXAxis; 
   primaryYAxis: ej.datavisualization.Chart.PrimaryYAxis; 
   constructor() { 
@@ -60,4 +60,4 @@ export class Chart {
 
 Now we can use ej object anywhere in our typescript application like the below screenshot.
 
-![](getting-started-images/chart.png)
+![Aurelia exposing ej Object](getting-started-images/chart.png)
