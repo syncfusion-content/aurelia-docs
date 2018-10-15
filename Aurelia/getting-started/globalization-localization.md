@@ -44,7 +44,7 @@ The following steps will explain about globalizing Syncfusion Aurelia components
 
 {% endhighlight %}
 
-N> Installation of [syncfusion-javascript](https://github.com/syncfusion/JavaScript-Widgets) package will automatically install         `syncfusion-ej-global` package. Additionally, we need to add the `syncfusion-ej-global` package path mapping with respect to installed `synfusion-ej-global` package version in `config.js` file
+N> Installation of [syncfusion-javascript](https://github.com/syncfusion/JavaScript-Widgets) package will automatically install         `syncfusion-ej-global` package. Additionally, we need to add the `syncfusion-ej-global` package path mapping with respect to installed `syncfusion-ej-global` package version in `config.js` file
 
 *   Set `locale` property in grid view which is used to set the culture that we want to use in our grid sample. For that, create `grid.html` file inside `src/samples/grid` folder with the below code snippet.
 
