@@ -13,13 +13,23 @@ Digital Gauge for Essential Studio encompasses the visualization of the segmente
 
 * Seven Segment
 
+![](/Aurelia/DigitalGauge/Overview_images/Overview_img2.png)
+
 * Fourteen Segment
+
+![](/Aurelia/DigitalGauge/Overview_images/Overview_img3.png)
 
 * Sixteen Segment
 
+![](/Aurelia/DigitalGauge/Overview_images/Overview_img4.png)
+
 * EightCrossEightDotMatrix
 
+![](/Aurelia/DigitalGauge/Overview_images/Overview_img5.png)
+
 * EightCrossEightSquareMatrix
+
+![](/Aurelia/DigitalGauge/Overview_images/Overview_img6.png)
 
 
 
