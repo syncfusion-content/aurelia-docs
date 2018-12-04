@@ -28,8 +28,8 @@ We have already configured a template project in GitHub repository [syncfusion-t
 
 The below steps describes to create Syncfusion Aurelia ColorPicker component.
 
-* Create `colorpicker` folder inside `src/samples/` location.
-* Create `colorpicker.html` file inside `src/samples/colorpicker` folder and use the below code example to render the ColorPicker component.
+* Create `ColorPicker` folder inside `src/samples/` location.
+* Create `ColorPicker.html` file inside `src/samples/ColorPicker` folder and use the below code example to render the ColorPicker component.
 
 {% highlight html %}
 
@@ -39,7 +39,7 @@ The below steps describes to create Syncfusion Aurelia ColorPicker component.
 
 {% endhighlight %}
 
-* Create `colorpicker.js` file with the below code snippet inside `src/samples/ColorPicker` folder.
+* Create `ColorPicker.js` file with the below code snippet inside `src/samples/ColorPicker` folder.
 
 {% highlight javascript %}
 

@@ -28,8 +28,8 @@ We have already configured a template project in GitHub repository [syncfusion-t
 
 The below steps describes to create Syncfusion Aurelia ToggleButton component.
 
-* Create `togglebutton` folder inside `src/samples/` location.
-* Create `togglebutton.html` file inside `src/samples/togglebutton` folder and use the below code example to render the togglebutton component.
+* Create `ToggleButton` folder inside `src/samples/` location.
+* Create `ToggleButton.html` file inside `src/samples/ToggleButton` folder and use the below code example to render the togglebutton component.
 
 {% highlight html %}
 
@@ -46,7 +46,7 @@ The below steps describes to create Syncfusion Aurelia ToggleButton component.
 
 {% endhighlight %}
 
-* Create `togglebutton.js` file with the below code snippet inside `src/samples/togglebutton` folder.
+* Create `ToggleButton.js` file with the below code snippet inside `src/samples/ToggleButton` folder.
 
 {% highlight javascript %}
 
