@@ -1,6 +1,6 @@
 ---
 layout: post
-title: getting-started
+title: getting-started | ColorPicker | Aurelia | Syncfusion
 description: getting started
 platform: aurelia
 control: ColorPicker
@@ -28,24 +28,24 @@ We have already configured a template project in GitHub repository [syncfusion-t
 
 The below steps describes to create Syncfusion Aurelia ColorPicker component.
 
-* Create `colorpicker` folder inside `src/samples/` location.
-* Create `colorpicker.html` file inside `src/samples/colorpicker` folder and use the below code example to render the ColorPicker component.
+* Create `ColorPicker` folder inside `src/samples/` location.
+* Create `ColorPicker.html` file inside `src/samples/ColorPicker` folder and use the below code example to render the ColorPicker component.
 
 {% highlight html %}
 
 <template>
-       <input id="colorpick" type="text" ej-color-picker="e-value.bind:colorvalue" />
+       <input id="colorpick" type="text" ej-color-picker="e-value.bind:value" />
 </template>
 
 {% endhighlight %}
 
-* Create `colorpicker.js` file with the below code snippet inside `src/samples/ColorPicker` folder.
+* Create `ColorPicker.js` file with the below code snippet inside `src/samples/ColorPicker` folder.
 
 {% highlight javascript %}
 
 export class Default {
     constructor() {
-      this.colorvalue = '#278787';
+      this.value = '#278787';
     }
 }
 
@@ -65,7 +65,7 @@ export class App {
                 nav: true, title: 'Child Router' },
    { route: 'button',        name: 'button', moduleId: 'samples/button/button',                
                 nav: true, title: 'Button' },
-   { route: 'colorpicker',        name: 'colorpicker',       moduleId: 'samples/colorpicker/colorpicker',                
+   { route: 'ColorPicker',        name: 'ColorPicker',       moduleId: 'samples/ColorPicker/ColorPicker',                
                 nav: true, title: 'ColorPicker' }
  ]);
  this.router = router;
@@ -85,4 +85,4 @@ gulp watch
 
 Execution of above code will render the following output.
 
-![](getting-started-images/getting-started-img1.png) 
+![Create a ColorPicker control](getting-started-images/getting-started-img1.png) 
