@@ -1,6 +1,6 @@
 ---
 layout: post
-title: getting-started
+title: getting-started | ColorPicker | Aurelia | Syncfusion
 description: getting started
 platform: aurelia
 control: ColorPicker
@@ -34,7 +34,7 @@ The below steps describes to create Syncfusion Aurelia ColorPicker component.
 {% highlight html %}
 
 <template>
-       <input id="colorpick" type="text" ej-color-picker="e-value.bind:colorvalue" />
+       <input id="colorpick" type="text" ej-color-picker="e-value.bind:value" />
 </template>
 
 {% endhighlight %}
@@ -45,7 +45,7 @@ The below steps describes to create Syncfusion Aurelia ColorPicker component.
 
 export class Default {
     constructor() {
-      this.colorvalue = '#278787';
+      this.value = '#278787';
     }
 }
 
@@ -65,7 +65,7 @@ export class App {
                 nav: true, title: 'Child Router' },
    { route: 'button',        name: 'button', moduleId: 'samples/button/button',                
                 nav: true, title: 'Button' },
-   { route: 'colorpicker',        name: 'colorpicker',       moduleId: 'samples/colorpicker/colorpicker',                
+   { route: 'ColorPicker',        name: 'ColorPicker',       moduleId: 'samples/ColorPicker/ColorPicker',                
                 nav: true, title: 'ColorPicker' }
  ]);
  this.router = router;
@@ -85,4 +85,4 @@ gulp watch
 
 Execution of above code will render the following output.
 
-![](getting-started-images/getting-started-img1.png) 
+![Create a ColorPicker control](getting-started-images/getting-started-img1.png) 
