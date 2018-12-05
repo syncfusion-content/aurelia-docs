@@ -78,7 +78,7 @@ export class App {
                 nav: true, title: 'Child Router' },
    { route: 'button',        name: 'button', moduleId: 'samples/button/button',                
                 nav: true, title: 'Button' },
-   { route: 'ToggleButton',        name: 'togglebutton', moduleId: 'samples/ToggleButton/ToggleButton',                
+   { route: 'ToggleButton',        name: 'ToggleButton', moduleId: 'samples/ToggleButton/ToggleButton',                
                 nav: true, title: 'ToggleButton' }
  ]);
  this.router = router;
