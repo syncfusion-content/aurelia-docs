@@ -250,7 +250,7 @@ gulp watch
 
 * Browse to [`http://localhost:9000`](http://localhost:9000)  to see the application. You can make changes in the code found under `src` folder and the browser should auto-refresh itself while you save files. The Grid component is rendered as like the below screenshot.
 
-![Essential JS 1 Aurelia components skeleton navigation](/Aurelia_images/skeleton_navigation.png)
+![Essential JS 1 Aurelia components skeleton navigation](../Aurelia_Images/skeleton_navigation.png)
 
 ## Catalog application
 
