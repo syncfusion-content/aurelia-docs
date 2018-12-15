@@ -12,7 +12,7 @@ keywords: RadialSlider, js radialslider
 
 This section helps to get started of the RadialSlider component in an Aurelia application.
 
-![](Getting_Started_images/getting-started-img1.png)
+![Getting Started](Getting_Started_images/getting-started-img1.png)
 
 ## Create a RadialSlider Component
 

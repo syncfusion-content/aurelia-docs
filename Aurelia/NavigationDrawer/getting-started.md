@@ -53,7 +53,7 @@ Create the target element as follows to display the list items by clicking targe
     <div id="targetPane">
         <div class="e-lv">
             <div class="e-header">
-                <div id="butdrawer" class="drawericon e-icon">
+                <div id="butdrawer" class="drawerIcon e-icon">
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ To set the target icon image and with the correct position as using the below me
 {% highlight css %}
 
     <style>
-      .drawericon {
+      .drawerIcon {
             background-position: center center;
             background-repeat: no-repeat;
             height: 45px;
@@ -75,7 +75,7 @@ To set the target icon image and with the correct position as using the below me
             padding-right: 10px;
         }
 
-        .drawericon:before {
+        .drawerIcon:before {
             content: "\e76b";
             font-size: 24px;
             height: 26px;
