@@ -159,7 +159,7 @@ The following output is displayed as a result of the above code example.
 
 ### External Form
 
-Set the [`editMode`](https://help.syncfusion.com/api/js/ejkanban#members:editsettings-editmode) as externalform to open the edit form in outside kanban content.
+Set the [`editMode`](https://help.syncfusion.com/api/js/ejkanban#members:editsettings-editmode) as `ExternalForm` to open the edit form in outside kanban content.
 
 The following code example describes the above behavior.
 

@@ -17,8 +17,8 @@ This section helps to get started of the RadialSlider component in an Aurelia ap
 ## Create a RadialSlider Component
 
 * To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
-* Create `radialslider` folder inside `src/samples` location.
-* Create `radialslider.html` file inside `src/samples/radialslider` folder and use the below code for rendering RadialSlider component.
+* Create `radialSlider` folder inside `src/samples` location.
+* Create `radialSlider.html` file inside `src/samples/radialSlider` folder and use the below code for rendering RadialSlider component.
 
 {% highlight html %}
 
@@ -30,7 +30,7 @@ This section helps to get started of the RadialSlider component in an Aurelia ap
 {% endhighlight %}
  
 
-* Create `radialslider.js` file inside `src/samples/radialslider` folder with below code snippet.
+* Create `radialSlider.js` file inside `src/samples/radialSlider` folder with below code snippet.
 
 {% highlight javascript %}
 

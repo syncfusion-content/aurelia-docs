@@ -17,8 +17,8 @@ This section helps to understand the getting started of the RadialMenu component
 ## Create a RadialMenu Component
 
 *	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
-*	Create `radialmenu` folder inside `src/samples` location.
-* Create `radialmenu.html` file inside `src/samples/radialmenu` folder and use the below code for rendering RadialMenu component.
+*	Create `radialMenu` folder inside `src/samples` location.
+* Create `radialMenu.html` file inside `src/samples/radialMenu` folder and use the below code for rendering RadialMenu component.
 
 {% highlight html %}
 
@@ -30,7 +30,7 @@ This section helps to understand the getting started of the RadialMenu component
 
 {% endhighlight %} 
 
-* Create `radialmenu.js` file inside `src/samples/radialmenu` folder with below code snippet.
+* Create `radialMenu.js` file inside `src/samples/radialMenu` folder with below code snippet.
 
 {% highlight javascript %}
 
@@ -195,7 +195,7 @@ Refer to the following code example to add functionalities for each items in **C
 
 {% endhighlight %}
 
-Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the RadialMenu component. Click **bold** item in Radialmenu component, to render the following output.
+Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the RadialMenu component. Click **bold** item in `RadialMenu` component, to render the following output.
 
 ![](Getting_Started_images/Getting_Started_img3.png)
 
