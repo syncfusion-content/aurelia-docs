@@ -1,6 +1,6 @@
 ---
 layout: post
-title: getting-started
+title: Syncfusion Navigation drawer Getting Started
 description: getting started
 platform: aurelia
 control: navigation drawer
@@ -93,7 +93,7 @@ To set the target icon image and with the correct position as using the below me
 
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img1.png)
+![Getting Started](Getting-Started_images/getting-started_img1.png)
 
 You can open the list items by clicking on target element using the e-target-id property. 
 
@@ -115,7 +115,7 @@ You can open the list items by clicking on target element using the e-target-id 
     
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img2.png)
+![Navigation Getting Started](Getting-Started_images/getting-started_img2.png)
 
 To set the images for list items of the Navigation Drawer by using the [`data-ej-imageurl`] property as follows.
 
@@ -131,7 +131,7 @@ To set the images for list items of the Navigation Drawer by using the [`data-ej
     
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img3.png)
+![Navigation Drawer Getting Started](Getting-Started_images/getting-started_img3.png)
 
 ## Customize Direction
 
@@ -149,6 +149,6 @@ By using this property, to change the list view open direction. The possible dir
 
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img5.png)
+![Customize Direction](Getting-Started_images/getting-started_img5.png)
 
 N> _Note:_ _You can find the Navigation Drawer properties from the_ [API reference](https://help.syncfusion.com/api/js/ejnavigationdrawer) _document_

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started for RadialSlider
+title: Syncfusion RadialSlider Getting Started
 description: Getting Started for RadialSlider
 platform: Aurelia
 control: RadialSlider
@@ -52,7 +52,7 @@ RadialSlider property **e-inner-circle-image-url** allow to set URL image to the
 
 {% endhighlight %}
 
-![](Getting_Started_images/getting-started-img1.png)
+![Image Configuration](Getting_Started_images/getting-started-img1.png)
 
 > _Note:_ _You can find the RadialSlider properties from the_ [API reference](https://help.syncfusion.com/api/js/ejradialslider) _document_
 

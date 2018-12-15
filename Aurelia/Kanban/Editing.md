@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Editing
+title:  Syncfusion Kanban Editing
 description: Editing
 documentation: ug
 platform: Aurelia
@@ -85,7 +85,7 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img1.png)
+![Edit Items](Editing_images/editing_img1.png)
 
 ## Edit modes
 
@@ -155,7 +155,7 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img2.png)
+![Edit Mode as Dialog](Editing_images/editing_img2.png)
 
 ### External Form
 
@@ -224,7 +224,7 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img11.png)
+![Edit Mode as External Form](Editing_images/editing_img11.png)
 
 Form Position:
 
@@ -296,7 +296,7 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img12.png)
+![Form Positions](Editing_images/editing_img12.png)
 
 ## Cell edit type and its params
 
@@ -441,7 +441,7 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img4.png)
+![Cell Edit Type](Editing_images/editing_img4.png)
 
 ## Column Validation
 
@@ -595,4 +595,4 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img5.png)
+![Column Validation](Editing_images/editing_img5.png)

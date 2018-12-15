@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Globalization and Localization
+title:  Syncfusion Kanban Globalization and Localization
 description: Globalization and Localization
 documentation: ug
 platform: Aurelia
@@ -247,5 +247,5 @@ export class Kanban {
 
 The following output is displayed as a result of the above code example.
 
-![](Localization_images/localization_img1.png)
+![Localization](Localization_images/localization_img1.png)
 

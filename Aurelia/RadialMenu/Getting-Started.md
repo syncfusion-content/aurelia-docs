@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started for RadialMenu
+title: Syncfusiton RadialMenu Getting Started
 description: Getting Started for RadialMenu
 platform: Aurelia
 control: RadialMenu
@@ -12,7 +12,7 @@ keywords: RadialMenu, js radialmenu
 
 This section helps to understand the getting started of the RadialMenu component for Aurelia.
 
-![](Getting_Started_images/Getting-Started_img1.png)
+![Getting Started](Getting_Started_images/Getting-Started_img1.png)
 
 ## Create a RadialMenu Component
 
@@ -133,7 +133,7 @@ You can display the Radial Menu by performing desired action on the target conte
 
 Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the following output.
 
-![](Getting_Started_images/getting-started_img2.png)
+![Displaying Radial Menu](Getting_Started_images/getting-started_img2.png)
 
 ## RadialMenu item functionalities
 
@@ -197,7 +197,7 @@ Refer to the following code example to add functionalities for each items in **C
 
 Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the RadialMenu component. Click **bold** item in `RadialMenu` component, to render the following output.
 
-![](Getting_Started_images/Getting_Started_img3.png)
+![Radial Menu Items functionalities](Getting_Started_images/Getting_Started_img3.png)
 
 
 > _Note:_ _You can find the RadialMenu properties from the_ [API reference](https://help.syncfusion.com/api/js/ejradialmenu) _document_
