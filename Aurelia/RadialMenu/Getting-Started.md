@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started for RadialMenu
+title: Syncfusion RadialMenu Getting Started
 description: Getting Started for RadialMenu
 platform: Aurelia
 control: RadialMenu
@@ -12,13 +12,13 @@ keywords: RadialMenu, js radialmenu
 
 This section helps to understand the getting started of the RadialMenu component for Aurelia.
 
-![](Getting_Started_images/Getting-Started_img1.png)
+![Getting Started](Getting_Started_images/Getting-Started_img1.png)
 
 ## Create a RadialMenu Component
 
 *	To create Syncfusion Aurelia application refer [Aurelia Getting Started](https://help.syncfusion.com/aurelia/overview#getting-started) Documentation.
-*	Create `radialmenu` folder inside `src/samples` location.
-* Create `radialmenu.html` file inside `src/samples/radialmenu` folder and use the below code for rendering RadialMenu component.
+*	Create `radialMenu` folder inside `src/samples` location.
+* Create `radialMenu.html` file inside `src/samples/radialMenu` folder and use the below code for rendering RadialMenu component.
 
 {% highlight html %}
 
@@ -30,7 +30,7 @@ This section helps to understand the getting started of the RadialMenu component
 
 {% endhighlight %} 
 
-* Create `radialmenu.js` file inside `src/samples/radialmenu` folder with below code snippet.
+* Create `radialMenu.js` file inside `src/samples/radialMenu` folder with below code snippet.
 
 {% highlight javascript %}
 
@@ -48,7 +48,7 @@ You can set the images for each item by giving the image URL with the **e-image-
 
 {% highlight html %}
 
-    <ej-radial-menu id="defaultradialmenu" e-auto-open="false">            
+    <ej-radial-menu id="defaultRadialMenu" e-auto-open="false">            
       <ej-item e-image-url="images/RadialMenu/font.png" e-text="Bold"></ej-item>
       <ej-item e-image-url="images/RadialMenu/f1.png" e-text="Italic"></ej-item>
       <ej-item e-image-url="images/RadialMenu/redo.png" e-text="Redo" e-enabled="false"></ej-item>
@@ -68,7 +68,7 @@ Refer to the following code example to add target content to the **RadialMenu**.
       Model–view–controller (MVC) is a software architecture pattern which separates the representation of information from the user's interaction with it.
       The model consists of application data, business rules, logic, and functions. A view can be any output representation of data, such as a chart or a diagram.
       Multiple views of the same data are possible, such as a bar chart for management and a tabular view for accountants.
-      The controller mediates input, converting it to commands for the model or view.The central ideas behind MVC are code reusability and n addition to dividing the application into three kinds of components, the MVC design defines the interactions between them.
+      The controller mediates input, converting it to commands for the model or view.The central ideas behind MVC are code re-usability and n addition to dividing the application into three kinds of components, the MVC design defines the interactions between them.
 
       A controller can send commands to its associated view to change the view's presentation of the model (e.g., by scrolling through a document). It can also send commands to the model to update the model's state (e.g., editing a document).
 
@@ -110,21 +110,21 @@ You can display the Radial Menu by performing desired action on the target conte
       let radialDiameter;
       let iframeY;
       let iframeX;
-      let xPos;
-      let yPos;
+      let xPosition;
+      let yPosition;
       let x;
       let y;
       target = $('#radialtarget1');
       radialRadius = 150;
       radialDiameter = 2 * radialRadius;
-      $('#defaultradialmenu').ejRadialMenu({ autoOpen: true });
+      $('#defaultRadialMenu').ejRadialMenu({ autoOpen: true });
       iframeY = e.detail.event.clientY;
       iframeX = e.detail.event.clientX;
-      xPos = (iframeX > radialRadius ? iframeX - radialRadius : 0);
-      yPos = (iframeY > radialRadius ? iframeY - radialRadius : 0);
-      x = iframeX > (target.width() - radialRadius) ? (target.width() - radialDiameter) : xPos;
-      y = iframeY > (target.height() - radialRadius) ? (target.height() - radialDiameter) : yPos;
-      $('#defaultradialmenu').ejRadialMenu('setPosition', x, y);
+      xPosition = (iframeX > radialRadius ? iframeX - radialRadius : 0);
+      yPosition = (iframeY > radialRadius ? iframeY - radialRadius : 0);
+      x = iframeX > (target.width() - radialRadius) ? (target.width() - radialDiameter) : xPosition;
+      y = iframeY > (target.height() - radialRadius) ? (target.height() - radialDiameter) : yPosition;
+      $('#defaultRadialMenu').ejRadialMenu('setPosition', x, y);
       $('iframe').contents().find('body').blur();
     }
 
@@ -133,7 +133,7 @@ You can display the Radial Menu by performing desired action on the target conte
 
 Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the following output.
 
-![](Getting_Started_images/getting-started_img2.png)
+![Displaying Radial Menu](Getting_Started_images/getting-started_img2.png)
 
 ## RadialMenu item functionalities
 
@@ -141,7 +141,7 @@ You can set the functionalities for each item and define click function by using
 
 {% highlight html %}
 
-    <ej-radial-menu id="defaultradialmenu" e-auto-open="false" e-on-click.trigger="itemsClick($event)">            
+    <ej-radial-menu id="defaultRadialMenu" e-auto-open="false" e-on-click.trigger="itemsClick($event)">            
       <ej-item e-image-url="images/RadialMenu/font.png" e-text="Bold"></ej-item>
       <ej-item e-image-url="images/RadialMenu/f1.png" e-text="Italic"></ej-item>
       <ej-item e-image-url="images/RadialMenu/redo.png" e-text="Redo" e-enabled="false"></ej-item>
@@ -158,7 +158,7 @@ Refer to the following code example to add functionalities for each items in **C
       constructor() {
     }
     rteChange(args) {
-        $('#defaultradialmenu').ejRadialMenu('enableItem', 'Undo');
+        $('#defaultRadialMenu').ejRadialMenu('enableItem', 'Undo');
       }
     itemsClick(e) {
     let rteObj = $('#rteSample1').data('ejRTE');
@@ -182,22 +182,22 @@ Refer to the following code example to add functionalities for each items in **C
     undo(e) {
       let rteObj = $('#rteSample1').data('ejRTE');
       rteObj.executeCommand('undo');
-      $('#defaultradialmenu').ejRadialMenu('disableItem', 'Undo');
-      $('#defaultradialmenu').ejRadialMenu('enableItem', 'Redo');
+      $('#defaultRadialMenu').ejRadialMenu('disableItem', 'Undo');
+      $('#defaultRadialMenu').ejRadialMenu('enableItem', 'Redo');
     }
     redo(e) {
       let rteObj = $('#rteSample1').data('ejRTE');
       rteObj.executeCommand('redo');
-      $('#defaultradialmenu').ejRadialMenu('disableItem', 'Redo');
-      $('#defaultradialmenu').ejRadialMenu('enableItem', 'Undo');
+      $('#defaultRadialMenu').ejRadialMenu('disableItem', 'Redo');
+      $('#defaultRadialMenu').ejRadialMenu('enableItem', 'Undo');
     }
     }
 
 {% endhighlight %}
 
-Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the RadialMenu component. Click **bold** item in Radialmenu component, to render the following output.
+Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the RadialMenu component. Click **bold** item in `RadialMenu` component, to render the following output.
 
-![](Getting_Started_images/Getting_Started_img3.png)
+![Radial Menu Items functionalities](Getting_Started_images/Getting_Started_img3.png)
 
 
 > _Note:_ _You can find the RadialMenu properties from the_ [API reference](https://help.syncfusion.com/api/js/ejradialmenu) _document_
