@@ -1,6 +1,6 @@
 ---
 layout: post
-title: getting-started
+title: Syncfusion Navigation drawer Getting Started
 description: getting started
 platform: aurelia
 control: navigation drawer
@@ -53,7 +53,7 @@ Create the target element as follows to display the list items by clicking targe
     <div id="targetPane">
         <div class="e-lv">
             <div class="e-header">
-                <div id="butdrawer" class="drawericon e-icon">
+                <div id="butdrawer" class="drawerIcon e-icon">
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ To set the target icon image and with the correct position as using the below me
 {% highlight css %}
 
     <style>
-      .drawericon {
+      .drawerIcon {
             background-position: center center;
             background-repeat: no-repeat;
             height: 45px;
@@ -75,7 +75,7 @@ To set the target icon image and with the correct position as using the below me
             padding-right: 10px;
         }
 
-        .drawericon:before {
+        .drawerIcon:before {
             content: "\e76b";
             font-size: 24px;
             height: 26px;
@@ -93,7 +93,7 @@ To set the target icon image and with the correct position as using the below me
 
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img1.png)
+![Getting Started](Getting-Started_images/getting-started_img1.png)
 
 You can open the list items by clicking on target element using the e-target-id property. 
 
@@ -115,9 +115,9 @@ You can open the list items by clicking on target element using the e-target-id 
     
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img2.png)
+![Navigation Getting Started](Getting-Started_images/getting-started_img2.png)
 
-To set the images for list items of the Navigation Drawer by using the data-ej-imageurl property as follows.
+To set the images for list items of the Navigation Drawer by using the [`data-ej-imageurl`] property as follows.
 
 {% highlight html %}
 
@@ -131,7 +131,7 @@ To set the images for list items of the Navigation Drawer by using the data-ej-i
     
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img3.png)
+![Navigation Drawer Getting Started](Getting-Started_images/getting-started_img3.png)
 
 ## Customize Direction
 
@@ -149,6 +149,6 @@ By using this property, to change the list view open direction. The possible dir
 
 {% endhighlight %}
 
-![](Getting-Started_images/getting-started_img5.png)
+![Customize Direction](Getting-Started_images/getting-started_img5.png)
 
 N> _Note:_ _You can find the Navigation Drawer properties from the_ [API reference](https://help.syncfusion.com/api/js/ejnavigationdrawer) _document_
