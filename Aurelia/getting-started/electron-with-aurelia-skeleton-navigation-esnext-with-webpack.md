@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Electron with Aurelia Skeleton-navigation-esnext with Webpack
+title: Electron and Syncfusion Aurelia Skeleton esnext with Webpack
 description: How to integrate aurelia-syncfusion-bridge with Aurelia skeleton-navigation-esnext-webpack and configure electron
 platform: Aurelia
 control: Getting started
 documentation: ug
-keywords: Aurelia,Syncfusion,aurelia-syncfusion-bridge,Aurelia skeleton-navigation-esnext-webpack
+keywords: Aurelia,Syncfusion,aurelia-syncfusion-bridge,Aurelia skeleton-navigation-esnext-webpack,
 ---
 
 # Desktop application using Electron with Aurelia Skeleton-navigation-esnext with Webpack
@@ -390,7 +390,6 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
         collapseWhitespace: true
       } : undefined,
       metadata: {
-        // available in `index.ejs`
         title, server,
       },
     }),
