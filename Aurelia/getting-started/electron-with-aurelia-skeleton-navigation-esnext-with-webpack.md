@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Desktop application using Electron with Aurelia Skeleton-navigation-esnext with Webpack
+title: Electron with Aurelia Skeleton-navigation-esnext with Webpack
 description: How to integrate aurelia-syncfusion-bridge with Aurelia skeleton-navigation-esnext-webpack and configure electron
 platform: Aurelia
 control: Getting started
@@ -360,7 +360,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
       },
       { test: /\.json$/i, loader: 'json-loader' },
       // use Bluebird as the global Promise implementation:
-      { test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/, loader: 'expose-loader?Promise' },
+      { test: /[\/\\]node_modules [\/\\]bluebird[\/\\].+\.js$/, loader: 'expose-loader?Promise' },
       // exposes jQuery globally as $ and as jQuery:
       { test: require.resolve('jquery'), loader: 'expose-loader?$!expose-loader?jQuery' },
       // embed small images and fonts as Data Urls and larger ones as files:
@@ -390,8 +390,8 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
         collapseWhitespace: true
       } : undefined,
       metadata: {
-        // available in index.ejs //
-        title, server, 
+        // available in `index.ejs`
+        title, server,
       },
     }),
     new CopyWebpackPlugin([
@@ -414,7 +414,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
 
 Specify the `index.js` file in [main](https://docs.npmjs.com/files/package.json#main) field of `package.json` file, which is the startup script of your app. Refer below code snippet for adding main field. And also add the below `clean` and `prod` scripts to `clean the folder` and `generate the production build`.
 
-{% highlight json %}
+{% highlight javascript %}
 
 "name": "skeleton-esnext-webpack",
   "version": "1.0.0",
@@ -427,8 +427,8 @@ Specify the `index.js` file in [main](https://docs.npmjs.com/files/package.json#
 . . .
 . . .
 "scripts": {
-    "start": "nps",
-    "test": "nps test",
+    . . .
+    . . .
     "clean": "rimraf dist", // To clean the dist
     "prod": "npm run clean && webpack -p" // Generate production build
   },
