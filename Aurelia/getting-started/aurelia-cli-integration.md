@@ -282,6 +282,33 @@ N> To load button component with grid component additionally, we need to import 
 
 N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` and add `syncfusion.useAll()` in our `main.js` file.
 
+N> If you are facing issue like `ReferenceError: jQuery is not defined` in Aurelia-CLI with Typescript Compiler, the root cause of the issue is jQuery is not bundled in application. To resolve the issue, refer the below code snippet in `webpack.config.js` file.
+
+{% highlight javascript %}
+
+plugins: [
+    ...when(!karma, new DuplicatePackageCheckerPlugin()),
+    new AureliaPlugin(),
+    new ProvidePlugin({
+      'Promise': 'bluebird',
+      '$': 'jquery', // jquery is defined
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+  }),
+  
+{% endhighlight %}
+
+And in the updated Aurelia-CLI version, to register the `aurelia-syncfusion-bridge` in `main.ts` file , refer the below structure.
+
+{% highlight javascript %}
+
+aurelia.use
+    .standardConfiguration()
+    .feature(PLATFORM.moduleName('resources/index'))
+    .plugin(PLATFORM.moduleName('aurelia-syncfusion-bridge'), (syncfusion) => syncfusion.useAll());
+  
+{% endhighlight %}
+
 ## Getting started
 
 The below step describes to create Syncfusion Aurelia Grid component.
