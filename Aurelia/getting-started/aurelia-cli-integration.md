@@ -61,7 +61,7 @@ Would you like to use the default setup or customize your choices?
 2. Default TypeScript
    A basic web-oriented setup with TypeScript for modern JavaScript development.
 3. Custom
-   Select transpilers, CSS pre-processors and more.
+   Select transpiler, CSS pre-processors and more.
 
 [Default ESNext]>
 
@@ -100,12 +100,11 @@ Would you like to install the project dependencies?
 Installing project dependencies.
 aurelia-syncfusion@0.1.0 E:\aurelia-syncfusion
 +-- aurelia-animator-css@1.0.1
-| +-- aurelia-metadata@1.0.3 
+| +-- aurelia-metadata@1.0.3
 ...................
 ...................
 
   +-- through2-filter@2.0.0
-  `-- vali-date@1.0.0
 
 Congratulations! Your Project "aurelia-syncfusion" Has Been Created!
 
