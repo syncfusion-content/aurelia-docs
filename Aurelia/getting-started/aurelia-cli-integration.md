@@ -61,7 +61,7 @@ Would you like to use the default setup or customize your choices?
 2. Default TypeScript
    A basic web-oriented setup with TypeScript for modern JavaScript development.
 3. Custom
-   Select transpilers, CSS pre-processors and more.
+   Select transpiler, CSS pre-processors and more.
 
 [Default ESNext]>
 
@@ -100,12 +100,11 @@ Would you like to install the project dependencies?
 Installing project dependencies.
 aurelia-syncfusion@0.1.0 E:\aurelia-syncfusion
 +-- aurelia-animator-css@1.0.1
-| +-- aurelia-metadata@1.0.3 
+| +-- aurelia-metadata@1.0.3
 ...................
 ...................
 
   +-- through2-filter@2.0.0
-  `-- vali-date@1.0.0
 
 Congratulations! Your Project "aurelia-syncfusion" Has Been Created!
 
@@ -281,6 +280,33 @@ N> To use `ejTemplate`, we need to add `syncfusion.ejGrid().ejTemplate();` in ou
 N> To load button component with grid component additionally, we need to import `syncfusion-javascript/Scripts/ej/web/ej.button.min` and add `syncfusion.ejGrid().ejButton();` in our `main.js` file.
 
 N> To load all Syncfusion components, we need to import `syncfusion-javascript/Scripts/ej/web/ej.web.all.min` and add `syncfusion.useAll()` in our `main.js` file.
+
+N> If you are facing issue like `ReferenceError: jQuery is not defined` in Aurelia-CLI with Typescript Compiler, the root cause of the issue is jQuery is not bundled in application. To resolve the issue, refer the below code snippet in `webpack.config.js` file.
+
+{% highlight javascript %}
+
+plugins: [
+    ...when(!karma, new DuplicatePackageCheckerPlugin()),
+    new AureliaPlugin(),
+    new ProvidePlugin({
+      'Promise': 'bluebird',
+      '$': 'jquery', // jquery is defined
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+  }),
+  
+{% endhighlight %}
+
+And in the updated Aurelia-CLI version, to register the `aurelia-syncfusion-bridge` in `main.ts` file , refer the below structure.
+
+{% highlight javascript %}
+
+aurelia.use
+    .standardConfiguration()
+    .feature(PLATFORM.moduleName('resources/index'))
+    .plugin(PLATFORM.moduleName('aurelia-syncfusion-bridge'), (syncfusion) => syncfusion.useAll());
+  
+{% endhighlight %}
 
 ## Getting started
 
