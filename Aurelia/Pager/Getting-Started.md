@@ -105,9 +105,9 @@ export class Pager{
 
 Run the above sample to get the below output.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Page Size](Getting-Started_images/Getting-Started_img2.png)
 
-**Page Count:**  pageCount value defines the number of pages to be displayed in the pager control for navigation. The default value for pageCount is 10 and value will be updated based on totalaRecordsCount and pageSize values.
+**Page Count:**  pageCount value defines the number of pages to be displayed in the pager control for navigation. The default value for pageCount is 10 and value will be updated based on `totalRecordsCount` and pageSize values.
 
 {% highlight HTML %}
 
@@ -129,4 +129,4 @@ export class Pager{
 
 Run the above sample to get the below output.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Page Count](Getting-Started_images/Getting-Started_img3.png)

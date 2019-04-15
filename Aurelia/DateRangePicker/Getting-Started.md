@@ -27,9 +27,9 @@ We have already configured a template project in GitHub repository syncfusion-te
 
 The below steps describes the steps to create Syncfusion Aurelia DateRangePicker component.
 
-Create `DateRangePicker` folder inside `src/samples/` location in sample files folder.
+Create `dateRangePicker` folder inside `src/samples/` location in sample files folder.
 
-Create an HTML file (here `daterangepicker.html` file) inside newly created folder and use the below code example to render the DateRangePicker component.
+Create an HTML file (here `dateRangePicker.html` file) inside newly created folder and use the below code example to render the DateRangePicker component.
 
 {% highlight HTML %}
 
@@ -38,7 +38,7 @@ Create an HTML file (here `daterangepicker.html` file) inside newly created fold
 {% endhighlight %}
 
 Create a javascript file in Aurelia application and add the Model class for binding with DateRangePicker component as given below.
-Here, for example, we created the  `daterangepicker.js` file with the below code snippet inside `src/samples/daterangepicker` folder.
+Here, for example, we created the  `dateRangePicker.js` file with the below code snippet inside `src/samples/dateRangePicker` folder.
 
 {% highlight javascript %}
 
@@ -58,7 +58,7 @@ Add the below  code to the config.map method.
 
 {% highlight javascript %}
 
-{ route: 'daterangepicker', name: 'daterangepicker', moduleId: 'samples/daterangepicker/daterangepicker', nav: true, title: 'DateRangePicker' }
+{ route: 'dateRangePicker', name: 'dateRangePicker', moduleId: 'samples/dateRangePicker/dateRangePicker', nav: true, title: 'DateRangePicker' }
 
 {% endhighlight %}
 
@@ -82,7 +82,7 @@ DateRangePicker provides an options to configure all its properties and to get i
 
 {% highlight HTML %}
 
-<input id="datepick" ej-date-range-picker="e-value.bind:daterangeValue;"  ></input>
+<input id="datepick" ej-date-range-picker="e-value.bind:dateValue;"  ></input>
 
 {% endhighlight%}
 
@@ -92,7 +92,7 @@ In script section set the Model values,
 
 export class DateRangePicker {
     constructor(){
-        this.daterangeValue = '"11/1/2013 - 12/3/2019"';
+        this.dateValue = '"11/1/2013 - 12/3/2019"';
     }
 }
 
