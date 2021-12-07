@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in Aurelia TreeGrid | Syncfusion
-description: Learn here all about rows with Syncfusion support Aurelia TreeGrid control, its elements and more.
+description: Learn here all about row support with Syncfusion Aurelia TreeGrid control, its elements and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
@@ -251,7 +251,7 @@ export class DefaultSample {
 
 The output of TreeGrid with Row Template is as follows.
 
-![Aurelia TreeGrid with row template](Rows_images/Rows_template.png)
+![Row template in Aurelia TreeGrid](Rows_images/Rows_template.png)
 
 N> In TreeGrid, the given row template is parsed for default row functionality like row selection, alt row and other default row customization. Using [`parseRowTemplate`](https://help.syncfusion.com/api/js/ejtreegrid#members:parserowtemplate) property we can disable the row template parsing. If we disable that property, TreeGrid is rendered with given row template.
 
