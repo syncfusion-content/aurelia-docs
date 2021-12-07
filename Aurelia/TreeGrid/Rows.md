@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rows in Aurelia TreeGrid
+title: Rows in Aurelia TreeGrid | Syncfusion
 description: Learn here all about rows with Syncfusion support Aurelia TreeGrid control, its elements and more.
 platform: Aurelia
 control: TreeGrid
