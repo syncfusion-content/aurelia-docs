@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in Aurelia TreeGrid | Syncfusion
-description: Learn here all about row support with Syncfusion Aurelia TreeGrid control, its elements and more.
+description: Learn here all about row support in Syncfusion Aurelia TreeGrid(SfTreeGrid) control, its elements and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
