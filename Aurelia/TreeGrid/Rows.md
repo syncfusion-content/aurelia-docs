@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in Aurelia TreeGrid | Syncfusion
-description: Learn here all about row support in Syncfusion Aurelia TreeGrid (SfTreeGrid) control, its elements and more.
+description: Learn here all about Rows support in Syncfusion Aurelia TreeGrid (SfTreeGrid) control, its elements and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
@@ -416,7 +416,7 @@ We can also customize row drag and drop actions by using below properties
 
 * canDrop – It is used to enable/disable the row drop action for draggedRecords collection in `rowDropActionBegin` client side event. 
 
-![Customizing row drag and drop](Rows_images/Rows_multidrag.png)
+![Customizing row drag and drop in Aurelia TreeGrid](Rows_images/Rows_multidrag.png)
 
 ## Details row
 
