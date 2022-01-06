@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows | TreeGrid
-description: rows
+title: Rows in Aurelia TreeGrid | Syncfusion
+description: Learn here all about Rows support in Syncfusion Aurelia TreeGrid (SfTreeGrid) control, its elements and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
 ---
 
-# Rows
+# Rows in Aurelia TreeGrid
 
 The TreeGrid rows displays the information of each row from the bounded data source.
 
@@ -251,7 +251,7 @@ export class DefaultSample {
 
 The output of TreeGrid with Row Template is as follows.
 
-![](Rows_images/Rows_template.png)
+![Row template in Aurelia TreeGrid](Rows_images/Rows_template.png)
 
 N> In TreeGrid, the given row template is parsed for default row functionality like row selection, alt row and other default row customization. Using [`parseRowTemplate`](https://help.syncfusion.com/api/js/ejtreegrid#members:parserowtemplate) property we can disable the row template parsing. If we disable that property, TreeGrid is rendered with given row template.
 
@@ -274,7 +274,7 @@ The following code example explains how to change the row height in TreeGrid
 {% endhighlight %}
 
 The below screenshot shows TreeGrid render with row height of 40.
-![](Rows_images/Rows_height.png)
+![Rendered with row height in Aurelia TreeGrid](Rows_images/Rows_height.png)
 
 ## Alternate row styling
 
@@ -297,7 +297,7 @@ The following code explains about enabling the alternate row style in TreeGrid
 {% endhighlight %}
 
 The below screenshot shows TreeGrid without alternate row style.
-![](Rows_images/Rows_altrow.png)
+![Alternate row style in Aurelia TreeGrid](Rows_images/Rows_altrow.png)
 
 ## Row Drag and Drop
 
@@ -331,7 +331,7 @@ export class DefaultSample {
 
 The following screenshot depicts a row drag and drop in the TreeGrid.
 
-![](Rows_images/Rows_draganddrop.png)
+![Row drag and drop in Aurelia TreeGrid](Rows_images/Rows_draganddrop.png)
 
 ## Customizing Drag tooltip
 
@@ -376,7 +376,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 
-![](Rows_images/Rows_dragtooltiptemplate.png)
+![Rendering row drag tooltip in Aurelia TreeGrid](Rows_images/Rows_dragtooltiptemplate.png)
 
 ## Multiple row drag and drop
 		
@@ -416,7 +416,7 @@ We can also customize row drag and drop actions by using below properties
 
 * canDrop – It is used to enable/disable the row drop action for draggedRecords collection in `rowDropActionBegin` client side event. 
 
-![](Rows_images/Rows_multidrag.png)
+![Customizing row drag and drop in Aurelia TreeGrid](Rows_images/Rows_multidrag.png)
 
 ## Details row
 
@@ -455,7 +455,7 @@ The following code example shows how to enable details tow in TreeGrid.
 {% endhighlight %}
 
 The below screenshot shows details row in TreeGrid.
-![](Rows_images/Rows_detailsrow.png)
+![Detailed row in Aurelia treegrid](Rows_images/Rows_detailsrow.png)
 
 The visibility of the details view of a record can also be toggled with any custom actions by using the method [`showHideDetailsRow`](https://help.syncfusion.com/api/js/ejtreegrid#methods:showhidedetailsrow).
 
@@ -484,7 +484,7 @@ The following code example shows how to hide detail info column in TreeGrid.
 {% endhighlight %}
 
 The below screenshot shows the details row rendered next to the respective row.
-![](Rows_images/Rows_detailspopup.png)
+![Rendering details rows next to the respective row in Aurelia TreeGrid](Rows_images/Rows_detailspopup.png)
 
 ### Defining row height for detail template
 
@@ -510,7 +510,7 @@ The following code example shows how to set details row height in TreeGrid.
 
 {% endhighlight %}
 The below screenshot shows details row rendered with height of `150px`.
-![](Rows_images/Rows_detailspopupheight.png)
+![Rendering details row with height in Aurelia TreeGrid](Rows_images/Rows_detailspopupheight.png)
 
 ### Customize detail row
 
@@ -549,7 +549,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot shows details row customization for specific row. 
-![](Rows_images/Rows_detailsdatabound.png)
+![Customizing details for a specific row in Aurelia TreeGrid](Rows_images/Rows_detailsdatabound.png)
 
 While opening and closing the details row, the [`detailsShown`](https://help.syncfusion.com/api/js/ejtreegrid#events:detailsshown) and [`DetailsHidden`](https://help.syncfusion.com/api/js/ejtreegrid#events:detailshidden) events are triggered. Using this event we can prevent the details row show and hide action for specific row.
 
@@ -614,7 +614,7 @@ The following code example shows how to use this property.
 {% endhighlight %}
 
 The below screenshot shows TreeGrid render with collapsed state.
-![](Rows_images/Rows_enablecollapseall.png)
+![Rendering TreeGrid with collapsed state in Aurelia TreeGrid](Rows_images/Rows_enablecollapseall.png)
 
 ###  Define expand/collapse state of every record
 
@@ -659,7 +659,7 @@ export class DefaultSample {
 {% endhighlight %}
 The below screenshot shows the output of above code example..
 
-![](Rows_images/Rows_expandstatemapping.png)
+![Expanding state of every record in Aurelia TreeGrid](Rows_images/Rows_expandstatemapping.png)
 
 ### Expand/Collapse all the rows dynamically
 
@@ -945,4 +945,4 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot shows the output of above code example..
-![](Rows_images/Rows_summaryrow.png)
+![Defining summary column in Aurelia TreeGrid](Rows_images/Rows_summaryrow.png)
