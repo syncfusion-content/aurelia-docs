@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Welcome to Syncfusion Aurelia
-description: Overview of Syncfusion Aurelia
+title: About Essential JS 1 Aurelia | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential JS 1 for Aurelia components, its features, and more.
 platform: Aurelia
 control: Introduction
 documentation: ug
@@ -248,7 +248,7 @@ gulp watch
 
 {% endhighlight %}
 
-* Browse to [`http://localhost:9000`](http://localhost:9000)  to see the application. You can make changes in the code found under `src` folder and the browser should auto-refresh itself while you save files. The Grid component is rendered as like the below screenshot.
+* Browse to http://localhost:9000 to see the application. You can make changes in the code found under `src` folder and the browser should auto-refresh itself while you save files. The Grid component is rendered as like the below screenshot.
 
 ![Essential JS 1 Aurelia components skeleton navigation](./Aurelia_Images/skeleton_navigation.png)
 
