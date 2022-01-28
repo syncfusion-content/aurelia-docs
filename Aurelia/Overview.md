@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Welcome to Syncfusion Aurelia
-description: Overview of Syncfusion Aurelia
+title: About Essential JS 1 Aurelia | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential JS 1 for Aurelia components, its features, and more.
 platform: Aurelia
 control: Introduction
 documentation: ug
