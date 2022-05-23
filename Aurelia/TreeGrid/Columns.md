@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aurelia TreeGrid Component | Columns | Syncfusion
-description: Learn here about getting started with Syncfusion Aurelia TreeGrid component columns, its elements, and more.
+title: Columns in Aurelia TreeGrid control | Syncfusion
+description: Learn about Columns support in Syncfusion Aurelia TreeGrid control, its elements, and more
 platform: Aurelia
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting started with Aurelia TreeGrid
+# Columns in Aurelia TreeGrid
 
 Column definitions specified in the [`e-columns`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns "columns") option defines how the data in the **DataSource** have to be displayed, formatted and edited in TreeGrid. The values in the **DataSource** can be mapped to the appropriate column using the [`column.field`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-field "Field") property of the corresponding column object.
 
