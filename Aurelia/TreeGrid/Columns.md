@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Aurelia TreeGrid control | Syncfusion
-description: Learn about Columns support in Syncfusion Aurelia TreeGrid control, its elements, and more.
+description: Learn here more about Columns support in Syncfusion Aurelia TreeGrid control, its elements, and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
