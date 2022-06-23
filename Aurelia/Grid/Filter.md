@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Filtering with Grid widget for Syncfusion Essential Aurelia
-description: How to enable filtering and its functionalities
+description: Learn here about Filtering support with Syncfusion Essential Aurelia Grid Control, its elements, and more.
 platform: Aurelia
 control: Grid
 documentation: ug
 --- 
-# Filtering
+# Filtering in Aurelia Grid
 
 Filtering helps to view particular or related records from dataSource which meets a given filtering criteria. To enable filter, set `e-allow-filtering` as `true`. 
 
@@ -52,7 +52,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img1.png)
+![Aurelia Grid menu filter](filtering_images/filtering_img1.png)
 
 
 ## Menu filter
@@ -93,19 +93,19 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img2.png)
+![Aurelia Grid numeric filter](filtering_images/filtering_img2.png)
 {:caption}
 Numeric Filter
 
-![](filtering_images/filtering_img3.png)
+![Aurelia Grid string filter](filtering_images/filtering_img3.png)
 {:caption}
 String Filter
 
-![](filtering_images/filtering_img4.png)
+![Aurelia Grid date filter](filtering_images/filtering_img4.png)
 {:caption}
 Date Filter
 
-![](filtering_images/filtering_img5.png)
+![Aurelia Grid boolean filter](filtering_images/filtering_img5.png)
 
 Boolean Filter
 
@@ -138,7 +138,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img6.png)
+![Aurelia Grid excel like filter](filtering_images/filtering_img6.png)
 
 
 ### Checkbox list generation:
@@ -176,7 +176,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img7.png)
+![Aurelia Grid checkbox list](filtering_images/filtering_img7.png)
 
 
 ### Add current selection to filter checkbox:
@@ -185,7 +185,7 @@ When filtering is done multiple times on the same column then the previously fil
 
 The following image describes the above mentioned behavior.
 
-![](filtering_images/filtering_img12.png)
+![Aurelia Grid add current selecttion](filtering_images/filtering_img12.png)
 
 
 ### Case Sensitivity
@@ -217,7 +217,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img8.png)
+![Aurelia Grid case sensitive](filtering_images/filtering_img8.png)
 
 
 ## Filter bar
@@ -389,7 +389,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img9.png)
+![Aurelia Grid filter bar](filtering_images/filtering_img9.png)
 
 
 Filter bar modes:
@@ -430,7 +430,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img10.png)
+![Aurelia Grid filter bar mode](filtering_images/filtering_img10.png)
 
 
 ## Filter Operators
@@ -641,7 +641,7 @@ export class Grid {
 
 The following output is displayed as a result of the above code example.
 
-![](filtering_images/filtering_img11.png)
+![Aurelia Grid filter template](filtering_images/filtering_img11.png)
 {:caption}
 After Filtering
  
