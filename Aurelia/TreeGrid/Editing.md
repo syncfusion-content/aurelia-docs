@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing | TreeGrid
-description: editing
+title: Editing in Aurelia TreeGrid Control | Syncfusion
+description: Learn here about editing support in Syncfusion Essential Aurelia TreeGrid Control, its elements, and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
 ---
 
-# Editing
+# Editing in Aurelia TreeGrid
 
 TreeGrid provides support to add, edit and delete the records dynamically using [`editSettings`](https://help.syncfusion.com/api/js/ejtreegrid#members:editsettings) property.
 
@@ -42,12 +42,12 @@ export class DefaultSample {
 }
 {% endhighlight %}
 
-![](Editing_images/Editing_beforeadd.png)
+![Aurelia TreeGrid before add](Editing_images/Editing_beforeadd.png)
 
 The above screenshot shows before add a new record in TreeGrid.
 {:.caption}
 
-![](Editing_images/Editing_afteradd.png)
+![Aurelia TreeGrid after add](Editing_images/Editing_afteradd.png)
 
 The above screenshot shows after add a new record in TreeGrid.
 {:.caption}
@@ -90,7 +90,7 @@ export class DefaultSample {
 }
 {% endhighlight %}
 The below screenshot shows new record added in row position of `Child`.
-![](Editing_images/Editing_childadd.png)
+![Aurelia TreeGrid child add](Editing_images/Editing_childadd.png)
 
 ### Adding records using method
 
@@ -179,7 +179,7 @@ export class DefaultSample {
 
 The output of TreeGrid with `CellEditing` is as follows.
 
-![](Editing_images/Editing_cellediting.png)
+![Aurelia TreeGrid cell editing](Editing_images/Editing_cellediting.png)
 
 ### Prevent cell editing
 
@@ -259,7 +259,7 @@ export class DefaultSample {
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_rowediting.png)
+![Aurelia TreeGrid row editing](Editing_images/Editing_rowediting.png)
 
 ### Dialog Editing
 
@@ -296,7 +296,7 @@ export class DefaultSample {
 
 The output of the TreeGrid with `DialogEditing` is as follows.
 
-![](Editing_images/Editing_dialogediting.png)
+![Aurelia TreeGrid dialog editing](Editing_images/Editing_dialogediting.png)
 
 The add and edit dialogs can be opened on custom actions instead of toolbar icons using the methods [`showAddDialog`](https://help.syncfusion.com/api/js/ejtreegrid#methods:showadddialog "showAddDialog") and [`showEditDialog`](https://help.syncfusion.com/api/js/ejtreegrid#methods:showeditdialog "showEditDialog").
 
@@ -430,7 +430,7 @@ export class DefaultSample {
 }
 {% endhighlight %}
 The output of the TreeGrid width EditTemplate as follows.
-![](Editing_images/Editing_celledittemplate.png)
+![Aurelia TreeGrid Delete record](Editing_images/Editing_celledittemplate.png)
 
 The updated record values are maintained in collection in TreeGrid, and the user can retrieve the updated record collection at any time by using the [`getUpdatedRecords`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getupdatedrecords "getUpdatedRecords") method.
 
@@ -465,12 +465,12 @@ export class DefaultSample {
 }
 {% endhighlight %}
 
-![](Editing_images/Editing_beforedelete.png)
+![Aurelia TreeGrid before delete](Editing_images/Editing_beforedelete.png)
 
 The above screenshot shows before delete a record in TreeGrid.
 {:.caption}
 
-![](Editing_images/Editing_afterdelete.png)
+![Aurelia TreeGrid after delete](Editing_images/Editing_afterdelete.png)
 
 The above screenshot shows after delete a record in TreeGrid.
 {:.caption}
@@ -506,4 +506,4 @@ export class DefaultSample {
 }
 {% endhighlight %}
 
-![](Editing_images/Editing_deleteconfirm.png)
+![Aurelia TreeGrid delete confirm](Editing_images/Editing_deleteconfirm.png)
