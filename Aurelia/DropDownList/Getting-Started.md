@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started for DropDownList
-description: Getting Started for DropDownList
+title: Getting Started with Aurelia DropDownList Control | Syncfusion
+description: Learn here about Getting Started with Syncfusion Essential Aurelia DropDownList Control, its elements, and more.
 platform: Aurelia
 control: DropDownList
 documentation: ug
 keywords: DropDownList, js dropdown, Populating data
 ---
 
-# Getting Started
+# Getting Started with Aurelia DropDownList
 
 The external script dependencies of the DropDownList widget are,
 
@@ -100,7 +100,7 @@ The DropDownList can be created from a HTML ‘input’ element with the HTML 'i
 
 {% endhighlight %}
 
-![](Getting-Started-images/Getting-Started_img1.jpeg)
+![Aurelia DropDownList population data](Getting-Started-images/Getting-Started_img1.jpeg)
 
 ## Populating data
 
@@ -132,7 +132,7 @@ The DropDownList can be bounded to both local array and remote data services .Yo
 	
 {% endhighlight %}
 	
-![](Getting-Started-images/Getteing-Started_img2.jpeg)
+![Aurelia DropDownList setting dimensions](Getting-Started-images/Getteing-Started_img2.jpeg)
 
 ## Setting Dimensions
 
