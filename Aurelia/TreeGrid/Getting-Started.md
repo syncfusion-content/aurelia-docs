@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting-Started
-description: getting started
+title: Getting Started with Aurelia TreeGrid Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Aurelia TreeGrid Control, its elements, and more.
 platform: Aurelia
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Aurelia TreeGrid
 This section helps to understand the getting started of the Aurelia TreeGrid with the step-by-step instructions.
 
 ## Create your first TreeGrid in Aurelia
@@ -18,7 +18,7 @@ The **Essential Aurelia TreeGrid** has been designed to represent and edit the h
 
 This section explains how to create a TreeGrid widget in your application with hierarchical data source and enable sorting and editing. The following screenshot displays the output.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Aurelia TreeGrid](Getting-Started_images/Getting-Started_img1.png)
 
 * Create TreeGrid folder inside src/samples/ location.
 * Create TreeGrid.html file inside src/samples/TreeGrid folder and use the below code example to render the TreeGrid component.
@@ -82,7 +82,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Aurelia TreeGrid empty datasource](Getting-Started_images/Getting-Started_img2.png)
 
 TreeGrid with empty datasource 
 {:.caption}
@@ -148,7 +148,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 TreeGrid widget is displayed as the output in the following screenshot.
-![](Getting-Started_images/Getting-Started_img1.png)
+![Aurelia TreeGrid Enable Toolbar](Getting-Started_images/Getting-Started_img1.png)
 
 ## Enable Toolbar
 
@@ -189,7 +189,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The following screen shot displays a Toolbar in TreeGrid.
-![](Getting-Started_images/Getting-Started_toolbar.png)
+![Aurelia TreeGrid](Getting-Started_images/Getting-Started_toolbar.png)
 
 N> Add, Edit, Delete options are enabled by `allowEditing`, `allowAdding`, `allowDeleting` in the `editSettings` property.
 
@@ -215,7 +215,7 @@ You can enable the multicolumn sorting in TreeGrid by setting [`e-allow-multi-so
 {% endhighlight %}
 
 The following screen shot displays a multiple column sorting in TreeGrid.
-![](Getting-Started_images/Getting-Started_multisorting.png)
+![Aurelia TreeGrid multiple column sorting](Getting-Started_images/Getting-Started_multisorting.png)
 
 ## Enable Editing
 
@@ -249,7 +249,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_editing.png)
+![Aurelia TreeGrid Editing](Getting-Started_images/Getting-Started_editing.png)
 
 [Click](editing) here to refer more details for TreeGrid Editing.
 
@@ -287,7 +287,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The following screenshot displays the context menu in TreeGrid control.
-![](Getting-Started_images/Getting-Started_contextmenu.png)
+![Aurelia TreeGrid context menu](Getting-Started_images/Getting-Started_contextmenu.png)
 
 [Click](context-menu) here to refer more details for TreeGrid context menu.
 
@@ -308,7 +308,7 @@ You can enable the column menu in TreeGrid, by setting the [`e-show-column-choos
 {% endhighlight %}
 
 The following screenshot displays the column chooser in TreeGrid control.
-![](Getting-Started_images/Getting-Started_columnchooser.png)
+![Aurelia TreeGrid column chooser](Getting-Started_images/Getting-Started_columnchooser.png)
 
 ## Define dimension of TreeGrid
 
