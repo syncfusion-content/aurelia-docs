@@ -1,13 +1,13 @@
 ---
 layout: post
-title: getting-started
-description: getting started for SplitButton
+title: Getting Started with Aurelia SplitButton Control | Syncfusion
+description: Learn here about Getting Started with Syncfusion Essential Aurelia SplitButton Control, its elements, and more.
 platform: aurelia
 control: SplitButton
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Aurelia SplitButton
 
 This section helps to understand the getting started of the Aurelia SplitButton with the step-by-step instructions.
 
@@ -100,6 +100,6 @@ gulp watch
 
 Execution of above code will render the following output.
 
-![](getting-started_images/getting-started_img1.png) 
+![Aurelia SplitButton getting started](getting-started_images/getting-started_img1.png) 
 
 
