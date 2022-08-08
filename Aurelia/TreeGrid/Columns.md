@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Aurelia TreeGrid Control | Syncfusion
-description: Learn here about columns support in Syncfusion Essential Aurelia TreeGrid Control, its elements, and more.
+title: Columns | TreeGrid 
+description: columns
 platform: Aurelia
 control: TreeGrid
 documentation: ug
 ---
 
-# Columns in Aurelia TreeGrid
+# Columns
 
 Column definitions specified in the [`e-columns`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns "columns") option defines how the data in the **DataSource** have to be displayed, formatted and edited in TreeGrid. The values in the **DataSource** can be mapped to the appropriate column using the [`column.field`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-field "Field") property of the corresponding column object.
 
@@ -107,7 +107,7 @@ export class DefaultSample {
 
 The below screenshot shows the TreeGrid rendered with specific column width values.
 
-![Aurelia TreeGrid columns](Columns_images/Column-Images_width.png)
+![](Columns_images/Column-Images_width.png)
 
 ### Defining common width for the columns
 
@@ -143,7 +143,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot shows TreeGrid render with common width. 
-![Aurelia TreeGrid common width](Columns_images/Column-Images_commonwidth.png)
+![](Columns_images/Column-Images_commonwidth.png)
 
 ## Headers
 
@@ -202,7 +202,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot depicts the output of above code example.
-![Aurelia TreeGrid header wrap](Columns_images/Column-Images_headerwrap.png)
+![](Columns_images/Column-Images_headerwrap.png)
 
 ### Header Template
 
@@ -259,7 +259,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot depicts column headers with custom templates.
-![Aurelia TreeGrid header template](Columns_images/Column-Images_headertemplate.png)
+![](Columns_images/Column-Images_headertemplate.png)
 
 ## Frozen Columns
 
@@ -282,11 +282,11 @@ export class DefaultSample {
 
 The below screenshot depicts TreeGrid with frozen columns,
 
-![Aurelia TreeGrid frozen](Columns_images/Column-Images_frozen.png)
+![](Columns_images/Column-Images_frozen.png)
 
 It is also possible to freeze all the preceding columns at run-time by choosing **Freeze Preceding Columns** option in the column menu or by using the [`freezePrecedingColumns`](https://help.syncfusion.com/api/js/ejtreegrid#methods:freezeprecedingcolumns "freezePrecedingColumns") method, the column field name, for which the columns preceding it to be frozen should be passed as the method parameter.
 
-![Aurelia TreeGrid preceding](Columns_images/Column-Images_preceding.png)
+![](Columns_images/Column-Images_preceding.png)
 
 ### Freeze columns using method
 
@@ -373,7 +373,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot shows the TreeGrid rendered with `FixedColumns` resize mode.
-![Aurelia TreeGrid checkbox](Columns_images/Columns_img15.png)
+![](Columns_images/Columns_img15.png)
 
 ## Checkbox column
 It is possible to display a column value as checkbox in TreeGrid by enabling the [`displayAsCheckbox`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-displayascheckbox "displayAsCheckbox") property and by setting the [`editType`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-edittype) property as `boolean` for that column. If the `displayAsCheckbox` property was set as `false`, then the column value will be displayed as string with the value mapped from the data source. The following code snippet explains how to display boolean value as checkbox column in TreeGrid.
@@ -392,7 +392,7 @@ export class DefaultSample {
 
 The below screen shot depicts the `Approved` column in TreeGrid displayed as a checkbox column.
 
-![Aurelia TreeGrid template](Columns_images/Column-Images_checkbox.png)
+![](Columns_images/Column-Images_checkbox.png)
 
 ## Column Template
 
@@ -435,7 +435,7 @@ The following code example show how to define template for the column.
 
 {% endhighlight %}
 
-![Aurelia TreeGrid column template](Columns_images/Column-Images_template.png)
+![](Columns_images/Column-Images_template.png)
 
 ## Column Menu
 
@@ -479,7 +479,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 
-![Aurelia TreeGrid column chooser](Columns_images/Column-Images_columnchooser.png)
+![](Columns_images/Column-Images_columnchooser.png)
 
 The column menu also provides support for some of the additional column options such as,
 
@@ -496,11 +496,11 @@ The following code example shows how to enable the column option in TreeGrid,
 
 {% endhighlight %}
 
-![Aurelia TreeGrid menu](Columns_images/Column-Images_columnmenu.png)
+![](Columns_images/Column-Images_columnmenu.png)
 Column menu option in TreeGrid
 {:.caption}
 
-![Aurelia TreeGrid insert dialog](Columns_images/Column-Images_columninsertdialog.png)
+![](Columns_images/Column-Images_columninsertdialog.png)
 Column insert dialog in TreeGrid  
 {:.caption}
 
@@ -542,7 +542,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 The below screenshot shows customized insert column dialog in TreeGrid.  
-![Aurelia TreeGrid column dialog](Columns_images/Column-Images_columndialogfields.png)
+![](Columns_images/Column-Images_columndialogfields.png)
 
 ### Hide specific column in column chooser list
 It is possible to hide the specific column in column chooser list by settings [`showInColumnChooser`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-showincolumnchooser) as `false` in the column definition.
@@ -563,7 +563,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The below screenshot shows TreeGrid column chooser without `Id` column. 
-![Aurelia TreeGrid column chooser](Columns_images/Column-Images_showincolumnchooser.png)
+![](Columns_images/Column-Images_showincolumnchooser.png)
 
 ## Show/Hide columns using method
 It is possible to toggle the visibility of the columns using the [`hideColumn`](/api/js/ejtreegrid#methods:hidecolumn "hideColumn") and [`showColumn`](/api/js/ejtreegrid#methods:showcolumn "showColumn") methods. The column's header text should be passed as the method parameter which is to be shown/hidden.
@@ -627,7 +627,7 @@ export class DefaultSample {
   	}
 }
 {% endhighlight %}
-![Aurelia TreeGrid commands](Columns_images/Column-Images_commands.png)
+![](Columns_images/Column-Images_commands.png)
 
 ### Custom buttons
 
@@ -660,7 +660,7 @@ export class DefaultSample {
 }
 {% endhighlight %}
 
-![Aurelia TreeGrid custom commands](Columns_images/Column-Images_customcommands.png)
+![](Columns_images/Column-Images_customcommands.png)
 
 ## Tree column/ Expander column 
 
@@ -703,7 +703,7 @@ The following code example explains how to hide the fourth column,
        
 {% endhighlight %}
 
-![Aurelia TreeGrid visibility](Columns_images/Column-Images_visibility.png)
+![](Columns_images/Column-Images_visibility.png)
 
 ## Read-only
 
@@ -794,7 +794,7 @@ export class DefaultSample {
 
 The below image displays the TreeGrid with validation rule applied for a date column.
 
-![Aurelia TreeGrid validation](Columns_images/Column-Images_validation.png)
+![](Columns_images/Column-Images_validation.png)
 
 ## Column Reorder
 
@@ -817,7 +817,7 @@ The following code example explains how to enable column reorder in TreeGrid,
 {% endhighlight %}
 
 The below screenshot shows the column reorder in TreeGrid.
-![Aurelia TreeGrid reorder](Columns_images/Column-Images_reorder.png)
+![](Columns_images/Column-Images_reorder.png)
 
 The TreeGrid columns can also be reordered by using the [`reorderColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:reordercolumn "reorderColumn") method, where the column field name and the target index should be passed as the method parameters.
 
@@ -845,7 +845,7 @@ export class DefaultSample {
 
 {% endhighlight %}
 The below screenshot shows TreeGrid rendered with text alignment and header text alignment.
-![Aurelia TreeGrid text align](Columns_images/Column-Images_textalign.png)
+![](Columns_images/Column-Images_textalign.png)
 
 ### Customize the column at initial load
 In TreeGrid, it is possible to customize the column at load time using [`load`](https://help.syncfusion.com/api/js/ejtreegrid#events:load) event.
@@ -877,7 +877,7 @@ export class DefaultSample {
 }
 {% endhighlight %}
 The below screenshot shows TreeGrid rendered with customized column.
-![Aurelia TreeGrid load](Columns_images/Column-Images_load.png)
+![](Columns_images/Column-Images_load.png)
 
 ## Get Column Object
 
