@@ -1,13 +1,13 @@
 ---
 layout: post
-title: getting-started
-description: getting started
-platform: js
-control: Control Name undefined
+title: Getting Started with Aurelia AutoComplete Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Aurelia AutoComplete Control, its elements, and more.
+platform: Aurelia
+control: AutoComplete
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Aurelia AutoComplete
 
 This section helps to understand the getting started of the Aurelia AutoComplete with the step-by-step instructions.
 
@@ -85,7 +85,7 @@ export class BasicUse {
 
 
 
-![](getting-started_images\getting-started_img1.png)
+![Aurelia AutoComplete getting started](getting-started_images\getting-started_img1.png)
 
 
 
@@ -142,7 +142,7 @@ export class BasicUse {
 
 
 
-![](getting-started_images\getting-started_img2.png)
+![Aurelia AutoComplete data binding](getting-started_images\getting-started_img2.png)
 
 ## Enable Popup Button
 
@@ -165,7 +165,7 @@ This button helps you to show all the available suggestions on clicking it.
 
 
 
-![](getting-started_images\getting-started_img3.png)
+![Aurelia AutoComplete enable popup button](getting-started_images\getting-started_img3.png)
 
 
  N> You can find the Rotator properties from the [API reference](https://help.syncfusion.com/api/js/ejautocomplete) document 
