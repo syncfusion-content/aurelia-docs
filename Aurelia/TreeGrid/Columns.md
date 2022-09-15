@@ -372,8 +372,6 @@ export class DefaultSample {
 }
 {% endhighlight %}
 
-The below screenshot shows the TreeGrid rendered with `FixedColumns` resize mode.
-
 ## Checkbox column
 It is possible to display a column value as checkbox in TreeGrid by enabling the [`displayAsCheckbox`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-displayascheckbox "displayAsCheckbox") property and by setting the [`editType`](https://help.syncfusion.com/api/js/ejtreegrid#members:columns-edittype) property as `boolean` for that column. If the `displayAsCheckbox` property was set as `false`, then the column value will be displayed as string with the value mapped from the data source. The following code snippet explains how to display boolean value as checkbox column in TreeGrid.
 
