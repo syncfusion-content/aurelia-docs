@@ -5,7 +5,7 @@ platform: Aurelia
 control: Spreadsheet
 documentation: Ug 
 ---
-# Getting started
+# Getting started for Aurelia Spreadsheet
 
 This section explains you the steps required to populate the Spreadsheet with data, format, and export it as excel file. This section covers only the minimal features that you need to know to get started with the Spreadsheet.
 
@@ -79,7 +79,7 @@ gulp watch
 
 Now, the Spreadsheet is rendered with default row and column count.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Aurelia Spreadsheet initialize](Getting-Started_images/Getting-Started_img1.png)
 
 ## Populate Spreadsheet with data
 
@@ -120,7 +120,7 @@ export class Spreadsheet {
 }
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Aurelia Spreadsheet populate spreadsheet with data](Getting-Started_images/Getting-Started_img2.png)
 
 ## Apply Conditional Formatting
 
@@ -163,7 +163,7 @@ export class Spreadsheet {
 
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Aurelia Spreadsheet apply conditional formating](Getting-Started_images/Getting-Started_img3.png)
 
 ## Export Spreadsheet as Excel File
 
