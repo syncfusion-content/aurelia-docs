@@ -45,7 +45,7 @@ The below steps describes to create Syncfusion Aurelia ReportViewer component.
 
 {% endhighlight %}
 
-N> Default RDL Report will be rendered, which is used in the online service.You can obtain sample rdl/rdlc files from Syncfusion installed location (%userprofile%\AppData\Local\Syncfusion\EssentialStudio\{{ site.releaseversion }}\Common\Data\ejReportTemplate).
+N> Default RDL Report will be rendered, which is used in the online service.You can obtain sample rdl/rdlc files from Syncfusion installed location (%userprofile%\AppData\Local\Syncfusion\EssentialStudio\19.1.0.63\Common\Data\ejReportTemplate).
 
 2.Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
 
@@ -145,7 +145,7 @@ The ReportViewer has data binding support to visualize the RDLC reports. The fol
 
 {% endhighlight %}
 
-N> Default RDLC Report will be rendered, which is used in the online service. You can obtain sample rdl/rdlc files from Syncfusion installed location (%userprofile%\AppData\Local\Syncfusion\EssentialStudio\{{ site.releaseversion }}\Common\Data\ejReportTemplate).
+N> Default RDLC Report will be rendered, which is used in the online service. You can obtain sample rdl/rdlc files from Syncfusion installed location (%userprofile%\AppData\Local\Syncfusion\EssentialStudio\19.1.0.63\Common\Data\ejReportTemplate).
 
 2.Create `reportviewer.js` file inside `src/samples/reportviewer` folder with below code snippet.
 
