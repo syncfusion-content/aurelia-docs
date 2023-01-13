@@ -1,11 +1,11 @@
 ---
-title: Getting Started for Aurelia Spreadsheet
-description: How to create a Spreadsheet with data source, apply format and export it as excel file.
+title: Getting Started with Aurelia Spreadsheet Control | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Essential Aurelia Spreadsheet control, its elements, and more.
 platform: Aurelia
 control: Spreadsheet
 documentation: Ug 
 ---
-# Getting started
+# Getting started with Aurelia Spreadsheet
 
 This section explains you the steps required to populate the Spreadsheet with data, format, and export it as excel file. This section covers only the minimal features that you need to know to get started with the Spreadsheet.
 
@@ -79,7 +79,7 @@ gulp watch
 
 Now, the Spreadsheet is rendered with default row and column count.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Initialize in Aurelia Spreadsheet](Getting-Started_images/Getting-Started_img1.png)
 
 ## Populate Spreadsheet with data
 
@@ -120,7 +120,7 @@ export class Spreadsheet {
 }
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Populate data in Aurelia Spreadsheet](Getting-Started_images/Getting-Started_img2.png)
 
 ## Apply Conditional Formatting
 
@@ -163,7 +163,7 @@ export class Spreadsheet {
 
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Apply Conditional Formatting in Aurelia Spreadsheet](Getting-Started_images/Getting-Started_img3.png)
 
 ## Export Spreadsheet as Excel File
 
