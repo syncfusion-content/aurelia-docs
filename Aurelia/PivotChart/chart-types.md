@@ -1,13 +1,13 @@
 ---
-title: Chart-Types
-description: chart types
+title: Chart-Types | PivotChart | Aurelia | Syncfusion
+description: Learn here more about chart types support in Syncfusion Essential Aurelia PivotChart Control, its elements, and more
 platform: Aurelia
 control: PivotChart
 documentation: ug
 api: /api/js/ejpivotchart
 ---
 
-# Chart types
+# Chart types in Aurelia PivotChart
 
 Essential **PivotChart JS** supports 17 different types of charts as follows:
 
@@ -50,7 +50,7 @@ export class BasicUse {
 
 The following screenshot displays the **column chart**.
 
-![](chart-types_images/ColumnChart.png)
+![Column Chart in Aurelia PivotChart](chart-types_images/ColumnChart.png)
 
 ## Stacking column chart
 
@@ -73,7 +73,7 @@ export class BasicUse {
 
 The following screenshot displays the **stacking column chart**.
 
-![](chart-types_images/StackingColumnChart.png)
+![Stacking column chart in Aurelia PivotChart](chart-types_images/StackingColumnChart.png)
 
 ## Bar chart
 
@@ -96,7 +96,7 @@ export class BasicUse {
 
 The following screenshot displays a **bar chart**.
 
-![](chart-types_images/BarChart.png)
+![Bar chart in Aurelia PivotChart](chart-types_images/BarChart.png)
 
 ## Stacking bar chart
 
@@ -119,7 +119,7 @@ export class BasicUse {
 
 The following screenshot displays the **stacking bar chart.**
 
-![](chart-types_images/StackingBarChart.png)
+![Stacking bar chart in Aurelia PivotChart](chart-types_images/StackingBarChart.png)
 
 ## Line chart
 
@@ -142,7 +142,7 @@ export class BasicUse {
 
 The following screenshot displays the **line chart**.
 
-![](chart-types_images/LineChart.png)
+![Line chart in Aurelia PivotChart](chart-types_images/LineChart.png)
 
 ## Step line chart
 
@@ -165,7 +165,7 @@ export class BasicUse {
 
 The following screenshot displays the **step line chart.**
 
-![](chart-types_images/StepLineChart.png)
+![Step line chart in Aurelia PivotChart](chart-types_images/StepLineChart.png)
 
 ## Spline chart
 
@@ -188,7 +188,7 @@ export class BasicUse {
 
 The following screenshot displays the **spline chart**.
 
-![](chart-types_images/SplineChart.png)
+![Spline chart in Aurelia PivotChart](chart-types_images/SplineChart.png)
 
 ## Area chart
 
@@ -211,7 +211,7 @@ export class BasicUse {
 
 The following screenshot displays the **area chart**.
 
-![](chart-types_images/AreaChart.png)
+![Area chart in Aurelia PivotChart](chart-types_images/AreaChart.png)
 
 ## Step area chart
 
@@ -234,7 +234,7 @@ export class BasicUse {
 
 The following screenshot displays the **step area chart.**
 
-![](chart-types_images/StepAreaChart.png)
+![Step area chart in Aurelia PivotChart](chart-types_images/StepAreaChart.png)
 
 ## Spline area chart
 
@@ -257,7 +257,7 @@ export class BasicUse {
 
 The following screenshot displays the **spline area chart.**
 
-![](chart-types_images/SplineAreaChart.png)
+![Spline area chart in Aurelia PivotChart](chart-types_images/SplineAreaChart.png)
 
 ## Stacking area chart
 
@@ -280,7 +280,7 @@ export class BasicUse {
 
 The following screenshot displays the **Stacking Area Chart.**
 
-![](chart-types_images/StackingAreaChart.png)
+![Stacking area chart in Aurelia PivotChart](chart-types_images/StackingAreaChart.png)
 
 ## Pie chart
 
@@ -303,7 +303,7 @@ export class BasicUse {
 
 The following screenshot displays the **pie chart**.
 
-![](chart-types_images/PieChart.png)
+![Pie chart in Aurelia PivotChart](chart-types_images/PieChart.png)
 
 ## Doughnut chart
 
@@ -326,7 +326,7 @@ export class BasicUse {
 
 The following screenshot displays the **doughnut chart**.
 
-![](chart-types_images/DoughnutChart.png)
+![Doughnut chart in Aurelia PivotChart](chart-types_images/DoughnutChart.png)
 
 ## Pyramid chart
 
@@ -349,7 +349,7 @@ export class BasicUse {
 
 The following screenshot displays the **pyramid chart.**
 
-![](chart-types_images/PyramidChart.png)
+![Pyramid chart in Aurelia PivotChart](chart-types_images/PyramidChart.png)
 
 ## Funnel chart
 
@@ -372,7 +372,7 @@ export class BasicUse {
 
 The following screenshot displays the **funnel chart:**
 
-![](chart-types_images/FunnelChart.png)
+![Funnel chart in Aurelia PivotChart](chart-types_images/FunnelChart.png)
 
 ## Scatter chart
 
@@ -395,7 +395,7 @@ export class BasicUse {
 
 The following screenshot displays the **scatter chart:**
 
-![](chart-types_images/ScatterChart.png)
+![Scatter chart in Aurelia PivotChart](chart-types_images/ScatterChart.png)
 
 ## Bubble chart
 
@@ -418,7 +418,7 @@ export class BasicUse {
 
 The following screenshot displays the **bubble chart:**
 
-![](chart-types_images/BubbleChart.png)
+![Bubble chart in Aurelia PivotChart](chart-types_images/BubbleChart.png)
 
 ## Combination chart
 
@@ -457,4 +457,4 @@ A **combination chart** combines two or more series types in a single chart. But
     }
 {% endhighlight %}
 
-![](Chart-Types_images/CombinationChart.png)
+![Combination chart in Aurelia PivotChart](Chart-Types_images/CombinationChart.png)
