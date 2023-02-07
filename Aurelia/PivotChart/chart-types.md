@@ -1,6 +1,6 @@
 ---
-title: Chart-Types | PivotChart | Aurelia | Syncfusion
-description: Learn here more about chart types support in Syncfusion Essential Aurelia PivotChart Control, its elements, and more
+title: Chart-Types in Aurelia PivotChart control | Syncfusion
+description: Learn here more about chart types support in Syncfusion Essential Aurelia PivotChart Control, its elements, and more.
 platform: Aurelia
 control: PivotChart
 documentation: ug
