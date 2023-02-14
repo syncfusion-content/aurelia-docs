@@ -8,6 +8,8 @@ documentation: ug
 ---
 # Aurelia Syncfusion Bridge
 
+> Syncfusion jQuery based widgets are no longer in active development. Switch to our pure JavaScript based next generation Essential JS 2 library.
+
 Aurelia-Syncfusion-Bridge includes wrappers for Syncfusion-JavaScript widget's, which act as the interface for both [Aurelia](http://aurelia.io/) frameworks and Syncfusion JavaScript widgets. This bridge is a structured, configurable collection of JavaScript classes which wrap Syncfusion JavaScript controls, presenting them in the form of Aurelia components.
 
 The Syncfusion Aurelia components are named with prefix `ej` to avoid conflicting with other library component and offers the following features.
