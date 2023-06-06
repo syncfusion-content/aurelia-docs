@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting-Started | ProgressBar | JavaScript | Syncfusion
-description: getting started
+title: Getting Started with Aurelia ProgressBar Control | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential Aurelia ProgressBar control, its elements, and more.
 platform: Aurelia
 control: ProgressBar
 documentation: ug
 keywords: ejprogressbar, progressbar, js progressbar
 ---
 
-# Getting Started
+# Getting Started with Aurelia ProgressBar
 
 This section briefly describes how to create a **ProgressBar** control using **Javascript** and learn its features.
 **Essential JavaScript** **ProgressBar** displays a **ProgressBar** within a webpage that allows you to show the progress of an event. Here, you can learn how to customize the progress and color of the **ProgressBar** in a real-time application to indicate the strength of the password, where the progress changes with respect to the change in length of the password. This helps you to validate the password is typed. 
