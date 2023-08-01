@@ -55,7 +55,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The following screenshot displays the Context menu in TreeGrid control.
-![](ContextMenu_images/ContextMenu_default.png)
+![Context menu default in Aurelia TreeGrid](contextmenu_images/aurelia-treegrid-context-menu-default.png)
 
 ## ContextMenu Customization
 
@@ -110,7 +110,7 @@ export class DefaultSample {
 {% endhighlight %}
 
 The following screenshot displays the customization of Context menu in TreeGrid control.
-![](ContextMenu_images/ContextMenu_custom.png)
+![Context menu customization in Aurelia TreeGrid](contextmenu_images/aurelia-treegrid-context-menu-customization.png)
 
 ### Header Context Menu
 Header context menu can be enabled by setting [`showContextMenu`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings-showcontextmenu) as `true`. The default value of the [`showContextMenu`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings-showcontextmenu) property is `false`.
@@ -154,5 +154,5 @@ export class DefaultSample {
 {% endhighlight %}
 
 The following screenshot displays the Header context menu in TreeGrid control.
-![](ContextMenu_images/ContextMenu_headermenu.png)
+![Header context menu in Aurelia TreeGrid](contextmenu_images/aurelia-treegrid-header-context-menu.png)
 
