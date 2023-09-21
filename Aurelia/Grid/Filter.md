@@ -25,8 +25,8 @@ And also four types of filter menu is available in all filter types, they are
 
 The corresponding filter menu is opened based on the column type.
 
-N> 1. Need to specify the [`e-type`](http://help.syncfusion.com/api/js/ejgrid#members:columns-type "type") of column, when first record data value is empty or null otherwise the filter menu is not opened. 
-N> 2. The default filter type is Filter bar, when `e-allow-filtering` is enabled and [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") is not set.
+N> 1. Need to specify the [`e-type`](https://help.syncfusion.com/api/js/ejgrid#members:columns-type "type") of column, when first record data value is empty or null otherwise the filter menu is not opened. 
+N> 2. The default filter type is Filter bar, when `e-allow-filtering` is enabled and [`filterType`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") is not set.
 
 The following code example describes the above behavior.
 
@@ -57,11 +57,11 @@ The following output is displayed as a result of the above code example.
 
 ## Menu filter
 
-You can enable menu filter by setting [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") of [`e-filter-settings`] as `menu`. 
+You can enable menu filter by setting [`filterType`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") of [`e-filter-settings`] as `menu`. 
 
-There is an option to show or hide the additional filter options in the menu by setting [`showPredicate`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showpredicate "filterSettings.showPredicate") of [`e-filter-settings`] as `true` or `false` respectively.
+There is an option to show or hide the additional filter options in the menu by setting [`showPredicate`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showpredicate "filterSettings.showPredicate") of [`e-filter-settings`] as `true` or `false` respectively.
 
-N> For [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") property you can assign either `string` value ("menu") or `enum` value (`ej.Grid.FilterType.Menu`).
+N> For [`filterType`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") property you can assign either `string` value ("menu") or `enum` value (`ej.Grid.FilterType.Menu`).
 
 We can also filter a specified range of values by using the `between` operator for the column type `number`, `date` and `datetime`.
 
@@ -111,7 +111,7 @@ Boolean Filter
 
 ## Excel-like filter
 
-You can enable excel menu by setting of [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterSettings.filterType") of [`e-filter-settings`] as `excel`. The excel menu contains an option such as Sorting, Clear filter, submenu for advanced filtering.
+You can enable excel menu by setting of [`filterType`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterSettings.filterType") of [`e-filter-settings`] as `excel`. The excel menu contains an option such as Sorting, Clear filter, submenu for advanced filtering.
 
 The following code example describes the above behavior.
 
@@ -145,10 +145,10 @@ The following output is displayed as a result of the above code example.
 
 By default, the checkbox list is generated from distinct values of the filter column from dataSource which gives an option to search and select the required items.
 
-Also on checkbox list generation, if the number of distinct values are greater than 1000, then the excel filter will display only first 1000 values to ensure the best performance on rendering and searching. However this limit has been customized according to your requirement by setting [`maxFilterChoices`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-maxfilterchoices "filterSettings.maxFilterChoices") of [`e-filter-settings`] with required limit in integer.
+Also on checkbox list generation, if the number of distinct values are greater than 1000, then the excel filter will display only first 1000 values to ensure the best performance on rendering and searching. However this limit has been customized according to your requirement by setting [`maxFilterChoices`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-maxfilterchoices "filterSettings.maxFilterChoices") of [`e-filter-settings`] with required limit in integer.
 
 N> 1. Using excel filter events you can change the dataSource of the checkbox list. 
-N> 2. [`ej.Query`](http://help.syncfusion.com/api/js/ejquery# "ej.Query") of checkbox list can also be changed using excel filter events.
+N> 2. [`ej.Query`](https://help.syncfusion.com/api/js/ejquery# "ej.Query") of checkbox list can also be changed using excel filter events.
 
 The following code example describes the above behavior.
 
@@ -190,7 +190,7 @@ The following image describes the above mentioned behavior.
 
 ### Case Sensitivity
 
-To perform filter operation with case sensitive in excel styled filter menu mode by setting [`enableCaseSensitivity`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-enablecasesensitivity "enableCaseSensitivity") as `true`.
+To perform filter operation with case sensitive in excel styled filter menu mode by setting [`enableCaseSensitivity`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-enablecasesensitivity "enableCaseSensitivity") as `true`.
 
 The following code example describes the above behavior.
 
@@ -222,7 +222,7 @@ The following output is displayed as a result of the above code example.
 
 ## Filter bar
 
-[`Filter bar`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "Filter bar") row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`.
+[`Filter bar`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "Filter bar") row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the [`filterType`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`.
 
 List of Filter bar Expressions:
 
@@ -394,16 +394,16 @@ The following output is displayed as a result of the above code example.
 
 Filter bar modes:
 
-This specifies the grid to start the filter action while typing in the filter bar or after pressing the enter key based on [`filterBarMode`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filterbarmode "filterBarMode").There are two types of [`filterBarMode`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filterbarmode "filterBarMode"), they are
+This specifies the grid to start the filter action while typing in the filter bar or after pressing the enter key based on [`filterBarMode`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filterbarmode "filterBarMode").There are two types of [`filterBarMode`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filterbarmode "filterBarMode"), they are
 
 1. OnEnter
 2. Immediate
 
-N> For [`filterBarMode`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filterbarmode "filterBarMode") property you can assign either `string` value (onenter) or `enum` value (`ej.Grid.FilterBarMode.OnEnter`).
+N> For [`filterBarMode`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filterbarmode "filterBarMode") property you can assign either `string` value (onenter) or `enum` value (`ej.Grid.FilterBarMode.OnEnter`).
 
 Filter bar message:
 
-The filter bar message is supported only for the [`filterType`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`. The filtered data with column name is displayed in the grid pager itself. By default [`showFilterBarStatus`](http://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showfilterbarmessage "showFilterBarMessage") is true.
+The filter bar message is supported only for the [`filterType`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-filtertype "filterType") as `filterbar`. The filtered data with column name is displayed in the grid pager itself. By default [`showFilterBarStatus`](https://help.syncfusion.com/api/js/ejgrid#members:filtersettings-showfilterbarmessage "showFilterBarMessage") is true.
 
 The following code example describes the above behavior.
 
@@ -435,7 +435,7 @@ The following output is displayed as a result of the above code example.
 
 ## Filter Operators
 
-The grid controls uses filter operators from [`ej.DataManager`](http://help.syncfusion.com/api/js/ejdatamanager# "ej.DataManager"), which are used at the time of filtering.
+The grid controls uses filter operators from [`ej.DataManager`](https://help.syncfusion.com/api/js/ejdatamanager# "ej.DataManager"), which are used at the time of filtering.
 
 List of Column type and Filter operators
 

@@ -8,14 +8,14 @@ documentation: ug
 --- 
 # Data binding
 
-The Grid control uses [`ej.DataManager`](http://helpjs.syncfusion.com/js/datamanager/overview# "ej.DataManager") which supports both RESTful JSON data services binding and local JSON array binding.  The [`e-data-source`](http://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") property can be assigned either with the instance of [`ej.DataManger`](http://help.syncfusion.com/api/js/ejdatamanager# "ej.DataManager") or JSON data array collection. It supports different kinds of data binding methods such as
+The Grid control uses [`ej.DataManager`](https://help.syncfusion.com/js/datamanager/overview "ej.DataManager") which supports both RESTful JSON data services binding and local JSON array binding.  The [`e-data-source`](https://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") property can be assigned either with the instance of [`ej.DataManger`](https://help.syncfusion.com/api/js/ejdatamanager# "ej.DataManager") or JSON data array collection. It supports different kinds of data binding methods such as
 
 1. Local data
 2. Remote data
 
 ## Local Data
 
-To bind local data to the Grid, you can assign a JSON array to the [`e-data-source`](http://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") property.
+To bind local data to the Grid, you can assign a JSON array to the [`e-data-source`](https://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") property.
 
 The following code example describes the above behavior.
 
@@ -57,11 +57,11 @@ N> 2. Refer this [Knowledge Base link](http://www.syncfusion.com/kb/3377/how-to-
 
 ## Remote Data
 
-To bind remote data to Grid Control, you can assign a service data as an instance of [`ej.DataManager`](http://help.syncfusion.com/api/js/ejdatamanager# "DataManager") to the [`e-data-source`](http://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") property.
+To bind remote data to Grid Control, you can assign a service data as an instance of [`ej.DataManager`](https://help.syncfusion.com/api/js/ejdatamanager# "DataManager") to the [`e-data-source`](https://help.syncfusion.com/api/js/ejgrid#members:datasource "dataSource") property.
 
 ### OData
 
-OData is a standardized protocol for creating and consuming data. You can provide the [OData service](http://www.odata.org/#) URL directly to the [`ej.DataManager`](http://help.syncfusion.com/api/js/ejdatamanager# "DataManager") class and then you can assign it to Grid [`e-data-source`](http://help.syncfusion.com/api/js/ejgrid#members:datasource "datasource").
+OData is a standardized protocol for creating and consuming data. You can provide the [OData service](https://www.odata.org/) URL directly to the [`ej.DataManager`](https://help.syncfusion.com/api/js/ejdatamanager# "DataManager") class and then you can assign it to Grid [`e-data-source`](https://help.syncfusion.com/api/js/ejgrid#members:datasource "datasource").
 
 The following code example describes the above behavior.
 

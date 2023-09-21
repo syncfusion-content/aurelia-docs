@@ -21,7 +21,7 @@ Digital Thermometer
 
 ## Create a Digital Gauge
 
-1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+1.To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started).
 2.Create `digitalGauge` folder inside `src/samples` location.
 3.Create `digitalGauge.html` file inside  `src/samples/digitalGauge` folder and use the below code for rendering DigitalGauge component 
 4.Create a <div> tag.

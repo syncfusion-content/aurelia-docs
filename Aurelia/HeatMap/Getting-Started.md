@@ -12,7 +12,7 @@ keywords: HeatMap, js heatmap, Populating data
 This section helps to get started of the HeatMap component for Aurelia. 
 
 ## Initialize HeatMap
-* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started).
 * Create `heatmap` folder inside `src/samples` location.
 * Create `heatmap.html` file inside  `src/samples/heatmap` folder and use the below code for rendering HeatMap component 
 
