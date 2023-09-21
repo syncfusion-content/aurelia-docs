@@ -64,7 +64,7 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 
 ## Data binding
 
-[`Data binding`](http://helpjs.syncfusion.com/js/grid/data-binding) in the grid is achieved by assigning an array of JavaScript objects to the [`dataSource`](http://help.syncfusion.com/api/js/ejgrid#members:columns-datasource) property. Refer to the following code example.
+[`Data binding`](https://help.syncfusion.com/js/grid/data-binding) in the grid is achieved by assigning an array of JavaScript objects to the [`dataSource`](https://help.syncfusion.com/api/js/ejgrid#members:columns-datasource) property. Refer to the following code example.
 
 {% highlight html %}
 
@@ -80,7 +80,7 @@ The below steps describes to create Syncfusion Aurelia Grid component.
 Configure the `e-data-source` bind value `this.gridData` in Aurelia view-model as shown in the following code.
 
 {% highlight js %}
-    import 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
+    import 'https://js.syncfusion.com/demos/web/scripts/jsondata.min.js';
     export class Grid {
     
             constructor() {
@@ -96,7 +96,7 @@ Configure the `e-data-source` bind value `this.gridData` in Aurelia view-model a
 
 ## Enable Paging
 
-[Paging](http://helpjs.syncfusion.com/js/grid/paging) can be enabled by setting the `e-allow-paging` to true.  This adds the pager in the bottom of the grid and page size can be customized by using the `e-page-settings` property.
+[Paging](https://help.syncfusion.com/js/grid/paging) can be enabled by setting the `e-allow-paging` to true.  This adds the pager in the bottom of the grid and page size can be customized by using the `e-page-settings` property.
 
 
 {% highlight html %}
@@ -135,7 +135,7 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
 ## Enable Filtering
 
-[`Filtering`](http://helpjs.syncfusion.com/js/grid/filter) can be enabled by setting the `e-allow-filtering` to `true`. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using the `e-filter-setting` property.
+[`Filtering`](https://help.syncfusion.com/js/grid/filter) can be enabled by setting the `e-allow-filtering` to `true`. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using the `e-filter-setting` property.
 
 
 {% highlight html %}
@@ -171,7 +171,7 @@ N> Pager settings can be customized by using the `e-page-settings` property. Whe
 
 ## Enable Grouping
 
-[`Grouping`](http://helpjs.syncfusion.com/js/grid/grouping) can be enabled by setting the `e-allow-grouping` to `true`. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in the `e-group-settings` property.
+[`Grouping`](https://help.syncfusion.com/js/grid/grouping) can be enabled by setting the `e-allow-grouping` to `true`. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in the `e-group-settings` property.
 
 
 {% highlight html %}
@@ -243,7 +243,7 @@ Configure the `e-group-settings` bind value `this.groupSettings` in Aurelia view
 
 ## Add Summaries
 
-[`Summaries`](http://helpjs.syncfusion.com/js/grid/summary) can be added by setting the `e-show-summary` to true and adding required summary rows and columns in the `e-summary-rows` property. For demonstration, Stock column's sum value is displayed as summary.
+[`Summaries`](https://help.syncfusion.com/js/grid/summary) can be added by setting the `e-show-summary` to true and adding required summary rows and columns in the `e-summary-rows` property. For demonstration, Stock column's sum value is displayed as summary.
 
 
 {% highlight html %}

@@ -12,7 +12,7 @@ This section explains briefly about how to create a **Diagram** control in your 
 
 ## Initialize Diagram
 
-* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started "").
+* To create Syncfusion Aurelia application refer [Aurelia Getting Started documentation](https://help.syncfusion.com/aurelia/overview#getting-started).
 * Create `diagram` folder inside `src/samples` location.
 * Create `diagram.html` file inside  `src/samples/diagram` folder and use the below code for rendering Diagram component 
 
