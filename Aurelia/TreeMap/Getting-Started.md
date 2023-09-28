@@ -21,7 +21,7 @@ You can configure an **Essential Aurelia TreeMap** in simple steps. In this sect
 
 To add a **TreeMap** control in your application, refer the following libraries in an **HTML** page. 
 
-* [jQuery](https://jquery.com) version  1.10.1 and above
+* [jQuery](https://jquery.com/) version  1.10.1 and above
 * JsRender
 * ej.web.all
 
