@@ -29,7 +29,7 @@ N> An all-day row is normally visible on the Scheduler, as the [showAllDayRow](/
 
 ### Recurrence
 
-Represents an appointment that is created for a certain time interval that occurs repeatedly in a daily, weekly, monthly, yearly or every weekday basis at the same time interval based on the recurrence rule. The other available options and validations that can be performed on recurrence appointments can be referred from [here](https://help.syncfusion.com/aurelia/schedule/working-with-appointments).
+Represents an appointment that is created for a certain time interval that occurs repeatedly in a daily, weekly, monthly, yearly or every weekday basis at the same time interval based on the recurrence rule. The other available options and validations that can be performed on recurrence appointments can be referred from [here](/aurelia/schedule/working-with-appointments#recurrence-options).
 
 ## CRUD operation
 
@@ -42,7 +42,7 @@ The appointments can be added/edited in the Scheduler using any one of the follo
 * Quick window
 * Inline creation/editing
 * Default appointment window
-* [Context menu](https://help.syncfusion.com/aurelia/schedule/context-menu)
+* [Context menu](/aurelia/schedule/context-menu)
 * Through programmatically
 
 #### Quick Window
@@ -227,10 +227,10 @@ The default appointment window is availed with options like
 
 The other additional options available are listed below for which the appropriate API’s are needed to be configured to display these options on the appointment window.
 
-* Location ([showLocationField](https://help.syncfusion.com/aurelia/schedule/miscellaneous#showhide-location-field))
-* Priority ([prioritySettings](https://help.syncfusion.com/aurelia/schedule/working-with-appointments#priority))
-* Categorize ([categorizeSettings](https://help.syncfusion.com/aurelia/schedule/working-with-appointments#categorization))
-* [Resources](https://help.syncfusion.com/aurelia/schedule/resources)
+* Location ([showLocationField](/aurelia/schedule/miscellaneous#showhide-location-field))
+* Priority ([prioritySettings](/aurelia/schedule/working-with-appointments#priority))
+* Categorize ([categorizeSettings](/aurelia/schedule/working-with-appointments#categorization))
+* [Resources](/aurelia/schedule/resources)
 
 The appointments can be created by double-clicking the Scheduler cells across the required time slots, which makes the Create Appointment window to pop-up. The start and end time fields will get automatically populated, according to the time-slot selection. Clicking on the done button in an appointment window will create the appointment for the selected time cells.
 
@@ -335,7 +335,7 @@ The appointments can be deleted in either of the following ways,
 * Selecting an appointment and pressing <kbd>Delete</kbd> key.
 * Through Programmatically.
 
-A pop-up with a confirmation message will get displayed before deleting an appointment, which can be either switched on/off using the API `showDeleteConfirmationDialog`. Also, the confirmation text in that pop-up can be customized as mentioned [here](https://help.syncfusion.com/aurelia/schedule/globalization-and-localization#localization:localizing-specific-words).
+A pop-up with a confirmation message will get displayed before deleting an appointment, which can be either switched on/off using the API `showDeleteConfirmationDialog`. Also, the confirmation text in that pop-up can be customized as mentioned [here](/aurelia/schedule/globalization-and-localization#localization:localizing-specific-words).
 
 **For example**, to localize only the delete confirmation message in the delete window -
 
@@ -390,7 +390,7 @@ export class Schedule {
 
 {% endhighlight %}
 
-N> All these CRUD operations on appointments (add/edit/delete) can also be done through the default [context menu](https://help.syncfusion.com/aurelia/schedule/context-menu#default-menu-options) options **Add Appointment**, **Edit Appointment** and **Delete Appointment** which is available, when context menu settings is enabled within Scheduler.
+N> All these CRUD operations on appointments (add/edit/delete) can also be done through the default [context menu](/aurelia/schedule/context-menu#default-menu-options) options **Add Appointment**, **Edit Appointment** and **Delete Appointment** which is available, when context menu settings is enabled within Scheduler.
 
 #### Through Programmatically
 
@@ -1036,8 +1036,8 @@ This option prioritize the appointments based on its importance and it can be di
 The [prioritySettings](/api/js/ejschedule#members:prioritysettings) holds the below priority related properties such as,
 
 * [enable](/api/js/ejschedule#members:prioritysettings-enable) - It accepts true or false value, denoting whether to enable/disable the priority option. Its default value is **false**.
-* [template](https://help.syncfusion.com/aurelia/schedule/templates#priority-settings-template) – Customize the priority icon/images using template options.
-* [dataSource](https://help.syncfusion.com/api/js/ejschedule#members:prioritysettings-datasource) – binds the priority dataSource collection. This property should be assigned with the JSON data array collection or instance of [ej.DataManger](/js/datamanager/overview).
+* [template](/aurelia/schedule/templates#priority-settings-template) – Customize the priority icon/images using template options.
+* [dataSource](/api/js/ejschedule#members:prioritysettings-datasource) – binds the priority dataSource collection. This property should be assigned with the JSON data array collection or instance of [ej.DataManger](/js/datamanager/overview).
 
 We have below 4 default values for priority dataSource collection.
 
@@ -1349,7 +1349,7 @@ It has the following properties based on which the recurrence appointments are r
     </tr>
 </table>
 
-To know more about other possible combinations of above specified recurrence rule properties, refer [here](https://support.syncfusion.com/kb/article/3918/what-is-recurrencerule-in-the-schedule-control?isInternalRefresh=False).
+To know more about other possible combinations of above specified recurrence rule properties, refer [here](https://support.syncfusion.com/kb/article/3918/what-is-recurrencerule-in-the-schedule-control).
 
 {% highlight html %}
 
@@ -1431,7 +1431,7 @@ export class Schedule {
 
 {% endhighlight %}
 
-N> You can parse the **RecurrenceRule** of an appointment from the server-side by making use of a new generic utility class **RecurrenceHelper**. Refer this [KB document](https://support.syncfusion.com/kb/article/5128/how-to-parse-the-recurrencerule-in-server-side-in-aspnet-mvc-scheduler?isInternalRefresh=False).
+N> You can parse the **RecurrenceRule** of an appointment from the server-side by making use of a new generic utility class **RecurrenceHelper**. Refer this [KB document](https://support.syncfusion.com/kb/article/5128/how-to-parse-the-recurrencerule-in-server-side-in-aspnet-mvc-scheduler).
 
 ### Recurrence Edit and delete options
 
