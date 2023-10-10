@@ -40,7 +40,7 @@ You can configure an **Essential Aurelia** Map in simple steps. In this example,
 
 To use ejMap, refer the following libraries in **HTML** page. 
 
-* [jQuery](https://jquery.com) version  1.10.1 and above,
+* [jQuery](https://jquery.com/) version  1.10.1 and above,
 * ej.web.all.min  
 * JsRender
 
