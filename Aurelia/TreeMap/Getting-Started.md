@@ -21,7 +21,7 @@ You can configure an **Essential Aurelia TreeMap** in simple steps. In this sect
 
 To add a **TreeMap** control in your application, refer the following libraries in an **HTML** page. 
 
-* [jQuery](http://jquery.com/) version  1.10.1 and above
+* [jQuery](https://jquery.com/) version  1.10.1 and above
 * JsRender
 * ej.web.all
 
@@ -125,7 +125,7 @@ Populate the TreeMap data in JSON object. For example, you can use population da
 
 
 
-N> Population data is referred from [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population).
+N> Population data is referred from [List of continents by population](https://en.wikipedia.org/wiki/List_of_continents_and_continental_subregions_by_population).
 
 
 The following screenshot displays a TreeMap control that is rendered after executing the above code sample. The control is rendered with the default properties using the above code. 
@@ -300,7 +300,7 @@ The following screenshot displays labels in a **TreeMap** control.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-N> Population data is referred from [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population).
+N> Population data is referred from [List of continents by population](https://en.wikipedia.org/wiki/List_of_continents_and_continental_subregions_by_population).
 
 
 

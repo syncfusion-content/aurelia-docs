@@ -40,7 +40,7 @@ You can configure an **Essential Aurelia** Map in simple steps. In this example,
 
 To use ejMap, refer the following libraries in **HTML** page. 
 
-* [jQuery](http://jquery.com/) version  1.10.1 and above,
+* [jQuery](https://jquery.com/) version  1.10.1 and above,
 * ej.web.all.min  
 * JsRender
 
@@ -61,7 +61,7 @@ You can link these libraries from a [Content Delivery Network (CDN)](https://en.
 
 ### Prepare Shape Data
 
-The Shape Data collection describing geographical shape information can be obtained from [GEOJSON format shapes](http://www.syncfusion.com/uploads/user/uploads/Maps_GeoJSON.zip). 
+The Shape Data collection describing geographical shape information can be obtained from [GEOJSON format shapes](https://www.syncfusion.com/uploads/user/uploads/Maps_GeoJSON.zip). 
 
 In this example, USA shape is used as shape data by utilizing the “**United States of America.json**” file in the following folder structure obtained from downloaded Maps_GeoJSON folder.
 
@@ -389,4 +389,4 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-The complete code sample can be found [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/EssentialStudioforJavaScript_HeatMap1627882807).
+The complete code sample can be found [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/EssentialStudioforJavaScript_HeatMap1627882807).
