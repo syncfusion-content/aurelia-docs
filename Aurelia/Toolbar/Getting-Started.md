@@ -95,7 +95,7 @@ Initialize the Toolbar items with **UL LI** template as follows.
 
 Apply the given styles in the code table to show the **toolbar items** as follows. You can refer images from any location. In the following code sample, the images are referred from the given location.
 
-[http://js.syncfusion.com/UG/Web/Content/](http://js.syncfusion.com/UG/Web/Content/)
+[https://help.syncfusion.com/aurelia/toolbar/getting-started](https://help.syncfusion.com/aurelia/toolbar/getting-started)
 
 {% highlight css %}
 
