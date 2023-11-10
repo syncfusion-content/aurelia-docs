@@ -11,7 +11,7 @@ keywords: ComboBox, ComboBox, Populating data
 
 The external script dependencies of the ComboBox widget are,
 
-* [jQuery 1.7.1](http://jquery.com/) and later versions.
+* [jQuery 1.7.1](https://jquery.com/) and later versions.
 
 And the internal script dependencies of the ComboBox widget are:
 
