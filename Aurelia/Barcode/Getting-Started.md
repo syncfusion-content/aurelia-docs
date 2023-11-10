@@ -41,7 +41,7 @@ The below steps describes to create Syncfusion Aurelia Barcode component.
 
     <template>
     <div>
-        <ej-barcode id="barcode" e-text="http://www.syncfusion.com" e-symbology-type="qrbarcode"></ej-barcode>
+        <ej-barcode id="barcode" e-text="https://www.syncfusion.com/" e-symbology-type="qrbarcode"></ej-barcode>
     </div>
     </template>
 
