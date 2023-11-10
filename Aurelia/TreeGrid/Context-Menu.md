@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in Aurelia TreeGrid
 
 The context menu in TreeGrid control is used to manipulate (add, edit and delete) the TreeGrid rows. In TreeGrid, context menu can be enabled with [`contextMenuSettings`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings) property. The [`contextMenuSettings`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings) property contains two inner properties [`showContextMenu`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings-showcontextmenu) and [`contextMenuItems`](https://help.syncfusion.com/api/js/ejtreegrid#members:contextmenusettings-contextmenuitems).
 
